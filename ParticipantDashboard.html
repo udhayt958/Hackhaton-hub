@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCT Hackathon Portal - Participant Dashboard</title>
+    <link rel="stylesheet" href="ParticipantDashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>NCT Hackathon</h3>
+                <p>Participant Dashboard</p>
+            </div>
+            
+            <div class="user-profile">
+                <div class="profile-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-info">
+                    <h4>Alex Johnson</h4>
+                    <p>Team: Code Warriors</p>
+                </div>
+                <div class="edit-profile-btn">
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+            
+            <div class="sidebar-menu">
+                <div class="menu-item active" data-url="ParticipantDashboard.html">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantProfile.html">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantTeam.html">
+                    <i class="fas fa-users"></i>
+                    <span>Team</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantProject.html">
+                    <i class="fas fa-code"></i>
+                    <span>Project</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantSchedule.html">
+                    <i class="fas fa-calendar"></i>
+                    <span>Schedule</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantRecources.html" >
+                    <i class="fas fa-book"></i>
+                    <span>Resources</span>
+                </div>
+                <!--<div class="menu-item" data-url="ParticipantAchievements.html">
+                    <i class="fas fa-medal"></i>
+                    <span>Achievements</span>
+                    <span class="badge new-badge">2</span>
+                </div>-->
+                <div class="menu-item" data-url="ParticipantMessages.html">
+                    <i class="fas fa-envelope"></i>
+                    <span>Messages</span>
+                    <span class="badge message-badge">3</span>
+                </div>
+               <!-- <div class="menu-item" data-url="ParticipantAnalytics.html">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Analytics</span>
+                </div>-->
+                <div class="menu-item" data-url="ParticipantLeaderboard.html">
+                    <i class="fas fa-trophy"></i>
+                    <span>Leaderboard</span>
+                </div>
+                <div class="menu-item" data-url="../home.html">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header class="top-header">
+                <div class="header-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search resources, events...">
+                </div>
+                <div class="header-actions">
+                    <div class="notification-bell">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">2</span>
+                    </div>
+                    <div class="messages-icon">
+                        <i class="fas fa-envelope"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="help-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Welcome Banner -->
+            <section class="welcome-banner">
+                <div class="welcome-content">
+                    <h1>Welcome, Alex!</h1>
+                    <p>You have <span class="highlight">3 days</span> left to submit your project!</p>
+                    <button class="btn btn-primary">Go to Project</button>
+                </div>
+                <div class="welcome-illustration">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+            </section>
+
+            <!-- Stats Cards -->
+            <section class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h2>8</h2>
+                        <p>Days Remaining</p>
+                    </div>
+                    <div class="stat-progress">
+                        <div class="progress-bar" style="width: 70%"></div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon badge-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h2>2</h2>
+                        <p>Badges Earned</p>
+                    </div>
+                    <div class="stat-progress">
+                        <div class="progress-bar badge-bar" style="width: 40%"></div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon message-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h2>3</h2>
+                        <p>Unread Messages</p>
+                    </div>
+                    <div class="stat-progress">
+                        <div class="progress-bar message-bar" style="width: 100%"></div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon feedback-icon">
+                        <i class="fas fa-comment"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h2>2</h2>
+                        <p>New Feedbacks</p>
+                    </div>
+                    <div class="stat-progress">
+                        <div class="progress-bar feedback-bar" style="width: 100%"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cards Section -->
+            <div class="cards-container">
+                <!-- Team Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-users"></i>
+                        <h3 class="card-title">Team Management</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Team: Code Warriors</p>
+                        <p>Members: 3/5</p>
+                        <p>Team Score: 85/100</p>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-primary">Manage Team</button>
+                    </div>
+                </div>
+
+                <!-- Project Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-code"></i>
+                        <h3 class="card-title">Project Submission</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Status: In Progress</p>
+                        <p>Deadline: Feb 28, 2025</p>
+                        <div class="project-progress">
+                            <div class="progress-label">Completion: 65%</div>
+                            <div class="progress-bar-container">
+                                <div class="progress-fill" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-primary">Continue Project</button>
+                    </div>
+                </div>
+
+                <!-- Schedule Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-calendar"></i>
+                        <h3 class="card-title">Next Event</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Workshop: AI Development</p>
+                        <p>Feb 26, 2025 - 10:00 AM</p>
+                        <p>Location: Virtual (Zoom)</p>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-primary">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Badges Section -->
+            <section class="badges-section">
+                <div class="section-header">
+                    <h2>Your Achievements</h2>
+                    <button class="btn btn-outlined view-all">View All</button>
+                </div>
+                
+                <div class="badges-grid">
+                    <div class="badge-card earned">
+                        <div class="badge-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="badge-content">
+                            <h3>Creative Genius</h3>
+                            <p>Awarded for exceptional creativity</p>
+                            <span class="badge-date">Feb 20, 2025</span>
+                        </div>
+                    </div>
+                    
+                    <div class="badge-card earned">
+                        <div class="badge-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="badge-content">
+                            <h3>Team Player</h3>
+                            <p>Awarded for outstanding collaboration</p>
+                            <span class="badge-date">Feb 18, 2025</span>
+                        </div>
+                    </div>
+                    
+                    <div class="badge-card locked">
+                        <div class="badge-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="badge-content">
+                            <h3>Code Master</h3>
+                            <p>For technical excellence and clean code</p>
+                        </div>
+                    </div>
+                    
+                    <div class="badge-card locked">
+                        <div class="badge-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="badge-content">
+                            <h3>MVP</h3>
+                            <p>For overall exceptional performance</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Messages Section -->
+           <!--<section class="messages-section">
+                <div class="section-header">
+                    <h2>Recent Messages</h2>
+                    <button class="btn btn-primary">New Message</button>
+                </div>
+                
+                <div class="messages-list">
+                    <div class="message-card unread">
+                        <div class="message-sender">
+                            <div class="sender-avatar judge">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="sender-info">
+                                <h4>Dr. Sarah Williams</h4>
+                                <span class="sender-role">Judge</span>
+                            </div>
+                        </div>
+                        <div class="message-preview">
+                            <p>Your team's presentation was excellent. I'd like to provide some feedback on your...</p>
+                            <span class="message-time">Today, 11:30 AM</span>
+                        </div>
+                        <div class="message-actions">
+                            <button class="btn btn-icon"><i class="fas fa-reply"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="message-card unread">
+                        <div class="message-sender">
+                            <div class="sender-avatar organizer">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="sender-info">
+                                <h4>Michael Rodriguez</h4>
+                                <span class="sender-role">Organizer</span>
+                            </div>
+                        </div>
+                        <div class="message-preview">
+                            <p>We've added new resources for AI development in the resource hub. Please check...</p>
+                            <span class="message-time">Yesterday, 2:45 PM</span>
+                        </div>
+                        <div class="message-actions">
+                            <button class="btn btn-icon"><i class="fas fa-reply"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="message-card unread">
+                        <div class="message-sender">
+                            <div class="sender-avatar judge">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="sender-info">
+                                <h4>James Thompson</h4>
+                                <span class="sender-role">Judge</span>
+                            </div>
+                        </div>
+                        <div class="message-preview">
+                            <p>Congratulations on earning the 'Creative Genius' badge! Your innovative approach to...</p>
+                            <span class="message-time">Feb 20, 2025</span>
+                        </div>
+                        <div class="message-actions">
+                            <button class="btn btn-icon"><i class="fas fa-reply"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn btn-outlined view-all">View All Messages</button>
+            </section>-->
+
+            <!-- Feedback Section -->
+            <!--<section class="feedback-section">
+                <div class="section-header">
+                    <h2>Judge Feedback</h2>
+                </div>
+                
+                <div class="feedback-list">
+                    <div class="feedback-card">
+                        <div class="feedback-header">
+                            <div class="judge-info">
+                                <div class="judge-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div>
+                                    <h4>Dr. Sarah Williams</h4>
+                                    <span class="feedback-date">Feb 22, 2025</span>
+                                </div>
+                            </div>
+                            <div class="feedback-score">
+                                <span>85</span>/100
+                            </div>
+                        </div>
+                        <div class="feedback-content">
+                            <p>Your team's project shows great potential. The concept is innovative and addresses a real market need. The user interface is intuitive, but could benefit from more polished design elements. Your technical implementation is solid, though there are opportunities to optimize performance.</p>
+                        </div>
+                        <div class="feedback-categories">
+                            <div class="category-item">
+                                <span class="category-label">Innovation</span>
+                                <div class="category-score">
+                                    <div class="score-fill" style="width: 90%"></div>
+                                </div>
+                                <span class="score-value">90%</span>
+                            </div>
+                            <div class="category-item">
+                                <span class="category-label">Technical</span>
+                                <div class="category-score">
+                                    <div class="score-fill" style="width: 85%"></div>
+                                </div>
+                                <span class="score-value">85%</span>
+                            </div>
+                            <div class="category-item">
+                                <span class="category-label">Design</span>
+                                <div class="category-score">
+                                    <div class="score-fill" style="width: 75%"></div>
+                                </div>
+                                <span class="score-value">75%</span>
+                            </div>
+                            <div class="category-item">
+                                <span class="category-label">Presentation</span>
+                                <div class="category-score">
+                                    <div class="score-fill" style="width: 88%"></div>
+                                </div>
+                                <span class="score-value">88%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="feedback-card">
+                        <div class="feedback-header">
+                            <div class="judge-info">
+                                <div class="judge-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div>
+                                    <h4>James Thompson</h4>
+                                    <span class="feedback-date">Feb 21, 2025</span>
+                                </div>
+                            </div>
+                            <div class="feedback-score">
+                                <span>82</span>/100
+                            </div>
+                        </div>
+                        <div class="feedback-content">
+                            <p>Strong concept with creative problem-solving. Your solution demonstrates good understanding of the target audience needs. Code quality is good, but documentation could be improved. The demo was effective in showcasing key features.</p>
+                        </div>
+                        <div class="feedback-categories">
+                            <div class="category-item">
+                                <span class="category-label">Innovation</span>
+                                <div class="category-score">
+                                    <div class="score-fill" style="width: 88%"></div>
+                                </div>
+                                <span class="score-value">88%</span>
+                            </div>
+                            <div class="category-item">
+                                <span class="category-label">Technical</span>
+                                <div class="category-score">
+                                    <div class="score-fill" style="width: 80%"></div>
+                                </div>
+                                <span class="score-value">80%</span>
+                            </div>
+                            <div class="category-item">
+                                <span class="category-label">Design</span>
+                                <div class="category-score">
+                                    <div class="score-fill" style="width: 78%"></div>
+                                </div>
+                                <span class="score-value">78%</span>
+                            </div>
+                            <div class="category-item">
+                                <span class="category-label">Presentation</span>
+                                <div class="category-score">
+                                    <div class="score-fill" style="width: 85%"></div>
+                                </div>
+                                <span class="score-value">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+            <!-- Resources Section -->
+            <section class="resources-section">
+                <div class="section-header">
+                    <h2>Resource Hub</h2>
+                    <div class="resource-filters">
+                        <select class="filter-dropdown">
+                            <option>All Resources</option>
+                            <option>Tutorials</option>
+                            <option>Documentation</option>
+                            <option>Templates</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h3>Hackathon Guidelines</h3>
+                            <p>Official rules and guidelines for the NCT Hackathon.</p>
+                            <div class="resource-meta">
+                                <span><i class="fas fa-calendar"></i> Feb 20, 2025</span>
+                                <span><i class="fas fa-download"></i> 156</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn btn-sm"><i class="fas fa-download"></i> Download</button>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-file-code"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h3>API Documentation</h3>
+                            <p>Complete documentation for all available APIs.</p>
+                            <div class="resource-meta">
+                                <span><i class="fas fa-calendar"></i> Feb 18, 2025</span>
+                                <span><i class="fas fa-download"></i> 98</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn btn-sm"><i class="fas fa-download"></i> Download</button>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card new">
+                        <div class="resource-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h3>AI Workshop Recording</h3>
+                            <p>Recording of the AI Development workshop.</p>
+                            <div class="resource-meta">
+                                <span><i class="fas fa-calendar"></i> Feb 24, 2025</span>
+                                <span><i class="fas fa-download"></i> 42</span>
+                            </div>
+                            <span class="new-tag">NEW</span>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn btn-sm"><i class="fas fa-play"></i> Watch</button>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h3>Project Template</h3>
+                            <p>Starter template for hackathon projects.</p>
+                            <div class="resource-meta">
+                                <span><i class="fas fa-calendar"></i> Feb 15, 2025</span>
+                                <span><i class="fas fa-download"></i> 205</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn btn-sm"><i class="fas fa-download"></i> Download</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Announcements Section -->
+            <section class="announcements-section">
+                <div class="section-header">
+                    <h2>Announcements</h2>
+                </div>
+                
+                <div class="announcements-list">
+                    <div class="announcement-card new">
+                        <div class="announcement-header">
+                            <h3>Workshop Schedule Updated</h3>
+                            <span class="announcement-date">February 25, 2025</span>
+                        </div>
+                        <div class="announcement-content">
+                            <p>The schedule for tomorrow's AI workshop has been updated. The session will now start at 10:00 AM instead of 9:00 AM. Please make sure to join on time.</p>
+                        </div>
+                        <div class="announcement-footer">
+                            <span class="announcement-author">Posted by: Michael Rodriguez (Organizer)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="announcement-card new">
+                        <div class="announcement-header">
+                            <h3>New Resources Available</h3>
+                            <span class="announcement-date">February 24, 2025</span>
+                        </div>
+                        <div class="announcement-content">
+                            <p>We've added new resources to help with your AI development. Check out the Resource Hub for the latest materials, including code samples and best practices documents.</p>
+                        </div>
+                        <div class="announcement-footer">
+                            <span class="announcement-author">Posted by: Jennifer Lee (Organizer)</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- New Message Modal -->
+    <div class="modal" id="messageModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>New Message</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="message-form">
+                    <div class="form-group">
+                        <label>To</label>
+                        <select class="form-control">
+                            <option>Select Recipient</option>
+                            <optgroup label="Judges">
+                                <option>Dr. Sarah Williams</option>
+                                <option>James Thompson</option>
+                                <option>David Chen</option>
+                            </optgroup>
+                            <optgroup label="Organizers">
+                                <option>Michael Rodriguez</option>
+                                <option>Jennifer Lee</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input type="text" class="form-control" placeholder="Enter subject">
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea class="form-control" rows="5" placeholder="Write your message here..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Attachments</label>
+                        <div class="attachment-upload">
+                            <button class="btn btn-outlined btn-sm">
+                                <i class="fas fa-paperclip"></i> Add Attachment
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary close-btn">Cancel</button>
+                <button class="btn btn-primary send-btn">Send Message</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div class="modal" id="profileModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edit Profile</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="profile-edit-container">
+                    <div class="profile-image-editor">
+                        <div class="profile-image-preview">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <button class="btn btn-sm">Change Photo</button>
+                    </div>
+                    <div class="profile-form">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" value="Alex Johnson" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" value="alex.johnson@email.com" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>University/Institution</label>
+                            <input type="text" value="Tech University" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Major/Field</label>
+                            <input type="text" value="Computer Science" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Bio</label>
+                            <textarea class="form-control">Junior developer passionate about AI and machine learning. Looking to create innovative solutions that make a difference.</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Skills</label>
+                            <select multiple class="form-control">
+                                <option selected>Python</option>
+                                <option selected>JavaScript</option>
+                                <option selected>React</option>
+                                <option>TensorFlow</option>
+                                <option>Node.js</option>
+                                <option>Mobile Development</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary close-btn">Cancel</button>
+                <button class="btn btn-primary save-btn">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple JavaScript for menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    menuItems.forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            // Modal Functionality
+            const modals = {
+                messageModal: document.getElementById('messageModal'),
+                profileModal: document.getElementById('profileModal')
+            };
+            
+            // New Message Button
+            const newMessageBtn = document.querySelector('.messages-section .btn-primary');
+            if (newMessageBtn) {
+                newMessageBtn.addEventListener('click', function() {
+                    modals.messageModal.style.display = 'block';
+                });
+            }
+            
+            // Edit Profile Button
+            const editProfileBtn = document.querySelector('.edit-profile-btn');
+            if (editProfileBtn) {
+                editProfileBtn.addEventListener('click', function() {
+                    modals.profileModal.style.display = 'block';
+                });
+            }
+            
+            // Close Buttons
+            const closeButtons = document.querySelectorAll('.close, .close-btn');
+            closeButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    for (const modal in modals) {
+                        modals[modal].style.display = 'none';
+                    }
+                });
+            });
+            
+            // Header Icons
+            const headerIcons = document.querySelectorAll('.header-actions > div');
+            headerIcons.forEach(icon => {
+                icon.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                });
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+    const menuItems = document.querySelectorAll(".menu-item");
+
+    menuItems.forEach(item => {
+        item.addEventListener("click", function () {
+            const url = item.getAttribute("data-url");
+            console.log("Redirecting to:", url); // Debugging
+            if (url) {
+                window.location.href = url;
+            }
+        });
+    });
+});
+    </script>
+</body>
+</html>

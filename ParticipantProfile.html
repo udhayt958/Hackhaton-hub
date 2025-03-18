@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCT Hackathon Portal - Profile</title>
+    <link rel="stylesheet" href="ParticipantProfile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>NCT Hackathon</h3>
+                <p>Participant Dashboard</p>
+            </div>
+            
+            <div class="user-profile">
+                <div class="profile-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-info">
+                    <h4>Alex Johnson</h4>
+                    <p>Team: Code Warriors</p>
+                </div>
+                <div class="edit-profile-btn">
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+            
+            <div class="sidebar-menu">
+                <div class="menu-item" data-url="ParticipantDashboard.html">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="menu-item active" data-url="ParticipantProfile.html">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantTeam.html">
+                    <i class="fas fa-users"></i>
+                    <span>Team</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantProject.html">
+                    <i class="fas fa-code"></i>
+                    <span>Project</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantSchedule.html">
+                    <i class="fas fa-calendar"></i>
+                    <span>Schedule</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantRecources.html">
+                    <i class="fas fa-book"></i>
+                    <span>Resources</span>
+                </div>
+               
+                <div class="menu-item" data-url="ParticipantMessages.html">
+                    <i class="fas fa-envelope"></i>
+                    <span>Messages</span>
+                    <span class="badge message-badge">3</span>
+                </div>
+
+                <div class="menu-item" data-url="ParticipantLeaderboard.html">
+                    <i class="fas fa-trophy"></i>
+                    <span>Leaderboard</span>
+                </div>
+                <div class="menu-item" data-url="../home.html">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header class="top-header">
+                <div class="header-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="header-actions">
+                    <div class="notification-bell">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">2</span>
+                    </div>
+                    <div class="messages-icon">
+                        <i class="fas fa-envelope"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="help-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Profile Header Banner -->
+            <section class="page-header">
+                <div class="page-header-content">
+                    <h1>My Profile</h1>
+                    <p>Manage your personal information, skills, and hackathon history</p>
+                </div>
+                <div class="page-header-actions">
+                    <button class="btn btn-outlined" id="exportData">
+                        <i class="fas fa-download"></i> Download Resume
+                    </button>
+                </div>
+            </section>
+
+            <!-- Profile Information Section -->
+            <div class="section profile-info-section">
+                <div class="section-header">
+                    <h2>Personal Information</h2>
+                    <button class="btn btn-primary edit-btn" id="editProfileBtn"><i class="fas fa-edit"></i> Edit Profile</button>
+                </div>
+                <div class="profile-container">
+                    <div class="profile-avatar">
+                        <img src="https://via.placeholder.com/150" alt="Profile Avatar">
+                        <div class="avatar-upload">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                    </div>
+                    <div class="profile-details">
+                        <div class="profile-row">
+                            <div class="profile-field">
+                                <label>Full Name</label>
+                                <p>Alex Johnson</p>
+                            </div>
+                            <div class="profile-field">
+                                <label>Email</label>
+                                <p>alex.johnson@email.com</p>
+                            </div>
+                        </div>
+                        <div class="profile-row">
+                            <div class="profile-field">
+                                <label>University/Organization</label>
+                                <p>Tech University</p>
+                            </div>
+                            <div class="profile-field">
+                                <label>Field of Study/Role</label>
+                                <p>Computer Science</p>
+                            </div>
+                        </div>
+                        <div class="profile-row">
+                            <div class="profile-field">
+                                <label>Location</label>
+                                <p>New York, USA</p>
+                            </div>
+                            <div class="profile-field">
+                                <label>Team</label>
+                                <p>Code Warriors</p>
+                            </div>
+                        </div>
+                        <div class="profile-field">
+                            <label>Bio</label>
+                            <p>Junior developer passionate about AI and machine learning. Looking to create innovative solutions that make a difference.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills & Badges Section -->
+            <div class="two-column-grid">
+                <!-- Skills Section -->
+                <div class="section skills-section">
+                    <div class="section-header">
+                        <h2>Skills & Expertise</h2>
+                        <button class="btn btn-outlined edit-btn"><i class="fas fa-plus"></i> Add Skills</button>
+                    </div>
+                    <div class="skills-container">
+                        <div class="skill-category">
+                            <h3>Programming Languages</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Python <i class="fas fa-star rating"></i><i class="fas fa-star rating"></i><i class="fas fa-star rating"></i><i class="fas fa-star-half-alt rating"></i><i class="far fa-star rating"></i></span>
+                                <span class="skill-tag">JavaScript <i class="fas fa-star rating"></i><i class="fas fa-star rating"></i><i class="fas fa-star rating"></i><i class="far fa-star rating"></i><i class="far fa-star rating"></i></span>
+                                <span class="skill-tag">Java <i class="fas fa-star rating"></i><i class="fas fa-star rating"></i><i class="far fa-star rating"></i><i class="far fa-star rating"></i><i class="far fa-star rating"></i></span>
+                                <span class="skill-tag">C++ <i class="fas fa-star rating"></i><i class="fas fa-star-half-alt rating"></i><i class="far fa-star rating"></i><i class="far fa-star rating"></i><i class="far fa-star rating"></i></span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Frameworks & Libraries</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">React <i class="fas fa-star rating"></i><i class="fas fa-star rating"></i><i class="fas fa-star rating"></i><i class="far fa-star rating"></i><i class="far fa-star rating"></i></span>
+                                <span class="skill-tag">Node.js <i class="fas fa-star rating"></i><i class="fas fa-star rating"></i><i class="fas fa-star-half-alt rating"></i><i class="far fa-star rating"></i><i class="far fa-star rating"></i></span>
+                                <span class="skill-tag">TensorFlow <i class="fas fa-star rating"></i><i class="fas fa-star rating"></i><i class="far fa-star rating"></i><i class="far fa-star rating"></i><i class="far fa-star rating"></i></span>
+                                <span class="skill-tag">Django <i class="fas fa-star rating"></i><i class="fas fa-star rating"></i><i class="fas fa-star-half-alt rating"></i><i class="far fa-star rating"></i><i class="far fa-star rating"></i></span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Other Skills</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">UI/UX Design <i class="fas fa-star rating"></i><i class="fas fa-star rating"></i><i class="far fa-star rating"></i><i class="far fa-star rating"></i><i class="far fa-star rating"></i></span>
+                                <span class="skill-tag">Database Management <i class="fas fa-star rating"></i><i class="fas fa-star rating"></i><i class="fas fa-star rating"></i><i class="far fa-star rating"></i><i class="far fa-star rating"></i></span>
+                                <span class="skill-tag">Cloud Services <i class="fas fa-star rating"></i><i class="fas fa-star-half-alt rating"></i><i class="far fa-star rating"></i><i class="far fa-star rating"></i><i class="far fa-star rating"></i></span>
+                                <span class="skill-tag">Project Management <i class="fas fa-star rating"></i><i class="fas fa-star rating"></i><i class="far fa-star rating"></i><i class="far fa-star rating"></i><i class="far fa-star rating"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Badges Section -->
+                <div class="section badges-section">
+                    <div class="section-header">
+                        <h2>Earned Badges</h2>
+                    </div>
+                    <div class="badges-grid">
+                        <div class="badge-card earned">
+                            <div class="badge-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="badge-content">
+                                <h3>Creative Genius</h3>
+                                <p>Awarded for exceptional creativity</p>
+                                <span class="badge-date">Feb 20, 2025</span>
+                            </div>
+                        </div>
+                        
+                        <div class="badge-card earned">
+                            <div class="badge-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="badge-content">
+                                <h3>Team Player</h3>
+                                <p>Awarded for outstanding collaboration</p>
+                                <span class="badge-date">Feb 18, 2025</span>
+                            </div>
+                        </div>
+                        
+                        <div class="badge-card locked">
+                            <div class="badge-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="badge-content">
+                                <h3>Code Master</h3>
+                                <p>For technical excellence and clean code</p>
+                            </div>
+                        </div>
+                        
+                        <div class="badge-card locked">
+                            <div class="badge-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="badge-content">
+                                <h3>MVP</h3>
+                                <p>For overall exceptional performance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hackathon History Section -->
+            <div class="section history-section">
+                <div class="section-header">
+                    <h2>Hackathon History</h2>
+                    <button class="btn btn-outlined edit-btn"><i class="fas fa-plus"></i> Add Entry</button>
+                </div>
+                <div class="history-container">
+                    <div class="history-item">
+                        <div class="history-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="history-content">
+                            <div class="history-header">
+                                <h3>Global Code Fest</h3>
+                                <span class="history-date">October 2024</span>
+                            </div>
+                            <div class="history-details">
+                                <p><strong>Project:</strong> Smart Home Automation</p>
+                                <p><strong>Team:</strong> Code Wizards</p>
+                                <p><strong>Result:</strong> <span class="badge-result">2nd Place</span></p>
+                                <p class="history-description">Developed an IoT-based smart home system with voice recognition and energy conservation features. Our team's solution was praised for its intuitive interface and practical applications.</p>
+                            </div>
+                            <div class="history-actions">
+                                <button class="btn btn-sm btn-outlined">View Certificate</button>
+                                <button class="btn btn-sm btn-outlined">View Project</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="history-item">
+                        <div class="history-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="history-content">
+                            <div class="history-header">
+                                <h3>Summer Hack Challenge</h3>
+                                <span class="history-date">July 2024</span>
+                            </div>
+                            <div class="history-details">
+                                <p><strong>Project:</strong> AI-Powered Health Assistant</p>
+                                <p><strong>Team:</strong> Health Innovators</p>
+                                <p><strong>Result:</strong> <span class="badge-result">Finalist</span></p>
+                                <p class="history-description">Created a health monitoring application using machine learning to predict potential health issues based on user input and wearable device data. Our solution made it to the final round of judging.</p>
+                            </div>
+                            <div class="history-actions">
+                                <button class="btn btn-sm btn-outlined">View Certificate</button>
+                                <button class="btn btn-sm btn-outlined">View Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div class="modal" id="profileModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edit Profile</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="profile-edit-container">
+                    <div class="profile-image-editor">
+                        <div class="profile-image-preview">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <button class="btn btn-sm btn-outlined">Change Photo</button>
+                    </div>
+                    <div class="profile-form">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" value="Alex Johnson" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" value="alex.johnson@email.com" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>University/Institution</label>
+                            <input type="text" value="Tech University" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Major/Field</label>
+                            <input type="text" value="Computer Science" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Location</label>
+                            <input type="text" value="New York, USA" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Team</label>
+                            <input type="text" value="Code Warriors" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Bio</label>
+                            <textarea class="form-control">Junior developer passionate about AI and machine learning. Looking to create innovative solutions that make a difference.</textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary close-btn">Cancel</button>
+                <button class="btn btn-primary save-btn">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Skills Modal -->
+    <div class="modal" id="skillsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add Skills</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Select Category</label>
+                    <select class="form-control">
+                        <option>Programming Languages</option>
+                        <option>Frameworks & Libraries</option>
+                        <option>Other Skills</option>
+                        <option>+ Add New Category</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Skill Name</label>
+                    <input type="text" class="form-control" placeholder="Enter skill name">
+                </div>
+                <div class="form-group">
+                    <label>Proficiency Level</label>
+                    <div class="rating-selector">
+                        <i class="fas fa-star rating-option selected"></i>
+                        <i class="fas fa-star rating-option selected"></i>
+                        <i class="fas fa-star rating-option selected"></i>
+                        <i class="far fa-star rating-option"></i>
+                        <i class="far fa-star rating-option"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary close-btn">Cancel</button>
+                <button class="btn btn-primary">Add Skill</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add History Modal -->
+    <div class="modal" id="historyModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add Hackathon Entry</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Hackathon Name</label>
+                    <input type="text" class="form-control" placeholder="Enter hackathon name">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input type="month" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Result</label>
+                        <select class="form-control">
+                            <option>Winner (1st Place)</option>
+                            <option>Runner-up (2nd Place)</option>
+                            <option>3rd Place</option>
+                            <option>Finalist</option>
+                            <option>Participant</option>
+                            <option>Special Award</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Project Name</label>
+                    <input type="text" class="form-control" placeholder="Enter project name">
+                </div>
+                <div class="form-group">
+                    <label>Team Name</label>
+                    <input type="text" class="form-control" placeholder="Enter team name">
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea class="form-control" rows="4" placeholder="Describe your project and experience"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Upload Certificate/Evidence (Optional)</label>
+                    <input type="file" class="form-control">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary close-btn">Cancel</button>
+                <button class="btn btn-primary">Add Entry</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sidebar Menu Functionality
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const itemText = this.querySelector('span').innerText.toLowerCase();
+                    if (itemText === 'dashboard') {
+                        window.location.href = 'ParticipantDashboard.html';
+                    }
+                    
+                    menuItems.forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Modal Functionality
+            const modals = {
+                profileModal: document.getElementById('profileModal'),
+                skillsModal: document.getElementById('skillsModal'),
+                historyModal: document.getElementById('historyModal')
+            };
+            
+            // Edit Profile Button
+            const editProfileBtn = document.getElementById('editProfileBtn');
+            if (editProfileBtn) {
+                editProfileBtn.addEventListener('click', function() {
+                    modals.profileModal.style.display = 'block';
+                });
+            }
+            
+            // Add Skills Button
+            const addSkillsBtn = document.querySelector('.skills-section .edit-btn');
+            if (addSkillsBtn) {
+                addSkillsBtn.addEventListener('click', function() {
+                    modals.skillsModal.style.display = 'block';
+                });
+            }
+            
+            // Add History Button
+            const addHistoryBtn = document.querySelector('.history-section .edit-btn');
+            if (addHistoryBtn) {
+                addHistoryBtn.addEventListener('click', function() {
+                    modals.historyModal.style.display = 'block';
+                });
+            }
+            
+            // Close Buttons
+            const closeButtons = document.querySelectorAll('.close, .close-btn');
+            closeButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    for (const modal in modals) {
+                        modals[modal].style.display = 'none';
+                    }
+                });
+            });
+            
+            // Rating Selection
+            const ratingOptions = document.querySelectorAll('.rating-option');
+            ratingOptions.forEach((star, index) => {
+                star.addEventListener('click', function() {
+                    ratingOptions.forEach((s, i) => {
+                        if (i <= index) {
+                            s.classList.remove('far');
+                            s.classList.add('fas', 'selected');
+                        } else {
+                            s.classList.remove('fas', 'selected');
+                            s.classList.add('far');
+                        }
+                    });
+                });
+            });
+            
+            // Avatar Upload (placeholder functionality)
+            const avatarUpload = document.querySelector('.avatar-upload');
+            if (avatarUpload) {
+                avatarUpload.addEventListener('click', function() {
+                    const input = document.createElement('input');
+                    input.type = 'file';
+                    input.accept = 'image/*';
+                    input.click();
+                    
+                    input.onchange = function() {
+                        if (input.files && input.files[0]) {
+                            alert('Upload functionality would be implemented here.');
+                        }
+                    };
+                });
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+    const menuItems = document.querySelectorAll(".menu-item");
+
+    menuItems.forEach(item => {
+        item.addEventListener("click", function () {
+            const url = item.getAttribute("data-url");
+            if (url) {
+                window.location.href = url; // Redirect to the corresponding page
+            }
+             });
+                     });
+                        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCT Hackathon - Achievements</title>
+    <link rel="stylesheet" href="ParticipantAchievements.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar (Same as Dashboard) -->
+        <div class="sidebar">
+            <div class="sidebar-header" >
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>NCT Hackathon</h3>
+                <p>Participant Dashboard</p>
+            </div>
+            
+            <div class="user-profile" >
+                <div class="profile-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-info">
+                    <h4>Alex Johnson</h4>
+                    <p>Team: Code Warriors</p>
+                </div>
+                <div class="edit-profile-btn">
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+            
+            <div class="sidebar-menu">
+                <div class="menu-item" data-url="ParticipantDashboard.html">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantProfile.html">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantTeam.html">
+                    <i class="fas fa-users"></i>
+                    <span>Team</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantProject.html">
+                    <i class="fas fa-code"></i>
+                    <span>Project</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantSchedule.html">
+                    <i class="fas fa-calendar"></i>
+                    <span>Schedule</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantRecources.html">
+                    <i class="fas fa-book"></i>
+                    <span>Resources</span>
+                </div>
+                <div class="menu-item active" data-url="ParticipantAchievements.html">
+                    <i class="fas fa-medal"></i>
+                    <span>Achievements</span>
+                    <span class="badge new-badge">2</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantMessages.html">
+                    <i class="fas fa-envelope"></i>
+                    <span>Messages</span>
+                    <span class="badge message-badge">3</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantAnalytics.html">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Analytics</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantLeaderboard.html">
+                    <i class="fas fa-trophy"></i>
+                    <span>Leaderboard</span>
+                </div>
+                <div class="menu-item" data-url="../home.html">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Achievements Header -->
+            <section class="section achievements-header">
+                <h2>Your Achievements</h2>
+                <p>Recognize your progress and milestones in the NCT Hackathon</p>
+            </section>
+
+            <!-- Earned Badges -->
+            <section class="section earned-badges">
+                <div class="section-header">
+                    <h3>Earned Badges</h3>
+                    <span class="badge-count">2 out of 8 badges</span>
+                </div>
+                
+                <div class="badges-grid">
+                    <div class="badge-card earned">
+                        <div class="badge-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="badge-details">
+                            <h4>Creative Genius</h4>
+                            <p>Awarded for exceptional creativity in project design</p>
+                            <div class="badge-meta">
+                                <span class="badge-date">Earned on Feb 20, 2025</span>
+                                <span class="badge-points">+50 XP</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="badge-card earned">
+                        <div class="badge-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="badge-details">
+                            <h4>Team Player</h4>
+                            <p>Recognized for outstanding collaboration</p>
+                            <div class="badge-meta">
+                                <span class="badge-date">Earned on Feb 18, 2025</span>
+                                <span class="badge-points">+40 XP</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="badge-card locked">
+                        <div class="badge-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="badge-details">
+                            <h4>Code Master</h4>
+                            <p>For technical excellence and clean code</p>
+                            <div class="badge-meta">
+                                <span class="badge-progress">Progress: 70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="badge-card locked">
+                        <div class="badge-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="badge-details">
+                            <h4>MVP</h4>
+                            <p>For overall exceptional performance</p>
+                            <div class="badge-meta">
+                                <span class="badge-progress">Progress: 40%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Achievements Timeline -->
+            <section class="section achievements-timeline">
+                <div class="section-header">
+                    <h3>Achievement Timeline</h3>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Creative Genius Badge Unlocked</h4>
+                            <p>Recognized for innovative AI accessibility solution</p>
+                            <span class="timeline-date">Feb 20, 2025</span>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Team Player Badge Earned</h4>
+                            <p>Exemplary teamwork and collaboration</p>
+                            <span class="timeline-date">Feb 18, 2025</span>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Progress Milestone</h4>
+                            <p>Completed 50% of project development</p>
+                            <span class="timeline-date">Feb 15, 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Available Badges -->
+            <section class="section available-badges">
+                <div class="section-header">
+                    <h3>Upcoming Badges</h3>
+                </div>
+                
+                <div class="badges-grid">
+                    <div class="badge-card upcoming">
+                        <div class="badge-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="badge-details">
+                            <h4>Project Innovator</h4>
+                            <p>Complete your project with unique features</p>
+                            <div class="badge-requirements">
+                                <span>Requirements:</span>
+                                <ul>
+                                    <li>Implement 3 unique features</li>
+                                    <li>Complete project by Feb 28</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="badge-card upcoming">
+                        <div class="badge-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <div class="badge-details">
+                            <h4>Community Champion</h4>
+                            <p>Contribute to hackathon community resources</p>
+                            <div class="badge-requirements">
+                                <span>Requirements:</span>
+                                <ul>
+                                    <li>Share 2 helpful resources</li>
+                                    <li>Help 3 team members</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- XP and Ranking -->
+            <section class="section xp-ranking">
+                <div class="section-header">
+                    <h3>Your Progress</h3>
+                </div>
+                
+                <div class="xp-card">
+                    <div class="xp-stats">
+                        <div class="xp-level">
+                            <span class="level-number">3</span>
+                            <span class="level-text">Current Level</span>
+                        </div>
+                        <div class="xp-progress">
+                            <div class="xp-bar">
+                                <div class="xp-fill" style="width: 65%;"></div>
+                            </div>
+                            <div class="xp-details">
+                                <span>90 / 150 XP</span>
+                                <span>Next Level: 60 XP</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xp-rewards">
+                        <h4>Next Level Rewards</h4>
+                        <ul>
+                            <li>Exclusive Profile Badge</li>
+                            <li>Advanced Resources Access</li>
+                            <li>Mentorship Opportunity</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sidebar Menu Functionality
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Navigate to respective pages
+                    const spanText = this.querySelector('span').textContent.trim();
+                    switch(spanText) {
+                        case 'Dashboard':
+                            window.location.href = 'ParticipantDashboard.html';
+                            break;
+                        case 'Resources':
+                            window.location.href = 'ParticipantResources.html';
+                            break;
+                        case 'Messages':
+                            window.location.href = 'ParticipantMessages.html';
+                            break;
+                        case 'Analytics':
+                            window.location.href = 'ParticipantAnalytics.html';
+                            break;
+                        case 'Leaderboard':
+                            window.location.href = 'ParticipantLeaderboard.html';
+                            break;
+                    }
+                    
+                    menuItems.forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+    const menuItems = document.querySelectorAll(".menu-item");
+
+    menuItems.forEach(item => {
+        item.addEventListener("click", function () {
+            const url = item.getAttribute("data-url");
+            console.log("Redirecting to:", url); // Debugging
+            if (url) {
+                window.location.href = url;
+            }
+        });
+    });
+});
+    </script>
+</body>
+</html>

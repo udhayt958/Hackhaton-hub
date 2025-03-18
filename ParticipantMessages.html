@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCT Hackathon - Messages</title>
+    <link rel="stylesheet" href="ParticipantMessages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar (Same as Dashboard) -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>NCT Hackathon</h3>
+                <p>Participant Dashboard</p>
+            </div>
+            
+            <div class="user-profile">
+                <div class="profile-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-info">
+                    <h4>Alex Johnson</h4>
+                    <p>Team: Code Warriors</p>
+                </div>
+                <div class="edit-profile-btn">
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+            
+            <div class="sidebar-menu">
+                <div class="menu-item" data-url="ParticipantDashboard.html">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantProfile.html">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantTeam.html">
+                    <i class="fas fa-users"></i>
+                    <span>Team</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantProject.html">
+                    <i class="fas fa-code"></i>
+                    <span>Project</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantSchedule.html">
+                    <i class="fas fa-calendar"></i>
+                    <span>Schedule</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantRecources.html">
+                    <i class="fas fa-book"></i>
+                    <span>Resources</span>
+                </div>
+                
+                <div class="menu-item active" data-url="ParticipantMessages.html">
+                    <i class="fas fa-envelope"></i>
+                    <span>Messages</span>
+                    <span class="badge message-badge">3</span>
+                </div>
+                
+                <div class="menu-item" data-url="ParticipantLeaderboard.html">
+                    <i class="fas fa-trophy"></i>
+                    <span>Leaderboard</span>
+                </div>
+                <div class="menu-item" data-url="../home.html">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header class="top-header">
+                <div class="header-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search messages...">
+                </div>
+                <div class="header-actions">
+                    <div class="notification-bell">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">2</span>
+                    </div>
+                    <div class="messages-icon">
+                        <i class="fas fa-envelope"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="help-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Messages Section -->
+            <div class="messages-container">
+                <!-- Messages Sidebar -->
+                <div class="messages-sidebar">
+                    <div class="messages-sidebar-header">
+                        <h2>Messages</h2>
+                        <button class="btn btn-primary" id="compose-btn">
+                            <i class="fas fa-pen"></i> Compose
+                        </button>
+                    </div>
+                    
+                    <div class="messages-filters">
+                        <div class="filter-tabs">
+                            <button class="filter-tab active" data-filter="all">All</button>
+                            <button class="filter-tab" data-filter="unread">Unread</button>
+                            <button class="filter-tab" data-filter="judges">Judges</button>
+                            <button class="filter-tab" data-filter="organizers">Organizers</button>
+                        </div>
+                    </div>
+                    
+                    <div class="messages-list">
+                        <!-- Judge Messages -->
+                        <div class="message-preview unread selected" data-id="1">
+                            <div class="message-avatar judge">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="message-preview-content">
+                                <div class="message-preview-header">
+                                    <h3>Dr. Sarah Williams</h3>
+                                    <span class="message-time">Today, 11:45 AM</span>
+                                </div>
+                                <div class="message-preview-info">
+                                    <span class="sender-role judge">Judge</span>
+                                    <span class="message-status">New</span>
+                                </div>
+                                <p class="message-snippet">I've reviewed your project's first submission. There are some interesting innovations...</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Organizer Messages -->
+                        <div class="message-preview" data-id="2">
+                            <div class="message-avatar organizer">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="message-preview-content">
+                                <div class="message-preview-header">
+                                    <h3>Michael Rodriguez</h3>
+                                    <span class="message-time">Yesterday, 2:30 PM</span>
+                                </div>
+                                <div class="message-preview-info">
+                                    <span class="sender-role organizer">Organizer</span>
+                                </div>
+                                <p class="message-snippet">We've updated some resources in the Resource Hub. Please check out the new...</p>
+                            </div>
+                        </div>
+                        
+                        <!-- More messages -->
+                        <div class="message-preview" data-id="3">
+                            <div class="message-avatar judge">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="message-preview-content">
+                                <div class="message-preview-header">
+                                    <h3>James Thompson</h3>
+                                    <span class="message-time">Feb 25, 2025</span>
+                                </div>
+                                <div class="message-preview-info">
+                                    <span class="sender-role judge">Judge</span>
+                                </div>
+                                <p class="message-snippet">Congratulations on your innovative approach. Some technical improvements...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Message Content -->
+                <div class="message-content">
+                    <div class="message-header">
+                        <div class="message-header-info">
+                            <h2>Project Feedback</h2>
+                            <div class="message-meta">
+                                <span class="message-from">From: <strong>Dr. Sarah Williams</strong> (Judge)</span>
+                                <span class="message-time-full">Today, March 3, 2025 at 11:45 AM</span>
+                            </div>
+                        </div>
+                        <div class="message-header-actions">
+                            <button class="btn btn-icon" title="Mark as unread">
+                                <i class="fas fa-envelope"></i>
+                            </button>
+                            <button class="btn btn-icon" title="Archive">
+                                <i class="fas fa-archive"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="message-body">
+                        <p>Dear Alex Johnson,</p>
+                        
+                        <p>I've thoroughly reviewed your team's project submission for the NCT Hackathon. Your approach to developing an AI-powered accessibility tool is both innovative and promising.</p>
+                        
+                        <p>Key Observations:</p>
+                        <ul>
+                            <li>Innovative use of machine learning for real-time text-to-speech conversion</li>
+                            <li>Impressive user interface design</li>
+                            <li>Potential for significant social impact</li>
+                        </ul>
+                        
+                        <p>Areas for Improvement:</p>
+                        <ul>
+                            <li>Consider optimizing the backend processing speed</li>
+                            <li>Explore more advanced natural language processing techniques</li>
+                            <li>Develop more comprehensive error handling</li>
+                        </ul>
+                        
+                        <p>Overall, your project shows great potential. Keep refining your approach, and don't hesitate to reach out if you need further guidance.</p>
+                        
+                        <p>Best regards,<br>
+                        Dr. Sarah Williams<br>
+                        Hackathon Judge</p>
+                    </div>
+                    
+                    <div class="message-reply">
+                        <div class="reply-header">
+                            <h3>Reply to Dr. Sarah Williams</h3>
+                        </div>
+                        <div class="reply-editor">
+                            <div class="reply-toolbar">
+                                <button class="toolbar-btn"><i class="fas fa-bold"></i></button>
+                                <button class="toolbar-btn"><i class="fas fa-italic"></i></button>
+                                <button class="toolbar-btn"><i class="fas fa-underline"></i></button>
+                                <button class="toolbar-btn"><i class="fas fa-list"></i></button>
+                                <button class="toolbar-btn"><i class="fas fa-list-ol"></i></button>
+                                <button class="toolbar-btn"><i class="fas fa-paperclip"></i></button>
+                            </div>
+                            <textarea placeholder="Type your reply here..."></textarea>
+                            <div class="reply-actions">
+                                <button class="btn btn-secondary">Save Draft</button>
+                                <button class="btn btn-primary">Send Reply</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Compose Message Modal -->
+    <div class="modal" id="composeModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>New Message</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="compose-form">
+                    <div class="form-group">
+                        <label>To</label>
+                        <select class="form-control" id="message-recipient-type">
+                            <option value="individual">Individual</option>
+                            <option value="team">Team Members</option>
+                            <option value="judges">Judges</option>
+                            <option value="organizers">Organizers</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group recipient-group" id="individual-recipient">
+                        <label>Recipient</label>
+                        <div class="recipient-search">
+                            <input type="text" class="form-control" placeholder="Search for a user...">
+                            <div class="recipient-suggestions">
+                                <div class="suggestion-item">
+                                    <div class="suggestion-avatar judge">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="suggestion-info">
+                                        <span class="suggestion-name">Dr. Sarah Williams</span>
+                                        <span class="suggestion-role judge">Judge</span>
+                                    </div>
+                                </div>
+                                <div class="suggestion-item">
+                                    <div class="suggestion-avatar organizer">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="suggestion-info">
+                                        <span class="suggestion-name">Michael Rodriguez</span>
+                                        <span class="suggestion-role organizer">Organizer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="selected-recipients">
+                            <!-- Selected recipients will appear here -->
+                        </div>
+                    </div>
+                    
+                    <div class="form-group recipient-group" id="team-recipient" style="display: none;">
+                        <label>Team Members</label>
+                        <div class="team-members-list">
+                            <div class="team-member">
+                                <input type="checkbox" id="team-member-1">
+                                <label for="team-member-1">Emily Chen</label>
+                            </div>
+                            <div class="team-member">
+                                <input type="checkbox" id="team-member-2">
+                                <label for="team-member-2">Carlos Rodriguez</label>
+                            </div>
+                            <div class="team-member">
+                                <input type="checkbox" id="team-member-3">
+                                <label for="team-member-3">Sophie Kim</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input type="text" class="form-control" placeholder="Enter message subject">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Message</label>
+                        <div class="compose-toolbar">
+                            <button type="button" class="toolbar-btn"><i class="fas fa-bold"></i></button>
+                            <button type="button" class="toolbar-btn"><i class="fas fa-italic"></i></button>
+                            <button type="button" class="toolbar-btn"><i class="fas fa-underline"></i></button>
+                            <button type="button" class="toolbar-btn"><i class="fas fa-list"></i></button>
+                            <button type="button" class="toolbar-btn"><i class="fas fa-list-ol"></i></button>
+                            <button type="button" class="toolbar-btn"><i class="fas fa-paperclip"></i></button>
+                        </div>
+                        <textarea class="form-control" rows="10" placeholder="Type your message here..."></textarea>
+                    </div>
+<div class="form-group">
+                        <label>Attachments</label>
+                        <div class="attachment-upload">
+                            <button class="btn btn-outlined btn-sm">
+                                <i class="fas fa-paperclip"></i> Add Attachment
+                            </button>
+                            <input type="file" id="attachment-file" hidden multiple>
+                        </div>
+                        
+                        <div class="attachments-list">
+                            <!-- Attachments will be dynamically added here -->
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary close-btn">Cancel</button>
+                <button class="btn btn-outlined">Save Draft</button>
+                <button class="btn btn-primary send-btn">Send Message</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sidebar Menu Functionality
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Navigate to respective pages
+                    const spanText = this.querySelector('span').textContent.trim();
+                    switch(spanText) {
+                        case 'Dashboard':
+                            window.location.href = 'ParticipantDashboard.html';
+                            break;
+                        case 'Resources':
+                            window.location.href = 'ParticipantResources.html';
+                            break;
+                        case 'Achievements':
+                            window.location.href = 'ParticipantAchievements.html';
+                            break;
+                        case 'Analytics':
+                            window.location.href = 'ParticipantAnalytics.html';
+                            break;
+                        case 'Leaderboard':
+                            window.location.href = 'ParticipantLeaderboard.html';
+                            break;
+                    }
+                    
+                    menuItems.forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            // Message Preview Click
+            const messagePreviews = document.querySelectorAll('.message-preview');
+            messagePreviews.forEach(preview => {
+                preview.addEventListener('click', function() {
+                    messagePreviews.forEach(p => p.classList.remove('selected'));
+                    this.classList.remove('unread');
+                    this.classList.add('selected');
+                });
+            });
+            
+            // Filter Tabs
+            const filterTabs = document.querySelectorAll('.filter-tab');
+            filterTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    filterTabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const filter = this.dataset.filter;
+                    filterMessages(filter);
+                });
+            });
+            
+            function filterMessages(filter) {
+                const previews = document.querySelectorAll('.message-preview');
+                previews.forEach(preview => {
+                    if (filter === 'all') {
+                        preview.style.display = 'flex';
+                    } else if (filter === 'unread') {
+                        preview.style.display = preview.classList.contains('unread') ? 'flex' : 'none';
+                    } else if (filter === 'judges') {
+                        const role = preview.querySelector('.sender-role');
+                        preview.style.display = role && role.classList.contains('judge') ? 'flex' : 'none';
+                    } else if (filter === 'organizers') {
+                        const role = preview.querySelector('.sender-role');
+                        preview.style.display = role && role.classList.contains('organizer') ? 'flex' : 'none';
+                    }
+                });
+            }
+            
+            // Compose Button
+            const composeBtn = document.getElementById('compose-btn');
+            const composeModal = document.getElementById('composeModal');
+            if (composeBtn) {
+                composeBtn.addEventListener('click', function() {
+                    composeModal.style.display = 'block';
+                });
+            }
+            
+            // Close Buttons
+            const closeButtons = document.querySelectorAll('.close, .close-btn');
+            closeButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    composeModal.style.display = 'none';
+                });
+            });
+            
+            // Recipient Type Change
+            const recipientType = document.getElementById('message-recipient-type');
+            const recipientGroups = document.querySelectorAll('.recipient-group');
+            
+            if (recipientType) {
+                recipientType.addEventListener('change', function() {
+                    recipientGroups.forEach(group => {
+                        group.style.display = 'none';
+                    });
+                    
+                    const selectedGroup = document.getElementById(`${this.value}-recipient`);
+                    if (selectedGroup) {
+                        selectedGroup.style.display = 'block';
+                    }
+                });
+            }
+            
+            // Recipient Search Functionality
+            const recipientSearch = document.querySelector('.recipient-search input');
+            const recipientSuggestions = document.querySelector('.recipient-suggestions');
+            const selectedRecipientsContainer = document.querySelector('.selected-recipients');
+            
+            if (recipientSearch) {
+                recipientSearch.addEventListener('input', function() {
+                    const searchTerm = this.value.toLowerCase();
+                    const suggestionItems = document.querySelectorAll('.suggestion-item');
+                    
+                    suggestionItems.forEach(item => {
+                        const name = item.querySelector('.suggestion-name').textContent.toLowerCase();
+                        item.style.display = name.includes(searchTerm) ? 'flex' : 'none';
+                    });
+                });
+                
+                // Add recipient on click
+                document.querySelectorAll('.suggestion-item').forEach(item => {
+                    item.addEventListener('click', function() {
+                        const name = this.querySelector('.suggestion-name').textContent;
+                        const role = this.querySelector('.suggestion-role').textContent;
+                        
+                        // Create recipient tag
+                        const recipientTag = document.createElement('div');
+                        recipientTag.className = 'recipient-tag';
+                        recipientTag.innerHTML = `
+                            <span>${name}</span>
+                            <button class="remove-recipient">&times;</button>
+                        `;
+                        
+                        // Remove functionality
+                        const removeBtn = recipientTag.querySelector('.remove-recipient');
+                        removeBtn.addEventListener('click', () => {
+                            recipientTag.remove();
+                        });
+                        
+                        selectedRecipientsContainer.appendChild(recipientTag);
+                        recipientSearch.value = '';
+                    });
+                });
+            }
+            
+            // Attachment Handling
+            const attachmentBtn = document.querySelector('.attachment-upload .btn');
+            const attachmentInput = document.getElementById('attachment-file');
+            const attachmentsList = document.querySelector('.attachments-list');
+            
+            if (attachmentBtn && attachmentInput) {
+                attachmentBtn.addEventListener('click', function() {
+                    attachmentInput.click();
+                });
+                
+                attachmentInput.addEventListener('change', function() {
+                    Array.from(this.files).forEach(file => {
+                        addAttachment(file);
+                    });
+                });
+            }
+            
+            function addAttachment(file) {
+                const attachmentItem = document.createElement('div');
+                attachmentItem.className = 'attachment-item';
+                
+                let icon = 'fas fa-file';
+                if (file.type.includes('pdf')) {
+                    icon = 'fas fa-file-pdf';
+                } else if (file.type.includes('image')) {
+                    icon = 'fas fa-file-image';
+                } else if (file.type.includes('word') || file.name.endsWith('.docx') || file.name.endsWith('.doc')) {
+                    icon = 'fas fa-file-word';
+                } else if (file.type.includes('excel') || file.name.endsWith('.xlsx') || file.name.endsWith('.xls')) {
+                    icon = 'fas fa-file-excel';
+                }
+                
+                attachmentItem.innerHTML = `
+                    <div class="attachment-info">
+                        <i class="${icon}"></i>
+                        <div>
+                            <span class="attachment-name">${file.name}</span>
+                            <span class="attachment-size">(${formatFileSize(file.size)})</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-icon remove-attachment">&times;</button>
+                `;
+                
+                // Remove attachment
+                const removeBtn = attachmentItem.querySelector('.remove-attachment');
+                removeBtn.addEventListener('click', function() {
+                    attachmentItem.remove();
+                });
+                
+                attachmentsList.appendChild(attachmentItem);
+            }
+            
+            function formatFileSize(bytes) {
+                if (bytes < 1024) return bytes + ' B';
+                else if (bytes < 1048576) return (bytes / 1024).toFixed(1) + ' KB';
+                else return (bytes / 1048576).toFixed(1) + ' MB';
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+    const menuItems = document.querySelectorAll(".menu-item");
+
+    menuItems.forEach(item => {
+        item.addEventListener("click", function () {
+            const url = item.getAttribute("data-url");
+            if (url) {
+                window.location.href = url; // Redirect to the corresponding page
+            }
+             });
+                     });
+                        });
+    </script>
+</body>
+</html>

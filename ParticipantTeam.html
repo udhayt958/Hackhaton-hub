@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCT Hackathon Portal - Team</title>
+    <link rel="stylesheet" href="ParticipantTeam.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>NCT Hackathon</h3>
+                <p>Participant Dashboard</p>
+            </div>
+            
+            <div class="user-profile">
+                <div class="profile-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-info">
+                    <h4>Alex Johnson</h4>
+                    <p>Team: Code Warriors</p>
+                </div>
+                <div class="edit-profile-btn">
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+            
+            <div class="sidebar-menu">
+                <div class="menu-item" data-url="ParticipantDashboard.html">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantProfile.html">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </div>
+                <div class="menu-item active" data-url="ParticipantTeam.html">
+                    <i class="fas fa-users"></i>
+                    <span>Team</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantProject.html">
+                    <i class="fas fa-code"></i>
+                    <span>Project</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantSchedule.html">
+                    <i class="fas fa-calendar"></i>
+                    <span>Schedule</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantRecources.html">
+                    <i class="fas fa-book"></i>
+                    <span>Resources</span>
+                </div>
+                
+                <div class="menu-item" data-url="ParticipantMessages.html">
+                    <i class="fas fa-envelope"></i>
+                    <span>Messages</span>
+                    <span class="badge message-badge">3</span>
+                </div>
+                
+                <div class="menu-item" data-url="ParticipantLeaderboard.html">
+                    <i class="fas fa-trophy"></i>
+                    <span>Leaderboard</span>
+                </div>
+                <div class="menu-item" data-url="../home.html">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header class="top-header">
+                <div class="header-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search team members...">
+                </div>
+                <div class="header-actions">
+                    <div class="notification-bell">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">2</span>
+                    </div>
+                    <div class="messages-icon">
+                        <i class="fas fa-envelope"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="help-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Team Header Banner -->
+            <section class="page-header">
+                <div class="page-header-content">
+                    <h1>Team Management</h1>
+                    <p>Manage your team members and collaborators for the hackathon</p>
+                </div>
+                <div class="page-header-actions">
+                    <button class="btn btn-primary" id="createTeamBtn">
+                        <i class="fas fa-plus"></i> Create New Team
+                    </button>
+                </div>
+            </section>
+
+            <!-- Team Info Card -->
+            <section class="team-overview-section">
+                <div class="team-card">
+                    <div class="team-header">
+                        <div class="team-info">
+                            <div class="team-avatar">
+                                <span>CW</span>
+                            </div>
+                            <div>
+                                <h2>Code Warriors</h2>
+                                <div class="team-meta">
+                                    <span class="team-status"><i class="fas fa-users"></i> 3/5 Members</span>
+                                    <span class="team-status"><i class="fas fa-calendar-alt"></i> Created: Feb 15, 2025</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-progress">
+                            <div class="progress-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">Project Progress</span>
+                                    <span class="stat-value">65%</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Team Score</span>
+                                    <span class="stat-value">85/100</span>
+                                </div>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-fill" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-description">
+                        <p>Our team is focused on developing an AI-powered solution to improve accessibility in education technology. We're combining machine learning with intuitive UI design to create a platform that adapts to different learning needs.</p>
+                    </div>
+                    <div class="team-actions">
+                        <button class="btn btn-outlined" id="inviteBtn">
+                            <i class="fas fa-user-plus"></i> Invite Member
+                        </button>
+                        <button class="btn btn-outlined">
+                            <i class="fas fa-share-alt"></i> Share Team Code
+                        </button>
+                        <button class="btn btn-outlined">
+                            <i class="fas fa-edit"></i> Edit Team
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team Members Section -->
+            <section class="section members-section">
+                <div class="section-header">
+                    <h2>Team Members</h2>
+                    <div class="section-actions">
+                        <select class="form-control role-filter">
+                            <option value="all">All Roles</option>
+                            <option value="lead">Team Lead</option>
+                            <option value="developer">Developer</option>
+                            <option value="designer">Designer</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="members-list">
+                    <!-- Team Lead -->
+                    <div class="member-card">
+                        <div class="member-avatar">
+                            <img src="https://via.placeholder.com/60" alt="Alex Johnson">
+                            <div class="member-status online"></div>
+                        </div>
+                        <div class="member-info">
+                            <div class="member-header">
+                                <h3>Alex Johnson</h3>
+                                <span class="role-badge leader">Team Lead</span>
+                            </div>
+                            <div class="member-details">
+                                <p><i class="fas fa-envelope"></i> alex.johnson@email.com</p>
+                                <p><i class="fas fa-graduation-cap"></i> Computer Science</p>
+                                <p><i class="fas fa-university"></i> Tech University</p>
+                            </div>
+                            <div class="member-skills">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">Project Management</span>
+                            </div>
+                        </div>
+                        <div class="member-actions">
+                            <span class="self-badge">You</span>
+                            <div class="member-badges">
+                                <i class="fas fa-crown" title="Team Lead"></i>
+                                <i class="fas fa-award" title="Badge Earned: Team Player"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 1 -->
+                    <div class="member-card">
+                        <div class="member-avatar">
+                            <img src="https://via.placeholder.com/60" alt="John Smith">
+                            <div class="member-status offline"></div>
+                        </div>
+                        <div class="member-info">
+                            <div class="member-header">
+                                <h3>John Smith</h3>
+                                <span class="role-badge developer">Backend Developer</span>
+                            </div>
+                            <div class="member-details">
+                                <p><i class="fas fa-envelope"></i> john.smith@email.com</p>
+                                <p><i class="fas fa-graduation-cap"></i> Software Engineering</p>
+                                <p><i class="fas fa-university"></i> Tech University</p>
+                            </div>
+                            <div class="member-skills">
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">MongoDB</span>
+                                <span class="skill-tag">API Development</span>
+                            </div>
+                        </div>
+                        <div class="member-actions">
+                            <button class="btn btn-sm btn-outlined">Message</button>
+                            <button class="btn btn-icon" id="memberActionBtn"><i class="fas fa-ellipsis-v"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="member-card">
+                        <div class="member-avatar">
+                            <img src="https://via.placeholder.com/60" alt="Sam Johnson">
+                            <div class="member-status online"></div>
+                        </div>
+                        <div class="member-info">
+                            <div class="member-header">
+                                <h3>Sam Johnson</h3>
+                                <span class="role-badge designer">UI/UX Designer</span>
+                            </div>
+                            <div class="member-details">
+                                <p><i class="fas fa-envelope"></i> sam.johnson@email.com</p>
+                                <p><i class="fas fa-graduation-cap"></i> Design & Media</p>
+                                <p><i class="fas fa-university"></i> Design Institute</p>
+                            </div>
+                            <div class="member-skills">
+                                <span class="skill-tag">Figma</span>
+                                <span class="skill-tag">UI Design</span>
+                                <span class="skill-tag">User Research</span>
+                            </div>
+                        </div>
+                        <div class="member-actions">
+                            <button class="btn btn-sm btn-outlined">Message</button>
+                            <button class="btn btn-icon" id="memberActionBtn2"><i class="fas fa-ellipsis-v"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Two Column Sections -->
+            <div class="two-column-grid">
+                <!-- Pending Invites Section -->
+                <section class="section invites-section">
+                    <div class="section-header">
+                        <h2>Pending Invites</h2>
+                        <button class="btn btn-sm btn-outlined refresh-btn"><i class="fas fa-sync-alt"></i> Refresh</button>
+                    </div>
+                    
+                    <div class="invites-list">
+                        <div class="invite-item">
+                            <div class="invite-info">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h3>alex.wilson@email.com</h3>
+                                    <p>Invited: Feb 24, 2025 (2 days ago)</p>
+                                </div>
+                            </div>
+                            <div class="invite-actions">
+                                <button class="btn btn-sm btn-outlined"><i class="fas fa-paper-plane"></i> Resend</button>
+                                <button class="btn btn-sm btn-danger"><i class="fas fa-times"></i> Cancel</button>
+                            </div>
+                        </div>
+                        
+                        <div class="invite-item">
+                            <div class="invite-info">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h3>maria.garcia@email.com</h3>
+                                    <p>Invited: Feb 23, 2025 (3 days ago)</p>
+                                </div>
+                            </div>
+                            <div class="invite-actions">
+                                <button class="btn btn-sm btn-outlined"><i class="fas fa-paper-plane"></i> Resend</button>
+                                <button class="btn btn-sm btn-danger"><i class="fas fa-times"></i> Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Team Activity Section -->
+                <section class="section activity-section">
+                    <div class="section-header">
+                        <h2>Recent Team Activity</h2>
+                    </div>
+                    
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-timestamp">Today, 9:30 AM</div>
+                            <div class="activity-content">
+                                <div class="activity-icon">
+                                    <i class="fas fa-code-branch"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <p><strong>John Smith</strong> pushed 5 commits to the project repository</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-timestamp">Yesterday, 3:45 PM</div>
+                            <div class="activity-content">
+                                <div class="activity-icon">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <p><strong>Sam Johnson</strong> uploaded new design mockups</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-timestamp">Yesterday, 2:15 PM</div>
+                            <div class="activity-content">
+                                <div class="activity-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <p><strong>You</strong> sent an invite to <strong>alex.wilson@email.com</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-timestamp">Feb 24, 2025</div>
+                            <div class="activity-content">
+                                <div class="activity-icon">
+                                    <i class="fas fa-comment"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <p><strong>Sam Johnson</strong> commented on the project timeline</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="view-all-container">
+                        <button class="btn btn-outlined view-all">View All Activity</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Invite Member Modal -->
+    <div class="modal" id="inviteModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Invite Team Member</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Invitation Method</label>
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="email">Email Invitation</button>
+                        <button class="tab-btn" data-tab="code">Share Invite Code</button>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="email-tab">
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" class="form-control" placeholder="Enter email address">
+                    </div>
+                    <div class="form-group">
+                        <label>Role (Optional)</label>
+                        <select class="form-control">
+                            <option value="">Select a role</option>
+                            <option>Frontend Developer</option>
+                            <option>Backend Developer</option>
+                            <option>UI/UX Designer</option>
+                            <option>Data Scientist</option>
+                            <option>Project Manager</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Personalized Message (Optional)</label>
+                        <textarea class="form-control" rows="3" placeholder="Add a personal message to your invitation..."></textarea>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="code-tab" style="display: none;">
+                    <div class="invite-code-container">
+                        <h3>Your Team Invite Code</h3>
+                        <div class="invite-code">
+                            <span>CW-2025-XYZ123</span>
+                            <button class="btn btn-sm btn-outlined copy-btn"><i class="fas fa-copy"></i> Copy</button>
+                        </div>
+                        <p class="invite-instructions">Share this code with potential team members. They can join your team by entering this code in the "Join Team" section.</p>
+                        <div class="share-options">
+                            <button class="btn btn-sm social-share"><i class="fab fa-whatsapp"></i></button>
+                            <button class="btn btn-sm social-share"><i class="fab fa-telegram"></i></button>
+                            <button class="btn btn-sm social-share"><i class="fab fa-slack"></i></button>
+                            <button class="btn btn-sm social-share"><i class="fab fa-discord"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary close-btn">Cancel</button>
+                <button class="btn btn-primary send-btn" id="sendInviteBtn">Send Invitation</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Member Actions Dropdown -->
+    <div class="dropdown-menu" id="memberDropdown" style="display: none;">
+        <ul>
+            <li><i class="fas fa-edit"></i> Change Role</li>
+            <li><i class="fas fa-comment"></i> Direct Message</li>
+            <li><i class="fas fa-crown"></i> Make Team Lead</li>
+            <li class="danger"><i class="fas fa-user-minus"></i> Remove from Team</li>
+        </ul>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sidebar Menu Functionality
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const itemText = this.querySelector('span').innerText.toLowerCase();
+                    if (itemText === 'dashboard') {
+                        window.location.href = 'ParticipantDashboard.html';
+                    } else if (itemText === 'profile') {
+                        window.location.href = 'ParticipantProfile.html';
+                    }
+                    
+                    menuItems.forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Modal Functionality
+            const inviteBtn = document.getElementById('inviteBtn');
+            const inviteModal = document.getElementById('inviteModal');
+            const closeBtn = document.querySelector('.close');
+            const cancelBtn = document.querySelector('.close-btn');
+            
+            inviteBtn.addEventListener('click', function() {
+                inviteModal.style.display = 'block';
+            });
+            
+            closeBtn.addEventListener('click', function() {
+                inviteModal.style.display = 'none';
+            });
+            
+            cancelBtn.addEventListener('click', function() {
+                inviteModal.style.display = 'none';
+            });
+            
+            // Tab Buttons
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const tab = this.getAttribute('data-tab');
+                    
+                    // Hide all tab contents
+                    document.querySelectorAll('.tab-content').forEach(content => {
+                        content.style.display = 'none';
+                    });
+                    
+                    // Show selected tab
+                    document.getElementById(tab + '-tab').style.display = 'block';
+                    
+                    // Toggle active class
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Change button text
+                    const sendBtn = document.getElementById('sendInviteBtn');
+                    if (tab === 'email') {
+                        sendBtn.textContent = 'Send Invitation';
+                    } else {
+                        sendBtn.textContent = 'Done';
+                    }
+                });
+            });
+            
+            // Member dropdown menu
+            const memberActionBtns = document.querySelectorAll('.member-actions .btn-icon');
+            const memberDropdown = document.getElementById('memberDropdown');
+            
+            memberActionBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    
+                    // Position dropdown next to the button
+                    const rect = this.getBoundingClientRect();
+                    memberDropdown.style.top = rect.bottom + window.scrollY + 'px';
+                    memberDropdown.style.left = rect.left + window.scrollX - 150 + 'px';
+                    memberDropdown.style.display = 'block';
+                });
+            });
+            
+            // Close dropdown when clicking elsewhere
+            document.addEventListener('click', function() {
+                memberDropdown.style.display = 'none';
+            });
+            
+            // Copy team code
+            const copyBtn = document.querySelector('.copy-btn');
+            if (copyBtn) {
+                copyBtn.addEventListener('click', function() {
+                    const inviteCode = document.querySelector('.invite-code span').textContent;
+                    navigator.clipboard.writeText(inviteCode).then(() => {
+                        // Show feedback
+                        this.textContent = 'Copied!';
+                        setTimeout(() => {
+                            this.innerHTML = '<i class="fas fa-copy"></i> Copy';
+                        }, 2000);
+                    });
+                });
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+    const menuItems = document.querySelectorAll(".menu-item");
+
+    menuItems.forEach(item => {
+        item.addEventListener("click", function () {
+            const url = item.getAttribute("data-url");
+            if (url) {
+                window.location.href = url; // Redirect to the corresponding page
+            }
+             });
+                     });
+                        });
+    </script>
+</body>
+</html>

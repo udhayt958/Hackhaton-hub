@@ -1,0 +1,54 @@
+/* Import base styles from ParticipantDashboard.css */
+@import url('ParticipantDashboard.css');
+
+/* Achievements Header */
+.achievements-header {
+    background-color: var(--primary-light);
+    border-radius: var(--radius-md);
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.achievements-header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.achievements-header p {
+    font-size: 15px;
+    color: var(--text-color);
+}
+
+/* Earned Badges Section */
+.earned-badges .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.badge-count {
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.badges-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.badge-card {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCT Hackathon Portal - Leaderboard</title>
+    <link rel="stylesheet" href="ParticipantLeaderboard.css">
+	<link rel="stylesheet" href="ParticipantDashboard.css">
+	<link rel="stylesheet" href="Participant.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>NCT Hackathon</h3>
+                <p>Participant Dashboard</p>
+            </div>
+            
+            <div class="user-profile">
+                <div class="profile-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-info">
+                    <h4>Alex Johnson</h4>
+                    <p>Team: Code Warriors</p>
+                </div>
+                <div class="edit-profile-btn">
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+            
+            <div class="sidebar-menu">
+                <div class="menu-item" data-url="ParticipantDashboard.html">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantProfile.html">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantTeam.html">
+                    <i class="fas fa-users"></i>
+                    <span>Team</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantProject.html">
+                    <i class="fas fa-code"></i>
+                    <span>Project</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantSchedule.html">
+                    <i class="fas fa-calendar"></i>
+                    <span>Schedule</span>
+                </div>
+                <div class="menu-item" data-url="ParticipantRecources.html">
+                    <i class="fas fa-book"></i>
+                    <span>Resources</span>
+                </div>
+                
+                <div class="menu-item" data-url="ParticipantMessages.html">
+                    <i class="fas fa-envelope"></i>
+                    <span>Messages</span>
+                    <span class="badge message-badge">3</span>
+                </div>
+                
+                <div class="menu-item active" data-url="ParticipantLeaderboard.html">
+                    <i class="fas fa-trophy"></i>
+                    <span>Leaderboard</span>
+                </div>
+                <div class="menu-item" data-url="../home.html">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Leaderboard Header Section -->
+            <div class="section">
+                <h2>Leaderboard</h2>
+                <p>Track team rankings and scores in the NCT Hackathon</p>
+            </div>
+
+            <!-- Leaderboard Filters -->
+            <div class="section leaderboard-filters">
+                <div class="filter-group">
+                    <label for="category">Category:</label>
+                    <select id="category" class="filter-select">
+                        <option value="all">All Categories</option>
+                        <option value="innovation">Innovation</option>
+                        <option value="technical">Technical Excellence</option>
+                        <option value="impact">Social Impact</option>
+                        <option value="presentation">Presentation</option>
+                    </select>
+                </div>
+                <div class="search-group">
+                    <input type="text" placeholder="Search teams..." class="search-input">
+                    <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+
+            <!-- Leaderboard Table -->
+            <div class="section">
+                <div class="leaderboard-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="rank-column">Rank</th>
+                                <th class="team-column">Team</th>
+                                <th>Project</th>
+                                <th>Innovation</th>
+                                <th>Technical</th>
+                                <th>Impact</th>
+                                <th>Presentation</th>
+                                <th class="score-column">Total Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="highlighted-row">
+                                <td class="rank-column"><div class="rank rank-1">1</div></td>
+                                <td class="team-column">Tech Innovators</td>
+                                <td>AI Health Assistant</td>
+                                <td>9.5</td>
+                                <td>9.2</td>
+                                <td>8.8</td>
+                                <td>9.0</td>
+                                <td class="score-column">36.5</td>
+                            </tr>
+                            <tr>
+                                <td class="rank-column"><div class="rank rank-2">2</div></td>
+                                <td class="team-column">Code Warriors</td>
+                                <td>Smart City Solution</td>
+                                <td>9.1</td>
+                                <td>8.9</td>
+                                <td>9.0</td>
+                                <td>8.7</td>
+                                <td class="score-column">35.7</td>
+                            </tr>
+                            <tr>
+                                <td class="rank-column"><div class="rank rank-3">3</div></td>
+                                <td class="team-column">Data Pioneers</td>
+                                <td>Sustainable Energy Platform</td>
+                                <td>8.7</td>
+                                <td>9.3</td>
+                                <td>8.9</td>
+                                <td>8.5</td>
+                                <td class="score-column">35.4</td>
+                            </tr>
+                            <tr>
+                                <td class="rank-column"><div class="rank">4</div></td>
+                                <td class="team-column">DevOps Giants</td>
+                                <td>Cloud Migration Tool</td>
+                                <td>8.5</td>
+                                <td>9.0</td>
+                                <td>8.2</td>
+                                <td>8.8</td>
+                                <td class="score-column">34.5</td>
+                            </tr>
+                            <tr>
+                                <td class="rank-column"><div class="rank">5</div></td>
+                                <td class="team-column">UI Masters</td>
+                                <td>Accessibility Toolkit</td>
+                                <td>8.8</td>
+                                <td>8.3</td>
+                                <td>8.9</td>
+                                <td>8.4</td>
+                                <td class="score-column">34.4</td>
+                            </tr>
+                            <tr>
+                                <td class="rank-column"><div class="rank">6</div></td>
+                                <td class="team-column">Network Ninjas</td>
+                                <td>IoT Security Framework</td>
+                                <td>8.2</td>
+                                <td>8.7</td>
+                                <td>8.5</td>
+                                <td>8.6</td>
+                                <td class="score-column">34.0</td>
+                            </tr>
+                            <tr>
+                                <td class="rank-column"><div class="rank">7</div></td>
+                                <td class="team-column">Backend Wizards</td>
+                                <td>Database Optimization Solution</td>
+                                <td>7.9</td>
+                                <td>8.8</td>
+                                <td>8.3</td>
+                                <td>8.4</td>
+                                <td class="score-column">33.4</td>
+                            </tr>
+                            <tr>
+                                <td class="rank-column"><div class="rank">8</div></td>
+                                <td class="team-column">Algorithm Aces</td>
+                                <td>ML Prediction Platform</td>
+                                <td>8.4</td>
+                                <td>8.6</td>
+                                <td>7.9</td>
+                                <td>8.2</td>
+                                <td class="score-column">33.1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Scoring System Information -->
+            <div class="section info-section">
+                <h3>Scoring System</h3>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-lightbulb"></i></div>
+                        <div class="info-title">Innovation</div>
+                        <div class="info-content">Originality and creativity of the solution.</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-laptop-code"></i></div>
+                        <div class="info-title">Technical</div>
+                        <div class="info-content">Code quality, complexity, and implementation.</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-globe"></i></div>
+                        <div class="info-title">Impact</div>
+                        <div class="info-content">Potential social or business impact of the solution.</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-presentation"></i></div>
+                        <div class="info-title">Presentation</div>
+                        <div class="info-content">Quality of demonstration and project pitch.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple JavaScript for menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    menuItems.forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+    const menuItems = document.querySelectorAll(".menu-item");
+
+    menuItems.forEach(item => {
+        item.addEventListener("click", function () {
+            const url = item.getAttribute("data-url");
+            if (url) {
+                window.location.href = url; // Redirect to the corresponding page
+            }
+             });
+                     });
+                        });
+    </script>
+</body>
+</html>
