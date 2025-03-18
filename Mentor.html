@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCT Hackathon Portal - Mentor Dashboard</title>
+    <link rel="stylesheet" href="Mentor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>NCT Hackathon</h3>
+                <p>Mentor Dashboard</p>
+            </div>
+            
+            <div class="user-profile">
+                <div class="profile-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-info">
+                    <h4>Mentor</h4>
+                    <p>mentor@example.com</p>
+                </div>
+            </div>
+            
+            <div class="sidebar-menu">
+                <div class="menu-item active" data-section="dashboard">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="menu-item" data-section="profile">
+                    <i class="fas fa-user"></i>
+                    <span>Edit Profile</span>
+                </div>
+                <div class="menu-item" data-section="messages">
+                    <i class="fas fa-envelope"></i>
+                    <span>Messages</span>
+                </div>
+                <div class="menu-item" data-url="../home.html">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header class="top-header">
+                <div class="header-title">
+                    <h2>Mentor Dashboard</h2>
+                </div>
+                <div class="header-actions">
+                    <div class="notification-bell">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">2</span>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Dashboard Section (Home) -->
+            <section class="dashboard-section active" id="dashboard">
+                <div class="welcome-banner">
+                    <div class="welcome-content">
+                        <h1>Welcome, Mentor!</h1>
+                        <p>From here you can manage your profile and communicate with participants and organizers.</p>
+                    </div>
+                    <div class="welcome-illustration">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                </div>
+                
+                <div class="cards-container">
+                    <div class="card" onclick="activateSection('profile')">
+                        <div class="card-header">
+                            <i class="fas fa-user-edit"></i>
+                            <h3 class="card-title">Edit Profile</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Update your personal information and expertise areas</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card" onclick="activateSection('messages')">
+                        <div class="card-header">
+                            <i class="fas fa-comment-alt"></i>
+                            <h3 class="card-title">Messages</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Communicate with participants and organizers</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Profile Section -->
+            <section class="profile-section" id="profile">
+                <h3 class="section-title">Edit Profile</h3>
+                
+                <form id="profileForm">
+                    <div class="form-group">
+                        <label for="fullName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input type="text" class="form-control" id="phone" placeholder="Enter your phone number">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="expertise" class="form-label">Areas of Expertise</label>
+                        <input type="text" class="form-control" id="expertise" placeholder="E.g., AI, Web Development, Mobile Apps">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bio" class="form-label">Bio</label>
+                        <textarea class="form-control" id="bio" rows="4" placeholder="Tell us about yourself, your experience and expertise"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password" class="form-label">Change Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter new password">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm new password">
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button type="button" class="btn btn-secondary" onclick="activateSection('dashboard')">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </section>
+            
+            <!-- Messages Section -->
+            <section class="messages-section" id="messages">
+                <div class="section-header">
+                    <h3>Messages</h3>
+                    <button class="btn btn-primary" id="composeBtn">New Message</button>
+                </div>
+                
+                <div class="message-tabs">
+                    <div class="message-tab active" data-tab="inbox">Inbox</div>
+                    <div class="message-tab" data-tab="sent">Sent</div>
+                </div>
+                
+                <div class="message-content active" id="inbox">
+                    <div class="message-list">
+                        <!-- Empty state for inbox -->
+                        <div class="text-center py-5">
+                            <i class="fas fa-inbox fa-3x mb-3"></i>
+                            <p>Your inbox is empty</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="message-content" id="sent">
+                    <div class="message-list">
+                        <!-- Empty state for sent messages -->
+                        <div class="text-center py-5">
+                            <i class="fas fa-paper-plane fa-3x mb-3"></i>
+                            <p>No sent messages</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="compose-message" style="display: none;">
+                    <h4>Compose New Message</h4>
+                    
+                    <form id="messageForm">
+                        <div class="form-group">
+                            <label for="recipient" class="form-label">Recipient</label>
+                            <select class="form-control" id="recipient">
+                                <option value="">Select recipient</option>
+                                <optgroup label="Organizers">
+                                    <option value="organizer1">Organizer 1</option>
+                                    <option value="organizer2">Organizer 2</option>
+                                </optgroup>
+                                <optgroup label="Participants">
+                                    <option value="participant1">Participant 1</option>
+                                    <option value="participant2">Participant 2</option>
+                                    <option value="participant3">Participant 3</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" placeholder="Enter subject">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="messageBody" class="form-label">Message</label>
+                            <textarea class="form-control" id="messageBody" rows="5" placeholder="Type your message here..."></textarea>
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <button type="button" class="btn btn-secondary" id="cancelMessage">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // Function to activate section
+        function activateSection(sectionId) {
+            // Remove active class from all menu items and sections
+            document.querySelectorAll('.menu-item').forEach(item => item.classList.remove('active'));
+            document.querySelectorAll('section').forEach(section => section.classList.remove('active'));
+            
+            // Add active class to target menu item and section
+            document.querySelector(`.menu-item[data-section="${sectionId}"]`).classList.add('active');
+            document.getElementById(sectionId).classList.add('active');
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Menu navigation
+            document.querySelectorAll('.menu-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const sectionId = this.getAttribute('data-section');
+                    const urlPath = this.getAttribute('data-url');
+                    
+                    if (sectionId) {
+                        activateSection(sectionId);
+                    } else if (urlPath) {
+                        window.location.href = urlPath;
+                    }
+                });
+            });
+            
+            // Message tabs
+            document.querySelectorAll('.message-tab').forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+                    
+                    // Remove active class from all tabs and contents
+                    document.querySelectorAll('.message-tab').forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.message-content').forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked tab and corresponding content
+                    this.classList.add('active');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // Compose message
+            const composeBtn = document.getElementById('composeBtn');
+            const composeSection = document.querySelector('.compose-message');
+            const cancelMessageBtn = document.getElementById('cancelMessage');
+            
+            composeBtn.addEventListener('click', function() {
+                composeSection.style.display = 'block';
+            });
+            
+            cancelMessageBtn.addEventListener('click', function() {
+                composeSection.style.display = 'none';
+                document.getElementById('messageForm').reset();
+            });
+            
+            // Form submissions
+            document.getElementById('profileForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Profile updated successfully!');
+            });
+            
+            document.getElementById('messageForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Message sent successfully!');
+                composeSection.style.display = 'none';
+                this.reset();
+            });
+        });
+    </script>
+</body>
+</html>
