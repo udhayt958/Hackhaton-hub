@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCT Hackathon Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navigation" class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo-1.png" alt="NCT Hackathon Logo" class="logo-img">
+                <a class="navbar-brand" href="#">NCT Hackathon</a>
+            </div>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                
+                <ul class="navbar-nav ms-auto auth-links">
+                    <li class="nav-item">
+                        <a class="nav-link btn-login" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+                    </li>
+                    
+                   <!-- <li class="nav-item">
+                        <a class="nav-link btn-login" href="#" data-bs-toggle="modal" data-bs-target="#emploginModal">Employee Login</a>
+                    </li>-->
+                    <li class="nav-item">
+                        <a class="nav-link btn-register" href="#" data-bs-toggle="modal" data-bs-target="#participantRegisterModal">Register</a>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1>Niagara College Toronto <span class="highlight">Hackathon 2025</span></h1>
+                        <p>Join us for a 48-hour coding challenge to solve real-world problems. Connect with industry leaders, showcase your skills, and win amazing prizes.</p>
+                        <div class="hero-buttons">
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#participantRegisterModal">Register Now</a>
+                            <a href="#about" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-slider">
+                        <div id="slider">
+                            <figure>
+                                <img src="img/screenshot1.png" alt="NCT Hackathon">
+                                <img src="img/screenshot2.png" alt="NCT Hackathon">
+                                <img src="img/screenshot3.png" alt="NCT Hackathon">
+                                <img src="img/screenshot4.png" alt="NCT Hackathon">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Participate?</h2>
+                <p>The NCT Hackathon offers a unique opportunity to learn, collaborate, and showcase your skills</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="feature-title">Innovative Challenges</h3>
+                        <p class="feature-description">Tackle real-world problems and develop innovative solutions using cutting-edge technologies.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="feature-title">Team Collaboration</h3>
+                        <p class="feature-description">Work with talented peers, form new connections, and build your professional network.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3 class="feature-title">Valuable Prizes</h3>
+                        <p class="feature-description">Win exciting prizes including cash awards, internship opportunities, and tech gadgets.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h2>About NCT Hackathon</h2>
+                        <p>The Niagara College Toronto Hackathon is an annual event that brings together students, developers, designers, and innovators from across the region to collaborate, create, and compete.</p>
+                        <p>Our mission is to foster innovation, encourage collaboration, and provide a platform for participants to showcase their technical skills and creative problem-solving abilities.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="stats-card">
+                                <div class="stats-number">300+</div>
+                                <p class="stats-label">Participants</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="stats-card">
+                                <div class="stats-number">48</div>
+                                <p class="stats-label">Hours</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="stats-card">
+                                <div class="stats-number">50+</div>
+                                <p class="stats-label">Projects</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="stats-card">
+                                <div class="stats-number">25K</div>
+                                <p class="stats-label">Prize Pool</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about the NCT Hackathon</p>
+            </div>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is NCT Hackathon 2025?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>NCT Hackathon 2025 is a coding and innovation event where students collaborate to build solutions for real-world problems within a limited time. The hackathon will run for 48 hours, during which teams will conceptualize, design, and build their projects.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Who can participate in NCT Hackathon?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The hackathon is open to students from all backgrounds, whether you're a beginner or an experienced developer. We welcome participants with various skills including programming, design, business, and presentation.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Where will NCT Hackathon be held?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The event will take place at Niagara College Toronto campus, with online participation options available. The address is 740 Bathurst Street, Toronto, ON, M5S 2R6, Canada.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I register for NCT Hackathon?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can register on our official website by clicking the "Register Now" button. Fill out the registration form and create your account before the registration deadline.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Have questions? Reach out to our team for more information</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="contact-info">
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>740 Bathurst Street, Toronto, ON, M5S 2R6, Canada</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>info@niagaracollegetoronto.ca</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>(647) 799-4830</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d721.560374106449!2d-79.41224232397208!3d43.66394706369505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b35e6cf8a7dfb%3A0xd32ac461151e9041!2sNiagara%20College%20%E2%80%93%20Toronto%20Mirvish%20Campus!5e0!3m2!1sen!2sca!4v1682538965360!5m2!1sen!2sca" style="border:0; width: 100%; height: 250px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-7">
+                    <div class="contact-form">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label for="name">Your Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                                </div>
+                                
+                                <div class="col-md-6 form-group">
+                                    <label for="email">Your Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" class="form-control" id="subject" placeholder="Enter subject" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="Enter your message" required></textarea>
+                            </div>
+                            
+                            <div class="text-end">
+                                <button type="submit" class="btn-submit">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <h5>NCT Hackathon</h5>
+                    <p>The premier hackathon event at Niagara College Toronto, bringing together students, developers, and industry professionals.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/niagaracollegetoronto" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/niagaracollegetoronto" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/niagaracollegetoronto" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/school/niagara-college-toronto/mycompany/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> 740 Bathurst Street, Toronto, ON</p>
+                    <p><i class="fas fa-phone me-2"></i> (647) 799-4830</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@niagaracollegetoronto.ca</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 NCT Hackathon. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content modal-custom">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login to Your Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginUsername" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="loginUsername" placeholder="Enter your username">
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p>Forgot your password? <a href="#">Reset it here</a></p>
+                    <p>Don't have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">Register now</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- EMP Login Modal --> 
+<div class="modal fade" id="emploginModal" tabindex="-1" aria-labelledby="emploginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content modal-custom">
+            <div class="modal-header">
+                <h5 class="modal-title" id="emploginModalLabel">Login to Your Account</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <label for="loginUsername" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="loginUsername" placeholder="Enter your username">
+                    </div>
+                    <div class="mb-3">
+                        <label for="loginPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="rememberMe">
+                        <label class="form-check-label" for="rememberMe">Remember me</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Register Modal (Participant Only) -->
+   <!-- Participant Register Modal -->
+<div class="modal fade" id="participantRegisterModal" tabindex="-1" aria-labelledby="participantRegisterModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content modal-custom">
+            <div class="modal-header text-center border-0">
+                <h5 class="modal-title w-100 fw-bold text-primary" id="participantRegisterModalLabel">Participant Registration</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="registerForm">
+                <div class="mb-3">
+                    <label for="username" class="form-label fw-semibold text-dark">Username</label>
+                    <input type="text" class="form-control p-2" id="username" placeholder="Enter your username" required>
+                </div>
+            
+                <div class="mb-3">
+                    <label for="participantName" class="form-label fw-semibold text-dark">Full Name</label>
+                    <input type="text" class="form-control p-2" id="participantName" placeholder="Enter your full name" required>
+                </div>
+  
+                <div class="mb-3">
+                  <label for="dateOfBirth" class="form-label fw-semibold text-dark">Date of Birth</label>
+                  <input type="date" class="form-control p-2" id="dateOfBirth" required>
+                </div>
+            
+                <div class="mb-3">
+                    <label for="participantEmail" class="form-label fw-semibold text-dark">Email</label>
+                    <input type="email" class="form-control p-2" id="participantEmail" placeholder="Enter your email" required>
+                </div>
+            
+                <div class="mb-3">
+                    <label for="participantPassword" class="form-label fw-semibold text-dark">Password</label>
+                    <input type="password" class="form-control p-2" id="participantPassword" placeholder="Create a password" required>
+                </div>
+            
+                <div class="mb-3">
+                    <label for="ParticipantConfirmPassword" class="form-label fw-semibold text-dark">Confirm Password</label>
+                    <input type="password" class="form-control p-2" id="ParticipantConfirmPassword" placeholder="Confirm your password" required>
+                </div>
+            
+                <div class="mb-3">
+                    <label for="collegeName" class="form-label fw-semibold text-dark">College Name</label>
+                    <select class="form-control p-2" id="collegeName" required>
+                        <option value="">Select your college</option>
+                        <option value="Niagara College Toronto">Niagara College Toronto</option>
+                        <option value="Toronto School of Management">Toronto School of Management</option>
+                        <option value="Flemming College">Flemming College</option>
+                    </select>
+                </div>
+            
+                <div class="mb-3">
+                    <label for="studentId" class="form-label fw-semibold text-dark">Student ID</label>
+                    <input type="text" class="form-control p-2" id="studentId" placeholder="Enter your student ID" required>
+                </div>
+            
+                <div class="mb-3">
+                    <label for="major" class="form-label fw-semibold text-dark">Major/Department</label>
+                    <input type="text" class="form-control p-2" id="major" placeholder="Enter your major/department" required>
+                </div>
+            
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="terms" required>
+                    <label class="form-check-label" for="terms">
+                        I agree to the <a href="/terms-and-conditions" target="_blank">Terms and Conditions</a>
+                    </label>
+                </div>
+            
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="isMentor">
+                    <label class="form-check-label" for="isMentor">
+                        Are you signing up as a mentor?
+                    </label>
+                </div>
+                
+                <!-- Mentor Access Code (hidden by default) -->
+                <div class="mb-3" id="mentorCodeContainer" style="display: none;">
+                    <label for="mentorCode" class="form-label fw-semibold text-dark">Mentor Access Code</label>
+                    <input type="text" class="form-control p-2" id="mentorCode" placeholder="Enter access code">
+                    <div id="mentorCodeError" class="text-danger mt-1" style="display: none;">
+                        👉 Invalid access code. Please contact the organizer.
+                    </div>
+                </div>
+                
+                <!-- JavaScript to toggle visibility -->
+                <script>
+                    document.getElementById("isMentor").addEventListener("change", function() {
+                        var mentorCodeContainer = document.getElementById("mentorCodeContainer");
+                        if (this.checked) {
+                            mentorCodeContainer.style.display = "block"; // Show the mentor code input
+                        } else {
+                            mentorCodeContainer.style.display = "none"; // Hide the mentor code input
+                        }
+                    });
+                </script>
+                <button type="submit" class="btn btn-primary w-100 fw-semibold p-2">Register</button>
+            </form>
+            </div>
+            <div class="modal-footer text-center w-100 d-block border-0">
+                <p class="mb-2 text-muted">Already have an account? <a href="#" class="text-decoration-none text-primary" data-bs-toggle="modal" data-bs-target="#participantLoginModal">Login here</a></p>
+            </div>
+        </div>
+    </div>
+  </div>
+
+    <!-- Scripts -->
+    <!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+   
+        // FAQ Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    item.classList.toggle('active');
+                });
+            });
+            
+            // Form submission handlers
+            const loginForm = document.getElementById('loginForm');
+            if (loginForm) {
+                loginForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const username = document.getElementById('loginUsername').value;
+                    const password = document.getElementById('loginPassword').value;
+                    
+                    // Simple authentication logic
+                    const users = {
+                        "Judge1": { password: "Judge1", redirect: "JudgeDashboard.html/JudgeDashboard.html" },
+                        "User1": { password: "User1", redirect: "ParticipantDashboard.html/ParticipantDashboard.html" },
+                        "Admin1": { password: "Admin1", redirect: "Organizer.html/OrganizerDashboard.html" },
+                        "Mentor1":{password: "Mentor", redirect: "Mentor/Mentor.html" }
+                    };
+                    
+                    if (users[username] && users[username].password === password) {
+                        window.location.href = users[username].redirect;
+                    } else {
+                        alert("Invalid username or password!");
+                    }
+                });
+            }
+        });
+    
+</script>
+
+</body>
+</html>

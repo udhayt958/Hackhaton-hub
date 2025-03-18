@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body">  
+  <div> 
+    <!---------------------------------Navbar------------------------------------->
+    <nav id="navigation" class="navbar navbar-expand-lg fixed-top">
+  <div class="container align-items-stretch">
+    
+    <!-- Logo -->
+    <div class="logo">
+      <a class="navbar-brand" href="#">Hackathon</a>
+    </div>
+
+    <!-- Navbar Toggler for Mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      
+      <!-- Left Side: Navigation Links -->
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="faq.html">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Right Side: Logins 
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#organizerLoginModal">
+            <i class="fas fa-user-shield"></i>  Organizer Login
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#judgeLoginModal">
+            <i class="fas fa-chalkboard-teacher"></i> Judge Login
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#participantLoginModal">
+            <i class="fas fa-user-graduate"></i> Participant Login
+          </a>
+        </li>
+      </ul>
+-->
+    </div>
+  </div>
+</nav>
+<<div class="modal fade" id="adminLoginModal" tabindex="-1" aria-labelledby="adminLoginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="background: rgba(255, 255, 255, 0.9); border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+            <div class="modal-header text-center border-0">
+                <h5 class="modal-title w-100 fw-bold text-primary" id="adminLoginModalLabel">Admin Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="adminUsername" class="form-label fw-semibold text-dark">Username</label>
+                        <input type="text" class="form-control p-2" id="adminUsername" placeholder="Enter admin username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="adminPassword" class="form-label fw-semibold text-dark">Password</label>
+                        <input type="password" class="form-control p-2" id="adminPassword" placeholder="Enter password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 fw-semibold p-2">Login</button>
+                </form>
+            </div>
+            <div class="modal-footer text-center w-100 d-block border-0">
+                <p class="mb-2 text-muted">Forgot your password? <a href="#" class="text-decoration-none text-primary">Reset here</a></p>
+                <p class="mb-2 text-muted">Don't have an account?</p>
+                <button type="button" class="btn btn-outline-primary w-100 fw-semibold p-2" data-bs-toggle="modal" data-bs-target="#adminRegisterModal">Register</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Organizer Login Modal -->
+<div class="modal fade" id="organizerLoginModal" tabindex="-1" aria-labelledby="organizerLoginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content modal-custom">
+            <div class="modal-header text-center border-0">
+                <h5 class="modal-title w-100 fw-bold text-primary" id="organizerLoginModalLabel">Organizer Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="organizerUsername" class="form-label fw-semibold text-dark">Username</label>
+                        <input type="text" class="form-control p-2" id="organizerUsername" placeholder="Enter organizer username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="organizerPassword" class="form-label fw-semibold text-dark">Password</label>
+                        <input type="password" class="form-control p-2" id="organizerPassword" placeholder="Enter password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 fw-semibold p-2">Login</button>
+                </form>
+            </div>
+            <div class="modal-footer text-center w-100 d-block border-0">
+                <p class="mb-2 text-muted">Forgot your password? <a href="#" class="text-decoration-none text-primary">Reset here</a></p>
+                <p class="mb-2 text-muted">Don't have an account?</p>
+                <button type="button" class="btn btn-outline-primary w-100 fw-semibold p-2" data-bs-toggle="modal" data-bs-target="#organizerRegisterModal">Register</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Judge Login Modal -->
+<div class="modal fade" id="judgeLoginModal" tabindex="-1" aria-labelledby="judgeLoginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content modal-custom">
+            <div class="modal-header text-center border-0">
+                <h5 class="modal-title w-100 fw-bold text-primary" id="judgeLoginModalLabel">Judge Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="judgeUsername" class="form-label fw-semibold text-dark">Username</label>
+                        <input type="text" class="form-control p-2" id="judgeUsername" placeholder="Enter judge username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="judgePassword" class="form-label fw-semibold text-dark">Password</label>
+                        <input type="password" class="form-control p-2" id="judgePassword" placeholder="Enter password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 fw-semibold p-2">Login</button>
+                </form>
+            </div>
+            <div class="modal-footer text-center w-100 d-block border-0">
+                <p class="mb-2 text-muted">Forgot your password? <a href="#" class="text-decoration-none text-primary">Reset here</a></p>
+                <p class="mb-2 text-muted">Don't have an account?</p>
+                <button type="button" class="btn btn-outline-primary w-100 fw-semibold p-2" data-bs-toggle="modal" data-bs-target="#judgeRegisterModal">Register</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Participant Login Modal -->
+<div class="modal fade" id="participantLoginModal" tabindex="-1" aria-labelledby="participantLoginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content modal-custom">
+            <div class="modal-header text-center border-0">
+                <h5 class="modal-title w-100 fw-bold text-primary" id="participantLoginModalLabel">Participant Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="participantUsername" class="form-label fw-semibold text-dark">Username</label>
+                        <input type="text" class="form-control p-2" id="participantUsername" placeholder="Enter participant username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="participantPassword" class="form-label fw-semibold text-dark">Password</label>
+                        <input type="password" class="form-control p-2" id="participantPassword" placeholder="Enter password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 fw-semibold p-2">Login</button>
+                </form>
+            </div>
+            <div class="modal-footer text-center w-100 d-block border-0">
+                <p class="mb-2 text-muted">Forgot your password? <a href="#" class="text-decoration-none text-primary">Reset here</a></p>
+                <p class="mb-2 text-muted">Don't have an account?</p>
+                <button type="button" class="btn btn-outline-primary w-100 fw-semibold p-2" data-bs-toggle="modal" data-bs-target="#participantRegisterModal">Register</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Organizer Register Modal -->
+<div class="modal fade" id="organizerRegisterModal" tabindex="-1" aria-labelledby="organizerRegisterModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content modal-custom">
+            <div class="modal-header text-center border-0">
+                <h5 class="modal-title w-100 fw-bold text-primary" id="organizerRegisterModalLabel">Organizer Registration</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="organizerName" class="form-label fw-semibold text-dark">Full Name</label>
+                        <input type="text" class="form-control p-2" id="organizerName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="organizerEmail" class="form-label fw-semibold text-dark">Email</label>
+                        <input type="email" class="form-control p-2" id="organizerEmail" placeholder="Enter your email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="organizerAffiliation" class="form-label fw-semibold text-dark">Affiliated Organization/Institution</label>
+                        <input type="text" class="form-control p-2" id="organizerAffiliation" placeholder="Organization/Institution" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="organizerPassword" class="form-label fw-semibold text-dark">Password</label>
+                        <input type="password" class="form-control p-2" id="organizerPassword" placeholder="Create a password" required>
+						<i class="toggle-password bi bi-eye-slash position-absolute end-0 top-50 translate-middle-y me-3 cursor-pointer" onclick="togglePassword('organizerPassword', this)"></i>
+                    </div>
+					<div class="mb-3">
+                        <label for="organizerConfirmPassword" class="form-label fw-semibold text-dark">Confirm Password</label>
+                        <input type="password" class="form-control p-2" id="organizerConfirmPassword" placeholder="Confirm your password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 fw-semibold p-2">Register</button>
+                </form>
+            </div>
+            <div class="modal-footer text-center w-100 d-block border-0">
+                <p class="mb-2 text-muted">Already have an account? <a href="#" class="text-decoration-none text-primary" data-bs-toggle="modal" data-bs-target="#organizerLoginModal">Login here</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Judge Register Modal -->
+<div class="modal fade" id="judgeRegisterModal" tabindex="-1" aria-labelledby="judgeRegisterModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content modal-custom">
+            <div class="modal-header text-center border-0">
+                <h5 class="modal-title w-100 fw-bold text-primary" id="judgeRegisterModalLabel">Judge Registration</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="judgeName" class="form-label fw-semibold text-dark">Full Name</label>
+                        <input type="text" class="form-control p-2" id="judgeName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="judgeEmail" class="form-label fw-semibold text-dark">Email</label>
+                        <input type="email" class="form-control p-2" id="judgeEmail" placeholder="Enter your email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="judgeCredentials" class="form-label fw-semibold text-dark">Expertise & Qualifications</label>
+                        <input type="text" class="form-control p-2" id="judgeCredentials" placeholder="Your expertise or title" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="judgePassword" class="form-label fw-semibold text-dark">Password</label>
+                        <input type="password" class="form-control p-2" id="judgePassword" placeholder="Create a password" required>
+                    </div>
+                   <div class="mb-3">
+                        <label for="JudgeConfirmPassword" class="form-label fw-semibold text-dark">Confirm Password</label>
+                        <input type="password" class="form-control p-2" id="JudgeConfirmPassword" placeholder="Confirm your password" required>
+                    </div>
+				   <button type="submit" class="btn btn-primary w-100 fw-semibold p-2">Register</button>
+                </form>
+            </div>
+            <div class="modal-footer text-center w-100 d-block border-0">
+                <p class="mb-2 text-muted">Already have an account? <a href="#" class="text-decoration-none text-primary" data-bs-toggle="modal" data-bs-target="#judgeLoginModal">Login here</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Participant Register Modal -->
+<div class="modal fade" id="participantRegisterModal" tabindex="-1" aria-labelledby="participantRegisterModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content modal-custom">
+            <div class="modal-header text-center border-0">
+                <h5 class="modal-title w-100 fw-bold text-primary" id="participantRegisterModalLabel">Participant Registration</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="participantName" class="form-label fw-semibold text-dark">Full Name</label>
+                        <input type="text" class="form-control p-2" id="participantName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="participantEmail" class="form-label fw-semibold text-dark">Email</label>
+                        <input type="email" class="form-control p-2" id="participantEmail" placeholder="Enter your email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="participantPassword" class="form-label fw-semibold text-dark">Password</label>
+                        <input type="password" class="form-control p-2" id="participantPassword" placeholder="Create a password" required>
+						
+					<div class="mb-3">
+                        <label for="ParticipantConfirmPassword" class="form-label fw-semibold text-dark">Confirm Password</label>
+                        <input type="password" class="form-control p-2" id="ParticipantConfirmPassword" placeholder="Confirm your password" required>
+                    </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 fw-semibold p-2">Register</button>
+                </form>
+            </div>
+            <div class="modal-footer text-center w-100 d-block border-0">
+                <p class="mb-2 text-muted">Already have an account? <a href="#" class="text-decoration-none text-primary" data-bs-toggle="modal" data-bs-target="#participantLoginModal">Login here</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+   <div class="container">
+  <div class="faq-section mt-2">
+    <h3>FAQ</h3>
+  </div>
+  <div class="faq">
+    <div class="row">
+      <div class="col-lg-5">
+        <div class="faq-grid-1-1">
+          <img src="img/icon-5.png" class="faq-main-img">
+          <div class="faq-grid-1-2">
+            <h5>Niagara College Toronto Hackathon 2025</h5>
+            <h6>Learn More: <a href="https://www.niagaracollegetoronto.ca/" target="_blank">https://www.niagaracollegetoronto.ca/</a></h6>
+          </div>
+		  <br>
+          <div class="faq-grid-1-3">
+            <button><img src="img/logo-1.png" class="faq-logo-img"></button>
+            <button><img src="img/icon-4.png" class="faq-logo-img"></button>
+          </div>
+        </div>
+      </div>
+	  
+      <div class="col-lg-7">
+        <div>
+          <div class="faq-title">
+            <h4>Empowering Innovation, Encouraging Collaboration, Building the Future.</h4>
+          </div>
+          <div class="faq-title-1">
+            <h4>Explore our FAQ to find answers to your questions.</h4>
+          </div>
+
+          <div class="faq-grid" onclick="toggleAnswer(this)">
+            <i class="fa-solid fa-chevron-right"></i>
+            <h5>What is NCT Hackathon 2025?</h5>
+            <p class="faq-answer">NCT Hackathon 2025 is a coding and innovation event where students collaborate to build solutions for real-world problems within a limited time.</p>
+          </div>
+          <div class="faq-grid" onclick="toggleAnswer(this)">
+            <i class="fa-solid fa-chevron-right"></i>
+            <h5>Who can participate in NCT Hackathon?</h5>
+            <p class="faq-answer">The hackathon is open to students from all backgrounds, whether you're a beginner or an experienced developer.</p>
+          </div>
+          <div class="faq-grid" onclick="toggleAnswer(this)">
+            <i class="fa-solid fa-chevron-right"></i>
+            <h5>Where will NCT Hackathon be held?</h5>
+            <p class="faq-answer">The event will take place at Niagara College Toronto campus, with online participation options available.</p>
+          </div>
+          <div class="faq-grid" onclick="toggleAnswer(this)">
+            <i class="fa-solid fa-chevron-right"></i>
+            <h5>How do I register for NCT Hackathon?</h5>
+            <p class="faq-answer">You can register on our official website by filling out the registration form before the deadline.</p>
+          </div>
+          <div class="faq-grid" onclick="toggleAnswer(this)">
+            <i class="fa-solid fa-chevron-right"></i>
+            <h5>What are the themes and challenges?</h5>
+            <p class="faq-answer">Themes include AI, cybersecurity, fintech, sustainability, and more. Detailed challenges will be announced closer to the event.</p>
+          </div>
+          <div class="faq-grid" onclick="toggleAnswer(this)">
+            <i class="fa-solid fa-chevron-right"></i>
+            <h5>What should I bring to the Hackathon?</h5>
+            <p class="faq-answer">Bring your laptop, chargers, ID, and any tools or resources you may need for development.</p>
+          </div>
+          <div class="faq-grid" onclick="toggleAnswer(this)">
+            <i class="fa-solid fa-chevron-right"></i>
+            <h5>Will there be food and refreshments?</h5>
+            <p class="faq-answer">Yes, meals and snacks will be provided throughout the event.</p>
+          </div>
+          <div class="faq-grid" onclick="toggleAnswer(this)">
+            <i class="fa-solid fa-chevron-right"></i>
+            <h5>Do I need a team to participate?</h5>
+            <p class="faq-answer">You can register as an individual or as a team. Teams can be formed at the event as well.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleAnswer(element) {
+    const answer = element.querySelector('.faq-answer');
+    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+<div class= "container">
+<footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> 740 Bathurst Street, Toronto,ON, M5S 2R6, Canada </p>
+                    <p><i class="fas fa-phone"></i> (647) 799-4830</p>
+                    <p><i class="fas fa-envelope"></i><a href="mailto:info@niagaracollegetoronto.ca">info@niagaracollegetoronto.ca</a></p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5>Follow Us</h5>
+                    <a href="https://www.facebook.com/niagaracollegetoronto" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/niagaracollegetoronto" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/niagaracollegetoronto" class="social-icon"><i class="bi bi-youtube"></i></a>
+                    <a href="https://www.linkedin.com/school/niagara-college-toronto/mycompany/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+	</div>
+</body>
+</html>

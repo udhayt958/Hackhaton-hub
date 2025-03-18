@@ -1,0 +1,126 @@
+/*---------------------------------------FAQ----------------------------------------*/
+.faq-section h3{
+  color: #000;
+  font-size: 25px;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+
+.faq{
+  background-color: #000;
+  margin: 20px 0;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.faq-title h4{
+  color: #fff;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.faq-title-1 h4{
+  color: #fff;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.faq-grid{
+  background-color: #fff;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.faq-grid h5{
+  padding-top: 10px;
+  padding-left: 10px;
+  color: #000;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+.faq-grid-1{
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.faq-grid-1 h5{
+  padding-top: 10px;
+  padding-left: 10px;
+  color: #000;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+.faq-grid-1-2{
+  padding-top: 60px;
+}
+
+.faq-grid-1-2 h5{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+
+.faq-grid-1-2 h6{
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+
+.faq-grid-1-3{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.faq-grid-1-3 img{
+  height: 150px;
+  width: 150Spx;
+  border-radius: 20px; 
+   box-shadow: 0 2px 10px rgba(1, 2, 3, 4)
+}
+
+ .faq-main-img {
+    max-width: 100%; /* Makes the image responsive */
+    height: 260px;    /* Maintains the aspect ratio */
+    margin-bottom: 15px; /* Adds space below the image */
+    border-radius: 10px; /* Optional: Adds rounded corners to the image */
+    box-shadow: 0 2px 10px rgba(1, 2, 3, 4); /* Optional: Adds a subtle shadow effect */
+	
+}
+.faq-grid-1-3 button{
+  border-style: none;
+}
+ .faq-grid {
+        cursor: pointer;
+        border-bottom: 1px solid #ccc;
+        padding: 15px 0;
+    }
+    .faq-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+    }
+    .faq-question i {
+        transition: transform 0.3s ease;
+    }
+    .faq-answer {
+        display: none;
+        padding-top: 10px;
+    }
+    .faq-grid.open .faq-answer {
+        display: block;
+    }
+    .faq-grid.open .faq-question i {
+        transform: rotate(180deg);
+    }
+

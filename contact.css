@@ -1,0 +1,137 @@
+
+/*-----------------------------------Contact US-----------------------------*/
+body {
+  background-color:blue; /* Light background for the entire page */
+}
+
+.contact-title h3 {
+  font-size: 26px; /* Increased size for the title */
+  font-weight: 700; /* Bold title */
+  font-family: 'Arial', sans-serif;
+  color: #1a1a1a; /* Dark color for better readability */
+  text-align: left; /* Center align the title */
+}
+
+.contact-grid h5 {
+  padding-top: 10px;
+  font-size: 14px; /* Increased size for better visibility */
+  font-weight: 400;
+  font-family: 'Arial', sans-serif;
+  color: #555; /* Dark gray for text */
+}
+
+.contact-grid-1 {
+  margin-bottom: 10px;
+  padding: 10px 5px; /* Adjusted padding */
+  background-color: #ff6f61; /* Soft coral color */
+  display: inline-block;
+  border-radius: 5px; /* Increased border radius */
+  text-align: center; /* Center the text */
+}
+
+.contact-grid-1 h6 {
+  color: #fff; /* White text for contrast */
+  font-size: 12px; /* Adjusted size */
+  font-weight: 500;
+  font-family: 'Arial', sans-serif;
+}
+
+.contact .info {
+  padding: 20px; /* Reduced padding for a compact look */
+  width: 100%;
+  background-color: #ffffff; /* White background for info boxes */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow for depth */
+  border-radius: 8px; /* Rounded corners */
+  margin-bottom: 20px; /* Spacing between info boxes */
+  display: flex;
+  align-items: center; /* Center align items vertically */
+}
+
+.contact .info_inner {
+  padding-left: 15px; /* Adjusted padding */
+}
+
+.contact .info i {
+  font-size: 24px; /* Increased icon size */
+  color: #fff; /* White icons for contrast */
+  width: 50px;
+  height: 50px;
+  background-color: #28a745; /* Green background for icons */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.contact .info i:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.contact .info h4 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 5px;
+  color:black; /* Darker text color */
+  
+}
+
+.contact .info p {
+  font-size: 14px;
+  margin-bottom: 0;
+  color: #777; /* Lighter gray for body text */
+}
+
+.contact .email_form {
+  margin-bottom: 20px;
+  padding: 30px;
+  width: 100%;
+  background-color:pitch; /* White background for form */
+  box-shadow: 0 4px 20px rgba(1,2 , 3, 4); /* Deeper shadow */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.contact .email_form input,
+.contact .email_form textarea {
+  border-radius: 5px; /* Rounded corners for inputs and textareas */
+  font-size: 14px;
+  border: 3px solid #ccc; /* Light border */
+  padding: 10px; /* Padding inside inputs */
+  transition: border-color 0.3s; /* Smooth transition */
+}
+
+.contact .email_form input:focus,
+.contact .email_form textarea:focus {
+  border-color: #28a745; /* Green border on focus */
+}
+
+.contact .email_form button {
+  border: none;
+  background-color: #007bff; /* Bootstrap primary color */
+  padding: 10px 30px;
+  color: #fff; /* White text for buttons */
+  border-radius: 50px; /* Rounded buttons */
+  transition: background-color 0.3s; /* Smooth transition */
+  font-size: 16px; /* Increased font size for buttons */
+}
+
+.contact .email_form button:hover {
+  background-color: #black; /* Darker blue on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .contact .info {
+    flex-direction: column; /* Stack elements on small screens */
+    align-items: flex-start; /* Align to start */
+  }
+
+  .contact .info_inner {
+    padding-left: 0; /* Remove padding on small screens */
+  }
+
+  .contact .email_form {
+    padding: 20px; /* Reduced padding for small screens */
+  }
+}
+
