@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCT Hackathon Portal - Announcements</title>
+    <link rel="stylesheet" href="OrganizerDashboard.css">
+    <link rel="stylesheet" href="OrganizerAnnouncement.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar (Copied from OrganizerDashboard.html) -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>NCT Hackathon</h3>
+                <p>Organizer Dashboard</p>
+            </div>
+            
+            <div class="user-profile">
+                <div class="profile-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-info">
+                    <h4>Michael Rodriguez</h4>
+                    <p>Lead Organizer</p>
+                </div>
+                <div class="edit-profile-btn">
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <ul>
+                    <li class="menu-item">
+                        <a href="OrganizerDashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerUserManagement.html">
+                            <i class="fas fa-users"></i>
+                            <span>User Management</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerProjectModeration.html">
+                            <i class="fas fa-code"></i>
+                            <span>Project Moderation</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerHackathonSettings.html">
+                            <i class="fas fa-calendar"></i>
+                            <span>Hackathon Settings</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerJudgeAssignment.html">
+                            <i class="fas fa-gavel"></i>
+                            <span>Judge Assignment</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerResourceHub.html">
+                            <i class="fas fa-book"></i>
+                            <span>Resource Hub</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerMessages.html">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                            <span class="badge message-badge">8</span>
+                        </a>
+                    </li>
+                    <li class="menu-item active">
+                        <a href="OrganizerAnnouncement.html">
+                            <i class="fas fa-bell"></i>
+                            <span>Announcements</span>
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+            
+                <div class="menu-separator"></div>
+            
+                <ul>
+                    <li class="menu-item logout">
+                        <a href="../home.html">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Page Title -->
+            <div class="section">
+                <h2>Announcements</h2>
+                <p>Create and manage announcements for all hackathon participants.</p>
+            </div>
+
+            <!-- Create New Announcement -->
+            <div class="section">
+                <div class="section-header">
+                    <h3 class="section-title">Create New Announcement</h3>
+                </div>
+                <form class="announcement-form">
+                    <div class="form-group">
+                        <label for="announcement-title">Title</label>
+                        <input type="text" id="announcement-title" placeholder="Enter announcement title" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="announcement-message">Message</label>
+                        <textarea id="announcement-message" rows="5" placeholder="Enter your announcement message here..." class="form-control"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="announcement-type">Type</label>
+                            <select id="announcement-type" class="form-control">
+                                <option value="general">General</option>
+                                <option value="important">Important</option>
+                                <option value="urgent">Urgent</option>
+                                <option value="deadline">Deadline Reminder</option>
+                            </select>
+                        </div>
+                        <div class="form-group half">
+                            <label for="target-audience">Target Audience</label>
+                            <select id="target-audience" class="form-control">
+                                <option value="all">All Users</option>
+                                <option value="participants">Participants Only</option>
+                                <option value="judges">Judges Only</option>
+                                <option value="organizers">Organizers Only</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Post Announcement</button>
+                        <button type="button" class="btn btn-secondary">Save Draft</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Recent Announcements -->
+            <div class="section">
+                <div class="section-header">
+                    <h3 class="section-title">Recent Announcements</h3>
+                    <div class="filter-group">
+                        <label for="filter-announcements">Filter:</label>
+                        <select id="filter-announcements" class="form-control-sm">
+                            <option value="all">All</option>
+                            <option value="general">General</option>
+                            <option value="important">Important</option>
+                            <option value="urgent">Urgent</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="announcements-list">
+                    <!-- Announcement Item -->
+                    <div class="announcement-item important">
+                        <div class="announcement-header">
+                            <div class="announcement-title">
+                                <span class="announcement-badge important">Important</span>
+                                <h4>Submission Deadline Extended</h4>
+                            </div>
+                            <div class="announcement-meta">
+                                <span class="announcement-date">Feb 28, 2025</span>
+                                <span class="announcement-audience">All Users</span>
+                            </div>
+                        </div>
+                        <div class="announcement-content">
+                            <p>Due to popular request, we have extended the project submission deadline by 24 hours. The new deadline is April 17th, 12:00 PM. Please make sure to submit your projects before this time.</p>
+                        </div>
+                        <div class="announcement-actions">
+                            <button class="btn btn-small btn-primary">Edit</button>
+                            <button class="btn btn-small btn-danger">Delete</button>
+                        </div>
+                    </div>
+
+                    <!-- Announcement Item -->
+                    <div class="announcement-item general">
+                        <div class="announcement-header">
+                            <div class="announcement-title">
+                                <span class="announcement-badge general">General</span>
+                                <h4>Workshop Schedule Released</h4>
+                            </div>
+                            <div class="announcement-meta">
+                                <span class="announcement-date">Feb 25, 2025</span>
+                                <span class="announcement-audience">Participants Only</span>
+                            </div>
+                        </div>
+                        <div class="announcement-content">
+                            <p>We have finalized the workshop schedule for the hackathon. There will be sessions on Web Development, Mobile App Development, and Machine Learning. Check the schedule page for details and timings.</p>
+                        </div>
+                        <div class="announcement-actions">
+                            <button class="btn btn-small btn-primary">Edit</button>
+                            <button class="btn btn-small btn-danger">Delete</button>
+                        </div>
+                    </div>
+
+                    <!-- Announcement Item -->
+                    <div class="announcement-item urgent">
+                        <div class="announcement-header">
+                            <div class="announcement-title">
+                                <span class="announcement-badge urgent">Urgent</span>
+                                <h4>Registration Closing Soon</h4>
+                            </div>
+                            <div class="announcement-meta">
+                                <span class="announcement-date">Feb 20, 2025</span>
+                                <span class="announcement-audience">All Users</span>
+                            </div>
+                        </div>
+                        <div class="announcement-content">
+                            <p>Registration for NCT Hackathon 2025 is closing in 48 hours. If you haven't registered yet, please do so as soon as possible. Limited spots available!</p>
+                        </div>
+                        <div class="announcement-actions">
+                            <button class="btn btn-small btn-primary">Edit</button>
+                            <button class="btn btn-small btn-danger">Delete</button>
+                        </div>
+                    </div>
+
+                    <!-- Announcement Item -->
+                    <div class="announcement-item general">
+                        <div class="announcement-header">
+                            <div class="announcement-title">
+                                <span class="announcement-badge general">General</span>
+                                <h4>Welcome to NCT Hackathon 2025</h4>
+                            </div>
+                            <div class="announcement-meta">
+                                <span class="announcement-date">Feb 15, 2025</span>
+                                <span class="announcement-audience">All Users</span>
+                            </div>
+                        </div>
+                        <div class="announcement-content">
+                            <p>Welcome to the NCT Hackathon 2025! We're excited to have you join us for this exciting event. Registration is now open, and we're looking forward to seeing your innovative projects.</p>
+                        </div>
+                        <div class="announcement-actions">
+                            <button class="btn btn-small btn-primary">Edit</button>
+                            <button class="btn btn-small btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pagination">
+                    <button class="btn btn-small btn-secondary"><i class="fas fa-chevron-left"></i> Previous</button>
+                    <span class="pagination-info">Page 1 of 3</span>
+                    <button class="btn btn-small btn-primary">Next <i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Scheduled Announcements -->
+            <div class="section">
+                <div class="section-header">
+                    <h3 class="section-title">Scheduled Announcements</h3>
+                    <div class="filter-group">
+                        <label for="filter-scheduled">Status:</label>
+                        <select id="filter-scheduled" class="form-control-sm">
+                            <option value="all">All</option>
+                            <option value="pending">Pending</option>
+                            <option value="sent">Sent</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="announcements-list">
+                    <!-- Scheduled Announcement Item -->
+                    <div class="announcement-item scheduled">
+                        <div class="announcement-header">
+                            <div class="announcement-title">
+                                <span class="announcement-badge scheduled">Scheduled</span>
+                                <h4>Final Project Reminder</h4>
+                            </div>
+                            <div class="announcement-meta">
+                                <span class="announcement-date">Will send on: Apr 16, 2025, 9:00 AM</span>
+                                <span class="announcement-audience">Participants Only</span>
+                            </div>
+                        </div>
+                        <div class="announcement-content">
+                            <p>A friendly reminder that project submissions are due tomorrow by 12:00 PM. Make sure to finalize your code and prepare your presentations for the judging round.</p>
+                        </div>
+                        <div class="announcement-actions">
+                            <button class="btn btn-small btn-primary">Edit</button>
+                            <button class="btn btn-small btn-danger">Cancel</button>
+                        </div>
+                    </div>
+
+                    <!-- Scheduled Announcement Item -->
+                    <div class="announcement-item scheduled">
+                        <div class="announcement-header">
+                            <div class="announcement-title">
+                                <span class="announcement-badge scheduled">Scheduled</span>
+                                <h4>Judging Schedule Released</h4>
+                            </div>
+                            <div class="announcement-meta">
+                                <span class="announcement-date">Will send on: Apr 16, 2025, 3:00 PM</span>
+                                <span class="announcement-audience">All Users</span>
+                            </div>
+                        </div>
+                        <div class="announcement-content">
+                            <p>The judging schedule for the final day has been released. Please check the schedule page to see when your team will be presenting.</p>
+                        </div>
+                        <div class="announcement-actions">
+                            <button class="btn btn-small btn-primary">Edit</button>
+                            <button class="btn btn-small btn-danger">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple JavaScript for menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    menuItems.forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+        </script>
+        <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const postButton = document.querySelector('.announcement-form button[type="submit"]');
+        const announcementForm = document.querySelector('.announcement-form');
+
+        // Handle form submission
+        postButton.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the form from actually submitting for now
+
+            const title = document.getElementById('announcement-title').value;
+            const message = document.getElementById('announcement-message').value;
+
+            if (title && message) {
+                // Display confirmation message
+                alert("Announcement has been posted!");
+                
+                // Optionally, reset the form
+                announcementForm.reset();
+            } else {
+                alert("Please fill in both the title and message fields.");
+            }
+        });
+    });
+</script>
+
+    </script>
+</body>
+</html>

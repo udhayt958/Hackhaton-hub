@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCT Hackathon Portal - Messages</title>
+    <link rel="stylesheet" href="OrganizerMessages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>NCT Hackathon</h3>
+                <p>Organizer Dashboard</p>
+            </div>
+            
+            <div class="user-profile">
+                <div class="profile-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-info">
+                    <h4>Michael Rodriguez</h4>
+                    <p>Lead Organizer</p>
+                </div>
+                <div class="edit-profile-btn">
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <ul>
+                    <li class="menu-item">
+                        <a href="OrganizerDashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerUserManagement.html">
+                            <i class="fas fa-users"></i>
+                            <span>User Management</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerProjectModeration.html">
+                            <i class="fas fa-code"></i>
+                            <span>Project Moderation</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerHackathonSettings.html">
+                            <i class="fas fa-calendar"></i>
+                            <span>Hackathon Settings</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerJudgeAssignment.html">
+                            <i class="fas fa-gavel"></i>
+                            <span>Judge Assignment</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerResourceHub.html">
+                            <i class="fas fa-book"></i>
+                            <span>Resource Hub</span>
+                        </a>
+                    </li>
+                    <li class="menu-item active">
+                        <a href="OrganizerMessages.html">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                            <span class="badge message-badge">8</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerAnnouncement.html">
+                            <i class="fas fa-bell"></i>
+                            <span>Announcements</span>
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+            
+                <div class="menu-separator"></div>
+            
+                <ul>
+                    <li class="menu-item logout">
+                        <a href="../home.html">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!--<header class="top-header">
+                <div class="header-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search messages...">
+                </div>
+                <div class="header-actions">
+                    <div class="notification-bell">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="messages-icon">
+                        <i class="fas fa-envelope"></i>
+                        <span class="badge">8</span>
+                    </div>
+                    <div class="help-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                </div>
+            </header> -->
+            
+            <!-- Messages Section -->
+            <div class="messages-container">
+                <!-- Messages Sidebar -->
+                <div class="messages-sidebar">
+                    <div class="messages-sidebar-header">
+                        <h2>Messages</h2>
+                        <button class="btn btn-primary" id="compose-btn">
+                            <i class="fas fa-pen"></i> Compose
+                        </button>
+                    </div>
+                    
+                    <div class="messages-filters">
+                        <div class="filter-tabs">
+                            <button class="filter-tab active" data-filter="all">All</button>
+                            <button class="filter-tab" data-filter="unread">Unread</button>
+                            <button class="filter-tab" data-filter="participants">Participants</button>
+                            <button class="filter-tab" data-filter="judges">Judges</button>
+                            <button class="filter-tab" data-filter="organizers">Organizers</button>
+                        </div>
+                    </div>
+                    
+                    <div class="messages-list">
+                        <!-- Unread Messages -->
+                        <div class="message-preview unread selected" data-id="1">
+                            <div class="message-avatar participant">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="message-preview-content">
+                                <div class="message-preview-header">
+                                    <h3>Alex Johnson</h3>
+                                    <span class="message-time">11:45 AM</span>
+                                </div>
+                                <div class="message-preview-info">
+                                    <span class="sender-role participant">Participant</span>
+                                    <span class="message-status">New</span>
+                                </div>
+                                <p class="message-snippet">I have a question about the submission deadline. Can we get an extension...</p>
+                            </div>
+                        </div>
+                        
+                        <div class="message-preview unread" data-id="2">
+                            <div class="message-avatar participant">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="message-preview-content">
+                                <div class="message-preview-header">
+                                    <h3>Emily Chen</h3>
+                                    <span class="message-time">10:30 AM</span>
+                                </div>
+                                <div class="message-preview-info">
+                                    <span class="sender-role participant">Participant</span>
+                                    <span class="message-status">New</span>
+                                </div>
+                                <p class="message-snippet">Our team is having trouble with the API. Could you provide additional docs...</p>
+                            </div>
+                        </div>
+                        
+                        <div class="message-preview" data-id="3">
+                            <div class="message-avatar judge">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="message-preview-content">
+                                <div class="message-preview-header">
+                                    <h3>Dr. Sarah Williams</h3>
+                                    <span class="message-time">Yesterday</span>
+                                </div>
+                                <div class="message-preview-info">
+                                    <span class="sender-role judge">Judge</span>
+                                </div>
+                                <p class="message-snippet">I've completed my first round of evaluations. Would like to discuss some of...</p>
+                            </div>
+                        </div>
+                        
+                        <div class="message-preview" data-id="4">
+                            <div class="message-avatar organizer">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="message-preview-content">
+                                <div class="message-preview-header">
+                                    <h3>James Peterson</h3>
+                                    <span class="message-time">Yesterday</span>
+                                </div>
+                                <div class="message-preview-info">
+                                    <span class="sender-role organizer">Organizer</span>
+                                </div>
+                                <p class="message-snippet">Let's coordinate the judging schedule for next week. I'm thinking we should...</p>
+                            </div>
+                        </div>
+                        
+                        <div class="message-preview" data-id="5">
+                            <div class="message-avatar participant">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="message-preview-content">
+                                <div class="message-preview-header">
+                                    <h3>Team CodeNinjas</h3>
+                                    <span class="message-time">2 days ago</span>
+                                </div>
+                                <div class="message-preview-info">
+                                    <span class="sender-role participant">Team</span>
+                                </div>
+                                <p class="message-snippet">We need access to the Azure credits mentioned in the resources section...</p>
+                            </div>
+                        </div>
+                        
+                        <div class="message-preview" data-id="6">
+                            <div class="message-avatar judge">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="message-preview-content">
+                                <div class="message-preview-header">
+                                    <h3>Dr. Mark Thompson</h3>
+                                    <span class="message-time">3 days ago</span>
+                                </div>
+                                <div class="message-preview-info">
+                                    <span class="sender-role judge">Judge</span>
+                                </div>
+                                <p class="message-snippet">I have a scheduling conflict with the final judging day. Is it possible to...</p>
+                            </div>
+                        </div>
+                        
+                        <div class="message-preview" data-id="7">
+                            <div class="message-avatar participant">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="message-preview-content">
+                                <div class="message-preview-header">
+                                    <h3>Sofia Martinez</h3>
+                                    <span class="message-time">Feb 22</span>
+                                </div>
+                                <div class="message-preview-info">
+                                    <span class="sender-role participant">Participant</span>
+                                </div>
+                                <p class="message-snippet">Can I still join a team or is it too late? I have experience with UI/UX design...</p>
+                            </div>
+                        </div>
+                        
+                        <div class="message-preview" data-id="8">
+                            <div class="message-avatar organizer">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="message-preview-content">
+                                <div class="message-preview-header">
+                                    <h3>Jessica Kim</h3>
+                                    <span class="message-time">Feb 20</span>
+                                </div>
+                                <div class="message-preview-info">
+                                    <span class="sender-role organizer">Organizer</span>
+                                </div>
+                                <p class="message-snippet">The sponsor from TechSolutions confirmed their workshop for next Tuesday...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Message Content -->
+                <div class="message-content">
+                    <div class="message-header">
+                        <div class="message-header-info">
+                            <h2>Submission Deadline Extension</h2>
+                            <div class="message-meta">
+                                <span class="message-from">From: <strong>Alex Johnson</strong> (Participant)</span>
+                                <span class="message-to">To: <strong>Organizers</strong></span>
+                                <span class="message-time-full">Today, March 3, 2025 at 11:45 AM</span>
+                            </div>
+                        </div>
+                        <div class="message-header-actions">
+                            <button class="btn btn-icon" title="Mark as unread">
+                                <i class="fas fa-envelope"></i>
+                            </button>
+                            <button class="btn btn-icon" title="Archive">
+                                <i class="fas fa-archive"></i>
+                            </button>
+                            <button class="btn btn-icon" title="Delete">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="message-body">
+                        <p>Hello Organizers,</p>
+                        
+                        <p>I'm Alex Johnson, the team lead for "InnovateTech." We're working on a project that leverages AI to improve accessibility features for visually impaired users.</p>
+                        
+                        <p>I wanted to inquire about the possibility of a submission deadline extension. We've encountered some unexpected technical challenges with our API integration that have set us back by a couple of days. We're making good progress, but we're concerned about having enough time for proper testing and polishing our submission.</p>
+                        
+                        <p>Would it be possible to extend the deadline by 24-48 hours? This would make a significant difference for our team and would allow us to deliver a more complete and polished project.</p>
+                        
+                        <p>Thank you for your consideration.</p>
+                        
+                        <p>Best regards,<br>
+                        Alex Johnson<br>
+                        Team InnovateTech</p>
+                    </div>
+                    
+                    <div class="message-reply">
+                        <div class="reply-header">
+                            <h3>Reply</h3>
+                        </div>
+                        <div class="reply-editor">
+                            <div class="reply-toolbar">
+                                <button class="toolbar-btn"><i class="fas fa-bold"></i></button>
+                                <button class="toolbar-btn"><i class="fas fa-italic"></i></button>
+                                <button class="toolbar-btn"><i class="fas fa-underline"></i></button>
+                                <button class="toolbar-btn"><i class="fas fa-list"></i></button>
+                                <button class="toolbar-btn"><i class="fas fa-list-ol"></i></button>
+                                <button class="toolbar-btn"><i class="fas fa-paperclip"></i></button>
+                            </div>
+                            <textarea placeholder="Type your reply here..."></textarea>
+                            <div class="reply-actions">
+                                <button class="btn btn-secondary">Save Draft</button>
+                                <button class="btn btn-primary">Send Reply</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Compose Message Modal -->
+    <div class="modal" id="composeModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>New Message</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="compose-form">
+                    <div class="form-group">
+                        <label>To</label>
+                        <select class="form-control" id="message-recipient-type">
+                            <option value="individual">Individual</option>
+                            <option value="group">Group/Team</option>
+                            <option value="all">All Participants</option>
+                            <option value="judges">All Judges</option>
+                            <option value="organizers">All Organizers</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group" id="individual-recipient">
+                        <label>Recipient</label>
+                        <div class="recipient-search">
+                            <input type="text" class="form-control" placeholder="Search for a user...">
+                            <div class="recipient-suggestions">
+                                <div class="suggestion-item">
+                                    <div class="suggestion-avatar participant">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="suggestion-info">
+                                        <span class="suggestion-name">Alex Johnson</span>
+                                        <span class="suggestion-role participant">Participant</span>
+                                    </div>
+                                </div>
+                                <div class="suggestion-item">
+                                    <div class="suggestion-avatar participant">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="suggestion-info">
+                                        <span class="suggestion-name">Emily Chen</span>
+                                        <span class="suggestion-role participant">Participant</span>
+                                    </div>
+                                </div>
+                                <div class="suggestion-item">
+                                    <div class="suggestion-avatar judge">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="suggestion-info">
+                                        <span class="suggestion-name">Dr. Sarah Williams</span>
+                                        <span class="suggestion-role judge">Judge</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="selected-recipients">
+                            <div class="recipient-tag">
+                                <span>Alex Johnson</span>
+                                <button class="remove-recipient"><i class="fas fa-times"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" id="group-recipient" style="display: none;">
+                        <label>Team</label>
+                        <select class="form-control">
+                            <option value="">Select a team</option>
+                            <option value="1">Team InnovateTech</option>
+                            <option value="2">Team CodeNinjas</option>
+                            <option value="3">Team ByteWizards</option>
+                            <option value="4">Team DataCrunchers</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input type="text" class="form-control" placeholder="Enter subject">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Message</label>
+                        <div class="compose-toolbar">
+                            <button type="button" class="toolbar-btn"><i class="fas fa-bold"></i></button>
+                            <button type="button" class="toolbar-btn"><i class="fas fa-italic"></i></button>
+                            <button type="button" class="toolbar-btn"><i class="fas fa-underline"></i></button>
+                            <button type="button" class="toolbar-btn"><i class="fas fa-list"></i></button>
+                            <button type="button" class="toolbar-btn"><i class="fas fa-list-ol"></i></button>
+                            <button type="button" class="toolbar-btn"><i class="fas fa-paperclip"></i></button>
+                        </div>
+                        <textarea class="form-control" rows="10" placeholder="Type your message here..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Attachments</label>
+                        <div class="attachment-upload">
+                            <button class="btn btn-outlined btn-sm">
+                                <i class="fas fa-paperclip"></i> Add Attachment
+                            </button>
+                            <input type="file" id="attachment-file" hidden>
+                        </div>
+                        
+                        <div class="attachments-list">
+                            <!-- Example attachment -->
+                            <div class="attachment-item">
+                                <div class="attachment-info">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span class="attachment-name">Hackathon_Schedule.pdf</span>
+                                    <span class="attachment-size">(1.2 MB)</span>
+                                </div>
+                                <button class="btn btn-icon remove-attachment"><i class="fas fa-times"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary close-btn">Cancel</button>
+                <button class="btn btn-outlined">Save Draft</button>
+                <button class="btn btn-primary send-btn">Send Message</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sidebar Menu Functionality
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // If clicked on Dashboard, navigate to dashboard page
+                    if(this.querySelector('span').textContent.trim() === 'Dashboard') {
+                        window.location.href = 'OrganizerDashboard.html';
+                    }
+                    // If clicked on Resource Hub, navigate to resource hub page
+                    else if(this.querySelector('span').textContent.trim() === 'Resource Hub') {
+                        window.location.href = 'OrganizerResourceHub.html';
+                    }
+                    // If clicked on Badges Management, navigate to badges page
+                    else if(this.querySelector('span').textContent.trim() === 'Badges Management') {
+                        window.location.href = 'OrganizerBadgeManagement.html';
+                    }
+                    // If clicked on Analytics, navigate to analytics page
+                    else if(this.querySelector('span').textContent.trim() === 'Analytics') {
+                        window.location.href = 'OrganizerAnalytics.html';
+                    }
+                    
+                    menuItems.forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            // Message Preview Click
+            const messagePreviews = document.querySelectorAll('.message-preview');
+            messagePreviews.forEach(preview => {
+                preview.addEventListener('click', function() {
+                    messagePreviews.forEach(p => p.classList.remove('selected'));
+                    this.classList.remove('unread');
+                    this.classList.add('selected');
+                    
+                    // Here you would typically load the message content via AJAX
+                    // For the demo, we just show the message that's already in the DOM
+                });
+            });
+            
+            // Filter Tabs
+            const filterTabs = document.querySelectorAll('.filter-tab');
+            filterTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    filterTabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const filter = this.dataset.filter;
+                    filterMessages(filter);
+                });
+            });
+            
+            function filterMessages(filter) {
+                const previews = document.querySelectorAll('.message-preview');
+                previews.forEach(preview => {
+                    if (filter === 'all') {
+                        preview.style.display = 'flex';
+                    } else if (filter === 'unread') {
+                        preview.style.display = preview.classList.contains('unread') ? 'flex' : 'none';
+                    } else if (filter === 'participants') {
+                        const role = preview.querySelector('.sender-role');
+                        preview.style.display = role && role.classList.contains('participant') ? 'flex' : 'none';
+                    } else if (filter === 'judges') {
+                        const role = preview.querySelector('.sender-role');
+                        preview.style.display = role && role.classList.contains('judge') ? 'flex' : 'none';
+                    } else if (filter === 'organizers') {
+                        const role = preview.querySelector('.sender-role');
+                        preview.style.display = role && role.classList.contains('organizer') ? 'flex' : 'none';
+                    }
+                });
+            }
+            
+            // Compose Button
+            const composeBtn = document.getElementById('compose-btn');
+            const composeModal = document.getElementById('composeModal');
+            if (composeBtn) {
+                composeBtn.addEventListener('click', function() {
+                    composeModal.style.display = 'block';
+                });
+            }
+            
+            // Close Buttons
+            const closeButtons = document.querySelectorAll('.close, .close-btn');
+            closeButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    composeModal.style.display = 'none';
+                });
+            });
+            
+            // Recipient Type Change
+            const recipientType = document.getElementById('message-recipient-type');
+            const individualRecipient = document.getElementById('individual-recipient');
+            const groupRecipient = document.getElementById('group-recipient');
+            
+            if (recipientType) {
+                recipientType.addEventListener('change', function() {
+                    if (this.value === 'individual') {
+                        individualRecipient.style.display = 'block';
+                        groupRecipient.style.display = 'none';
+                    } else if (this.value === 'group') {
+                        individualRecipient.style.display = 'none';
+                        groupRecipient.style.display = 'none';
+                    }
+                });
+            }
+            
+            // Attachment Button
+            const attachmentBtn = document.querySelector('.attachment-upload .btn');
+            const attachmentInput = document.getElementById('attachment-file');
+            
+            if (attachmentBtn && attachmentInput) {
+                attachmentBtn.addEventListener('click', function() {
+                    attachmentInput.click();
+                });
+                
+                attachmentInput.addEventListener('change', function() {
+                    if (this.files.length) {
+                        addAttachment(this.files[0]);
+                    }
+                });
+            }
+            
+            function addAttachment(file) {
+                const attachmentsList = document.querySelector('.attachments-list');
+                const attachmentItem = document.createElement('div');
+                attachmentItem.className = 'attachment-item';
+                
+                let icon = 'fas fa-file';
+                if (file.type.includes('pdf')) {
+                    icon = 'fas fa-file-pdf';
+                } else if (file.type.includes('image')) {
+                    icon = 'fas fa-file-image';
+                } else if (file.type.includes('word') || file.name.endsWith('.docx') || file.name.endsWith('.doc')) {
+                    icon = 'fas fa-file-word';
+                } else if (file.type.includes('excel') || file.name.endsWith('.xlsx') || file.name.endsWith('.xls')) {
+                    icon = 'fas fa-file-excel';
+                }
+                
+                attachmentItem.innerHTML = `
+                    <div class="attachment-info">
+                        <i class="${icon}"></i>
+                        <span class="attachment-name">${file.name}</span>
+                        <span class="attachment-size">(${formatFileSize(file.size)})</span>
+                    </div>
+                    <button class="btn btn-icon remove-attachment"><i class="fas fa-times"></i></button>
+                `;
+                
+                attachmentsList.appendChild(attachmentItem);
+                
+                // Add event listener to remove button
+                const removeBtn = attachmentItem.querySelector('.remove-attachment');
+                removeBtn.addEventListener('click', function() {
+                    attachmentItem.remove();
+                });
+            }
+            
+            function formatFileSize(bytes) {
+                if (bytes < 1024) return bytes + ' B';
+                else if (bytes < 1048576) return (bytes / 1024).toFixed(1) + ' KB';
+                else return (bytes / 1048576).toFixed(1) + ' MB';
+            }
+            
+            // Remove existing attachment example
+            const removeAttachmentButtons = document.querySelectorAll('.remove-attachment');
+            removeAttachmentButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    this.closest('.attachment-item').remove();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+<!--';
+                        groupRecipient.style.display = 'block';
+                    } else {
+                        individualRecipient.style.display = 'none   -->

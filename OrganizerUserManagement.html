@@ -1,0 +1,329 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCT Hackathon Portal - User Management</title>
+    <link rel="stylesheet" href="OrganizerDashboard.css">
+    <link rel="stylesheet" href="OrganizerUserManagement.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar (Copied from OrganizerDashboard.html) -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>NCT Hackathon</h3>
+                <p>Organizer Dashboard</p>
+            </div>
+            
+            <div class="user-profile">
+                <div class="profile-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-info">
+                    <h4>Michael Rodriguez</h4>
+                    <p>Lead Organizer</p>
+                </div>
+                <div class="edit-profile-btn">
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <ul>
+                    <li class="menu-item">
+                        <a href="OrganizerDashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="menu-item active">
+                        <a href="OrganizerUserManagement.html">
+                            <i class="fas fa-users"></i>
+                            <span>User Management</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerProjectModeration.html">
+                            <i class="fas fa-code"></i>
+                            <span>Project Moderation</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerHackathonSettings.html">
+                            <i class="fas fa-calendar"></i>
+                            <span>Hackathon Settings</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerJudgeAssignment.html">
+                            <i class="fas fa-gavel"></i>
+                            <span>Judge Assignment</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerResourceHub.html">
+                            <i class="fas fa-book"></i>
+                            <span>Resource Hub</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerMessages.html">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                            <span class="badge message-badge">8</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerAnnouncement.html">
+                            <i class="fas fa-bell"></i>
+                            <span>Announcements</span>
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+            
+                <div class="menu-separator"></div>
+            
+                <ul>
+                    <li class="menu-item logout">
+                        <a href="../home.html">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content (Kept the same as original OrganizerUserManagement.html) -->
+        <div class="main-content">
+            <!-- Page Header -->
+            <div class="section">
+                <h2>User Management</h2>
+                <p>Manage participants, teams, and assign roles for the NCT Hackathon.</p>
+            </div>
+
+            <!-- Stats Container -->
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-value">128</div>
+                    <div class="stat-label">Total Users</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">95</div>
+                    <div class="stat-label">Participants</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">25</div>
+                    <div class="stat-label">Team Leaders</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">8</div>
+                    <div class="stat-label">Judges</div>
+                </div>
+            </div>
+
+            <!-- User Management Tabs -->
+            <div class="section">
+                <div class="tabs">
+                    <div class="tab active" data-tab="pending">Pending Approvals (5)</div>
+                    <div class="tab" data-tab="participants">Participants (95)</div>
+                    <div class="tab" data-tab="teams">Teams (32)</div>
+                    <div class="tab" data-tab="judges">Judges (8)</div>
+                </div>
+
+                <!-- Pending Approvals Tab Content -->
+                <div class="tab-content active" id="pending">
+                    <div class="search-filter">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search by name or email">
+                        </div>
+                        <div class="filter">
+                            <select>
+                                <option value="all">All Roles</option>
+                                <option value="participant">Participant</option>
+                                <option value="judge">Judge</option>
+                            </select>
+                        </div>
+                        <div class="actions">
+                            <button class="btn btn-success">Approve All</button>
+                            <button class="btn btn-danger">Reject All</button>
+                        </div>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox"></th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Date</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>John Smith</td>
+                                    <td>john@example.com</td>
+                                    <td>Participant</td>
+                                    <td>Feb 24, 2025</td>
+                                    <td>
+                                        <button class="btn btn-small btn-success">Approve</button>
+                                        <button class="btn btn-small btn-danger">Reject</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>Jane Doe</td>
+                                    <td>jane@example.com</td>
+                                    <td>Participant</td>
+                                    <td>Feb 24, 2025</td>
+                                    <td>
+                                        <button class="btn btn-small btn-success">Approve</button>
+                                        <button class="btn btn-small btn-danger">Reject</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>Michael Johnson</td>
+                                    <td>michael@example.com</td>
+                                    <td>Judge</td>
+                                    <td>Feb 25, 2025</td>
+                                    <td>
+                                        <button class="btn btn-small btn-success">Approve</button>
+                                        <button class="btn btn-small btn-danger">Reject</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>Emily Wilson</td>
+                                    <td>emily@example.com</td>
+                                    <td>Participant</td>
+                                    <td>Feb 25, 2025</td>
+                                    <td>
+                                        <button class="btn btn-small btn-success">Approve</button>
+                                        <button class="btn btn-small btn-danger">Reject</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>David Brown</td>
+                                    <td>david@example.com</td>
+                                    <td>Participant</td>
+                                    <td>Feb 26, 2025</td>
+                                    <td>
+                                        <button class="btn btn-small btn-success">Approve</button>
+                                        <button class="btn btn-small btn-danger">Reject</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Participants Tab Content (Hidden by default) -->
+                <div class="tab-content" id="participants">
+                    <div class="search-filter">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search by name or email">
+                        </div>
+                        <div class="filter">
+                            <select>
+                                <option value="all">All Teams</option>
+                                <option value="team1">Team 1</option>
+                                <option value="team2">Team 2</option>
+                                <option value="none">No Team</option>
+                            </select>
+                        </div>
+                        <div class="actions">
+                            <button class="btn btn-primary">Export List</button>
+                            <button class="btn btn-primary">Add User</button>
+                        </div>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Team</th>
+                                    <th>Status</th>
+                                    <th>Join Date</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Table would be filled with participant data -->
+                                <tr>
+                                    <td>Alex Johnson</td>
+                                    <td>alex@example.com</td>
+                                    <td>Code Ninjas</td>
+                                    <td><span class="status active">Active</span></td>
+                                    <td>Feb 15, 2025</td>
+                                    <td>
+                                        <button class="btn btn-small btn-primary">Edit</button>
+                                        <button class="btn btn-small btn-danger">Deactivate</button>
+                                    </td>
+                                </tr>
+                                <!-- More rows would follow -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Other tab contents would be similar but with appropriate data -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Menu functionality (preserved from original)
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    menuItems.forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // If Dashboard is clicked, navigate to the dashboard page
+                    if (this.querySelector('span').textContent === 'Dashboard') {
+                        window.location.href = 'OrganizerDashboard.html';
+                    }
+                    // Similarly for other menu items
+                });
+            });
+
+            // Tab switching functionality
+            const tabs = document.querySelectorAll('.tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+                    
+                    // Remove active class from all tabs and contents
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to current tab and content
+                    this.classList.add('active');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

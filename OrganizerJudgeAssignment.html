@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCT Hackathon Portal - Judge Assignment</title>
+    <link rel="stylesheet" href="OrganizerDashboard.css">
+    <link rel="stylesheet" href="OrganizerJudgeAssignment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar (Copied from OrganizerDashboard.html) -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>NCT Hackathon</h3>
+                <p>Organizer Dashboard</p>
+            </div>
+            
+            <div class="user-profile">
+                <div class="profile-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-info">
+                    <h4>Michael Rodriguez</h4>
+                    <p>Lead Organizer</p>
+                </div>
+                <div class="edit-profile-btn">
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <ul>
+                    <li class="menu-item">
+                        <a href="OrganizerDashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerUserManagement.html">
+                            <i class="fas fa-users"></i>
+                            <span>User Management</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerProjectModeration.html">
+                            <i class="fas fa-code"></i>
+                            <span>Project Moderation</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerHackathonSettings.html">
+                            <i class="fas fa-calendar"></i>
+                            <span>Hackathon Settings</span>
+                        </a>
+                    </li>
+                    <li class="menu-item active">
+                        <a href="OrganizerJudgeAssignment.html">
+                            <i class="fas fa-gavel"></i>
+                            <span>Judge Assignment</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerResourceHub.html">
+                            <i class="fas fa-book"></i>
+                            <span>Resource Hub</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerMessages.html">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                            <span class="badge message-badge">8</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerAnnouncement.html">
+                            <i class="fas fa-bell"></i>
+                            <span>Announcements</span>
+                        </a>
+                    </li>
+                    
+                   
+                </ul>
+            
+                <div class="menu-separator"></div>
+            
+                <ul>
+                    <li class="menu-item logout">
+                        <a href="../home.html">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Page Title -->
+            <div class="section">
+                <h2>Judge Assignment</h2>
+                <p>Assign judges to projects and define judging criteria.</p>
+            </div>
+
+            <!-- Judges List -->
+            <div class="section">
+                <div class="section-header">
+                    <h3 class="section-title">Judges</h3>
+                    <button class="btn btn-primary btn-small">Add Judge</button>
+                </div>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Expertise</th>
+                                <th>Projects Assigned</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dr. Sarah Johnson</td>
+                                <td>sarah.j@nct.edu</td>
+                                <td>AI & Machine Learning</td>
+                                <td>3</td>
+                                <td><span class="status active">Active</span></td>
+                                <td>
+                                    <button class="btn btn-small btn-primary">Edit</button>
+                                    <button class="btn btn-small btn-primary">Assign</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Prof. Michael Chen</td>
+                                <td>m.chen@nct.edu</td>
+                                <td>Web Development</td>
+                                <td>4</td>
+                                <td><span class="status active">Active</span></td>
+                                <td>
+                                    <button class="btn btn-small btn-primary">Edit</button>
+                                    <button class="btn btn-small btn-primary">Assign</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Emily Rodriguez</td>
+                                <td>e.rodriguez@tech.com</td>
+                                <td>UI/UX Design</td>
+                                <td>2</td>
+                                <td><span class="status active">Active</span></td>
+                                <td>
+                                    <button class="btn btn-small btn-primary">Edit</button>
+                                    <button class="btn btn-small btn-primary">Assign</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>David Kumar</td>
+                                <td>d.kumar@innovate.ca</td>
+                                <td>Mobile Development</td>
+                                <td>0</td>
+                                <td><span class="status pending">Pending</span></td>
+                                <td>
+                                    <button class="btn btn-small btn-primary">Edit</button>
+                                    <button class="btn btn-small btn-primary">Assign</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Project Assignment -->
+            <div class="section">
+                <div class="section-header">
+                    <h3 class="section-title">Project Assignment</h3>
+                </div>
+                <div class="assignment-container">
+                    <div class="assignment-filters">
+                        <div class="form-row">
+                            <div class="form-group half">
+                                <label for="filter-judge">Filter by Judge</label>
+                                <select id="filter-judge" class="form-control">
+                                    <option value="">All Judges</option>
+                                    <option value="1">Dr. Sarah Johnson</option>
+                                    <option value="2">Prof. Michael Chen</option>
+                                    <option value="3">Emily Rodriguez</option>
+                                    <option value="4">David Kumar</option>
+                                </select>
+                            </div>
+                            <div class="form-group half">
+                                <label for="filter-category">Filter by Category</label>
+                                <select id="filter-category" class="form-control">
+                                    <option value="">All Categories</option>
+                                    <option value="web">Web Applications</option>
+                                    <option value="mobile">Mobile Applications</option>
+                                    <option value="ai">AI/ML Solutions</option>
+                                    <option value="iot">IoT Projects</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Project Name</th>
+                                    <th>Team</th>
+                                    <th>Category</th>
+                                    <th>Assigned Judges</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Smart Campus Navigator</td>
+                                    <td>Code Ninjas</td>
+                                    <td>Mobile Applications</td>
+                                    <td>
+                                        <div class="judge-tags">
+                                            <span class="judge-tag">M. Chen</span>
+                                            <span class="judge-tag">E. Rodriguez</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-small btn-primary">Assign Judge</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>AI Study Assistant</td>
+                                    <td>Tech Wizards</td>
+                                    <td>AI/ML Solutions</td>
+                                    <td>
+                                        <div class="judge-tags">
+                                            <span class="judge-tag">S. Johnson</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-small btn-primary">Assign Judge</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Virtual Career Fair</td>
+                                    <td>Web Masters</td>
+                                    <td>Web Applications</td>
+                                    <td>
+                                        <div class="judge-tags">
+                                            <span class="judge-tag">M. Chen</span>
+                                            <span class="judge-tag">S. Johnson</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-small btn-primary">Assign Judge</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Smart IoT Campus</td>
+                                    <td>Circuit Breakers</td>
+                                    <td>IoT Projects</td>
+                                    <td>
+                                        <div class="judge-tags">
+                                            <span class="judge-tag">M. Chen</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-small btn-primary">Assign Judge</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Judging Criteria -->
+            <div class="section">
+                <div class="section-header">
+                    <h3 class="section-title">Judging Criteria</h3>
+                    <button class="btn btn-primary btn-small">Add Criterion</button>
+                </div>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Criterion</th>
+                                <th>Description</th>
+                                <th>Weight (%)</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Innovation</td>
+                                <td>Uniqueness and creativity of the solution</td>
+                                <td>25</td>
+                                <td>
+                                    <button class="btn btn-small btn-primary">Edit</button>
+                                    <button class="btn btn-small btn-danger">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Technical Complexity</td>
+                                <td>Technical difficulty and implementation quality</td>
+                                <td>25</td>
+                                <td>
+                                    <button class="btn btn-small btn-primary">Edit</button>
+                                    <button class="btn btn-small btn-danger">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>User Experience</td>
+                                <td>Design and usability of the solution</td>
+                                <td>20</td>
+                                <td>
+                                    <button class="btn btn-small btn-primary">Edit</button>
+                                    <button class="btn btn-small btn-danger">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Practicality</td>
+                                <td>Relevance and usefulness of the solution</td>
+                                <td>15</td>
+                                <td>
+                                    <button class="btn btn-small btn-primary">Edit</button>
+                                    <button class="btn btn-small btn-danger">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Presentation</td>
+                                <td>Quality of project presentation and demo</td>
+                                <td>15</td>
+                                <td>
+                                    <button class="btn btn-small btn-primary">Edit</button>
+                                    <button class="btn btn-small btn-danger">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple JavaScript for menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    menuItems.forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

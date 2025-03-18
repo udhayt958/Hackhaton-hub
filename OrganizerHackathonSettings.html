@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCT Hackathon Portal - Hackathon Settings</title>
+    <link rel="stylesheet" href="OrganizerDashboard.css">
+    <link rel="stylesheet" href="OrganizerHackathonSettings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar (Copied from OrganizerDashboard.html) -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>NCT Hackathon</h3>
+                <p>Organizer Dashboard</p>
+            </div>
+            
+            <div class="user-profile">
+                <div class="profile-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-info">
+                    <h4>Michael Rodriguez</h4>
+                    <p>Lead Organizer</p>
+                </div>
+                <div class="edit-profile-btn">
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <ul>
+                    <li class="menu-item">
+                        <a href="OrganizerDashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerUserManagement.html">
+                            <i class="fas fa-users"></i>
+                            <span>User Management</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerProjectModeration.html">
+                            <i class="fas fa-code"></i>
+                            <span>Project Moderation</span>
+                        </a>
+                    </li>
+                    <li class="menu-item active">
+                        <a href="OrganizerHackathonSettings.html">
+                            <i class="fas fa-calendar"></i>
+                            <span>Hackathon Settings</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerJudgeAssignment.html">
+                            <i class="fas fa-gavel"></i>
+                            <span>Judge Assignment</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerResourceHub.html">
+                            <i class="fas fa-book"></i>
+                            <span>Resource Hub</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerMessages.html">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                            <span class="badge message-badge">8</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerAnnouncement.html">
+                            <i class="fas fa-bell"></i>
+                            <span>Announcements</span>
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+            
+                <div class="menu-separator"></div>
+            
+                <ul>
+                    <li class="menu-item logout">
+                        <a href="../home.html">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Page Title -->
+            <div class="section">
+                <h2>Hackathon Settings</h2>
+                <p>Configure and manage hackathon details, schedule, and rules.</p>
+            </div>
+
+            <!-- Basic Settings -->
+            <div class="section">
+                <div class="section-header">
+                    <h3 class="section-title">Basic Information</h3>
+                </div>
+                <form class="settings-form">
+                    <div class="form-group">
+                        <label for="hackathon-name">Hackathon Name</label>
+                        <input type="text" id="hackathon-name" value="NCT Hackathon 2025" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="hackathon-desc">Description</label>
+                        <textarea id="hackathon-desc" rows="3" class="form-control">Niagara College Toronto annual hackathon event bringing together students to solve real-world problems.</textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="start-date">Start Date</label>
+                            <input type="date" id="start-date" value="2025-04-15" class="form-control">
+                        </div>
+                        <div class="form-group half">
+                            <label for="end-date">End Date</label>
+                            <input type="date" id="end-date" value="2025-04-17" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="venue">Venue</label>
+                        <input type="text" id="venue" value="Niagara College Toronto Campus" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="max-participants">Maximum Participants</label>
+                        <input type="number" id="max-participants" value="200" class="form-control">
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Schedule Settings -->
+            <div class="section">
+                <div class="section-header">
+                    <h3 class="section-title">Event Schedule</h3>
+                    <button class="btn btn-primary btn-small">Add Event</button>
+                </div>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Event Name</th>
+                                <th>Date</th>
+                                <th>Start Time</th>
+                                <th>End Time</th>
+                                <th>Location</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Opening Ceremony</td>
+                                <td>Apr 15, 2025</td>
+                                <td>09:00 AM</td>
+                                <td>10:00 AM</td>
+                                <td>Main Auditorium</td>
+                                <td>
+                                    <button class="btn btn-small btn-primary">Edit</button>
+                                    <button class="btn btn-small btn-danger">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Team Formation</td>
+                                <td>Apr 15, 2025</td>
+                                <td>10:30 AM</td>
+                                <td>12:00 PM</td>
+                                <td>Conference Room A</td>
+                                <td>
+                                    <button class="btn btn-small btn-primary">Edit</button>
+                                    <button class="btn btn-small btn-danger">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Coding Begins</td>
+                                <td>Apr 15, 2025</td>
+                                <td>01:00 PM</td>
+                                <td>-</td>
+                                <td>All Labs</td>
+                                <td>
+                                    <button class="btn btn-small btn-primary">Edit</button>
+                                    <button class="btn btn-small btn-danger">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Final Submissions</td>
+                                <td>Apr 17, 2025</td>
+                                <td>11:00 AM</td>
+                                <td>12:00 PM</td>
+                                <td>-</td>
+                                <td>
+                                    <button class="btn btn-small btn-primary">Edit</button>
+                                    <button class="btn btn-small btn-danger">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Rules Settings -->
+            <div class="section">
+                <div class="section-header">
+                    <h3 class="section-title">Rules & Guidelines</h3>
+                </div>
+                <div class="form-group">
+                    <label for="rules-editor">Edit Hackathon Rules</label>
+                    <textarea id="rules-editor" rows="10" class="form-control">
+# NCT Hackathon 2025 Rules
+
+1. Team Size: Teams must consist of 2-5 members.
+2. Eligibility:participants can or cannot be current students of Niagara College Toronto.
+3. Original Work: All submissions must be original work created during the hackathon.
+4. Tools & Libraries: Teams may use open-source libraries and frameworks.
+5. Submission Deadline: All projects must be submitted by April 17, 2025, 12:00 PM.
+6. Judging Criteria: Projects will be judged based on innovation, technical complexity, design, and presentation.
+7. Code of Conduct: Participants must follow the NCT code of conduct throughout the event.
+                    </textarea>
+                </div>
+                <div class="form-actions">
+                    <button class="btn btn-primary">Save Rules</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple JavaScript for menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    menuItems.forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

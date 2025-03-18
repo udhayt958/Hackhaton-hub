@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCT Hackathon Portal - Project Moderation</title>
+    <link rel="stylesheet" href="OrganizerDashboard.css">
+    <link rel="stylesheet" href="OrganizerProjectModeration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar (Copied from OrganizerDashboard.html) -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>NCT Hackathon</h3>
+                <p>Organizer Dashboard</p>
+            </div>
+            
+            <div class="user-profile">
+                <div class="profile-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-info">
+                    <h4>Michael Rodriguez</h4>
+                    <p>Lead Organizer</p>
+                </div>
+                <div class="edit-profile-btn">
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <ul>
+                    <li class="menu-item">
+                        <a href="OrganizerDashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerUserManagement.html">
+                            <i class="fas fa-users"></i>
+                            <span>User Management</span>
+                        </a>
+                    </li>
+                    <li class="menu-item active">
+                        <a href="OrganizerProjectModeration.html">
+                            <i class="fas fa-code"></i>
+                            <span>Project Moderation</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerHackathonSettings.html">
+                            <i class="fas fa-calendar"></i>
+                            <span>Hackathon Settings</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerJudgeAssignment.html">
+                            <i class="fas fa-gavel"></i>
+                            <span>Judge Assignment</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerResourceHub.html">
+                            <i class="fas fa-book"></i>
+                            <span>Resource Hub</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerMessages.html">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                            <span class="badge message-badge">8</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerAnnouncement.html">
+                            <i class="fas fa-bell"></i>
+                            <span>Announcements</span>
+                        </a>
+                    </li>
+                    
+                   
+                </ul>
+            
+                <div class="menu-separator"></div>
+            
+                <ul>
+                    <li class="menu-item logout">
+                        <a href="../home.html">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Page Header -->
+            <div class="section">
+                <h2>Project Moderation</h2>
+                <p>Review, approve, and manage project submissions for the NCT Hackathon.</p>
+            </div>
+
+            <!-- Stats Container -->
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-value">15</div>
+                    <div class="stat-label">Total Projects</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">8</div>
+                    <div class="stat-label">Pending Review</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">7</div>
+                    <div class="stat-label">Approved</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Rejected</div>
+                </div>
+            </div>
+
+            <!-- Project Tabs -->
+            <div class="section">
+                <div class="tabs">
+                    <div class="tab active" data-tab="pending">Pending (8)</div>
+                    <div class="tab" data-tab="approved">Approved (7)</div>
+                    <div class="tab" data-tab="rejected">Rejected (0)</div>
+                    <div class="tab" data-tab="all">All Projects (15)</div>
+                </div>
+
+                <!-- Search and Filters -->
+                <div class="search-filter">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search by project name or team">
+                    </div>
+                    <div class="filter">
+                        <select>
+                            <option value="all">All Categories</option>
+                            <option value="web">Web Development</option>
+                            <option value="mobile">Mobile App</option>
+                            <option value="ai">AI/ML</option>
+                            <option value="iot">IoT</option>
+                        </select>
+                    </div>
+                    <div class="actions">
+                        <button class="btn btn-primary">Set Judging Criteria</button>
+                    </div>
+                </div>
+
+                <!-- Pending Projects Tab Content -->
+                <div class="tab-content active" id="pending">
+                    <div class="projects-grid">
+                        <!-- Project Card 1 -->
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">Smart Campus Navigator</h3>
+                                <span class="project-status pending">Pending</span>
+                            </div>
+                            <div class="project-info">
+                                <p><strong>Team:</strong> Code Ninjas</p>
+                                <p><strong>Category:</strong> Mobile App</p>
+                                <p><strong>Submitted:</strong> Feb 25, 2025</p>
+                            </div>
+                            <div class="project-description">
+                                A mobile application that helps students navigate campus, find classrooms, and receive notifications about events and deadlines.
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-primary">View Details</button>
+                                <button class="btn btn-success">Approve</button>
+                                <button class="btn btn-danger">Reject</button>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 2 -->
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">AI Study Buddy</h3>
+                                <span class="project-status pending">Pending</span>
+                            </div>
+                            <div class="project-info">
+                                <p><strong>Team:</strong> DataMinds</p>
+                                <p><strong>Category:</strong> AI/ML</p>
+                                <p><strong>Submitted:</strong> Feb 24, 2025</p>
+                            </div>
+                            <div class="project-description">
+                                An AI-powered application that helps students create personalized study plans, generate practice questions, and track learning progress.
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-primary">View Details</button>
+                                <button class="btn btn-success">Approve</button>
+                                <button class="btn btn-danger">Reject</button>
+                            </div>
+                        </div>
+
+                        <!-- More project cards would follow the same pattern -->
+                    </div>
+                </div>
+
+                <!-- Other tab contents would be similar but with appropriate data -->
+                <div class="tab-content" id="approved">
+                    <!-- This would contain approved projects -->
+                    <div class="projects-grid">
+                        <!-- Sample approved project card -->
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">Campus Security App</h3>
+                                <span class="project-status approved">Approved</span>
+                            </div>
+                            <div class="project-info">
+                                <p><strong>Team:</strong> SecureTech</p>
+                                <p><strong>Category:</strong> Mobile App</p>
+                                <p><strong>Submitted:</strong> Feb 20, 2025</p>
+                                <p><strong>Approved:</strong> Feb 22, 2025</p>
+                            </div>
+                            <div class="project-description">
+                                A mobile application for campus security with emergency alerts, campus map, and direct contact to security personnel.
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-primary">View Details</button>
+                                <button class="btn btn-warning">Change Status</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The rest of the tab content would follow a similar pattern -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Menu functionality
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    menuItems.forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Navigation logic
+                    const menuText = this.querySelector('span').textContent;
+                    if (menuText === 'Dashboard') {
+                        window.location.href = 'OrganizerDashboard.html';
+                    } else if (menuText === 'User Management') {
+                        window.location.href = 'user-management.html';
+                    }
+                    // Similarly for other menu items
+                });
+            });
+
+            // Tab switching functionality
+            const tabs = document.querySelectorAll('.tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+                    
+                    // Remove active class from all tabs and contents
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to current tab and content
+                    this.classList.add('active');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCT Hackathon Portal - Badge Management</title>
+    <link rel="stylesheet" href="OrganizerBadgeManagement.css">
+	    <link rel="stylesheet" href="OrganizerDashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>NCT Hackathon</h3>
+                <p>Organizer Dashboard</p>
+            </div>
+            
+            <div class="user-profile">
+                <div class="profile-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-info">
+                    <h4>Michael Rodriguez</h4>
+                    <p>Lead Organizer</p>
+                </div>
+                <div class="edit-profile-btn">
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <ul>
+                    <li class="menu-item">
+                        <a href="OrganizerDashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerUserManagement.html">
+                            <i class="fas fa-users"></i>
+                            <span>User Management</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerProjectModeration.html">
+                            <i class="fas fa-code"></i>
+                            <span>Project Moderation</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerHackathonSettings.html">
+                            <i class="fas fa-calendar"></i>
+                            <span>Hackathon Settings</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerJudgeAssignment.html">
+                            <i class="fas fa-gavel"></i>
+                            <span>Judge Assignment</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerResourceHub.html">
+                            <i class="fas fa-book"></i>
+                            <span>Resource Hub</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerMessages.html">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                            <span class="badge message-badge">8</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="OrganizerAnnouncement.html">
+                            <i class="fas fa-bell"></i>
+                            <span>Announcements</span>
+                        </a>
+                    </li>
+                    
+                    <li class="menu-item">
+                        <a href="OrganizerAnalytics.html">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Analytics</span>
+                        </a>
+                    </li>
+
+                    <li class="menu-item active">
+                        <a href="OrganizerBadgeManagement .html">
+                            <i class="fas fa-medal"></i>
+                            <span>Badges Management</span>
+                        </a>
+                    </li>
+                </ul>
+            
+                <div class="menu-separator"></div>
+            
+                <ul>
+                    <li class="menu-item logout">
+                        <a href="../home.html">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header class="top-header">
+                <div class="header-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search badges...">
+                </div>
+                <div class="header-actions">
+                    <div class="notification-bell">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="messages-icon">
+                        <i class="fas fa-envelope"></i>
+                        <span class="badge">8</span>
+                    </div>
+                    <div class="help-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Badge Management Header Section -->
+            <section class="page-header">
+                <div class="page-header-content">
+                    <h1>Badge Management</h1>
+                    <p>Create and manage badges to recognize participant achievements</p>
+                </div>
+                <div class="page-header-actions">
+                    <button class="btn btn-primary" id="createBadgeBtn">
+                        <i class="fas fa-plus"></i> Create New Badge
+                    </button>
+                </div>
+            </section>
+
+            <!-- Badge Stats -->
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h2>16</h2>
+                        <p>Total Badges</p>
+                    </div>
+                    <div class="stat-progress">
+                        <div class="progress-bar" style="width: 100%"></div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h2>42</h2>
+                        <p>Badges Awarded</p>
+                    </div>
+                    <div class="stat-progress">
+                        <div class="progress-bar" style="width: 65%"></div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h2>38</h2>
+                        <p>Participants Recognized</p>
+                    </div>
+                    <div class="stat-progress">
+                        <div class="progress-bar" style="width: 45%"></div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h2>8</h2>
+                        <p>Judge Awarded Badges</p>
+                    </div>
+                    <div class="stat-progress">
+                        <div class="progress-bar" style="width: 80%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Badge Categories -->
+            <section class="badge-categories">
+                <div class="section-header">
+                    <h2>Badge Categories</h2>
+                    <button class="btn btn-outlined" id="addCategoryBtn">
+                        <i class="fas fa-plus"></i> Add Category
+                    </button>
+                </div>
+                
+                <div class="categories-container">
+                    <div class="category-item active">
+                        <span class="category-name">All Badges</span>
+                        <span class="category-count">16</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-name">Technical Skills</span>
+                        <span class="category-count">5</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-name">Teamwork</span>
+                        <span class="category-count">4</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-name">Creativity</span>
+                        <span class="category-count">3</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-name">Leadership</span>
+                        <span class="category-count">2</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-name">Engagement</span>
+                        <span class="category-count">2</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Badge Grid -->
+            <section class="badges-section">
+                <div class="section-header">
+                    <h2>All Badges</h2>
+                    <div class="filters">
+                        <div class="filter-group">
+                            <select class="form-control">
+                                <option value="all">All Status</option>
+                                <option value="active">Active</option>
+                                <option value="inactive">Inactive</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <select class="form-control">
+                                <option value="all">All Types</option>
+                                <option value="judge">Judge Awarded</option>
+                                <option value="auto">Auto-Assigned</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="badges-grid">
+                    <!-- Badge 1 -->
+                    <div class="badge-card">
+                        <div class="badge-header">
+                            <div class="badge-icon blue">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="badge-actions">
+                                <button class="btn btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+                        <div class="badge-content">
+                            <div class="badge-title">
+                                <h3>Creative Genius</h3>
+                                <span class="badge-type judge">Judge Awarded</span>
+                            </div>
+                            <p class="badge-description">For exceptional creativity and innovative thinking during the hackathon.</p>
+                            <div class="badge-stats">
+                                <div class="badge-stat">
+                                    <i class="fas fa-award"></i>
+                                    <span>5 awarded</span>
+                                </div>
+                                <div class="badge-stat">
+                                    <i class="fas fa-gavel"></i>
+                                    <span>3 judges can award</span>
+                                </div>
+                            </div>
+                            <div class="badge-category">
+                                <span>Category: <strong>Creativity</strong></span>
+                            </div>
+                        </div>
+                        <div class="badge-footer">
+                            <button class="btn btn-sm btn-outlined">Edit</button>
+                            <button class="btn btn-sm btn-primary">Award Badge</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Badge 2 -->
+                    <div class="badge-card">
+                        <div class="badge-header">
+                            <div class="badge-icon green">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="badge-actions">
+                                <button class="btn btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+                        <div class="badge-content">
+                            <div class="badge-title">
+                                <h3>Code Master</h3>
+                                <span class="badge-type judge">Judge Awarded</span>
+                            </div>
+                            <p class="badge-description">For technical excellence and clean, well-structured code implementation.</p>
+                            <div class="badge-stats">
+                                <div class="badge-stat">
+                                    <i class="fas fa-award"></i>
+                                    <span>3 awarded</span>
+                                </div>
+                                <div class="badge-stat">
+                                    <i class="fas fa-gavel"></i>
+                                    <span>2 judges can award</span>
+                                </div>
+                            </div>
+                            <div class="badge-category">
+                                <span>Category: <strong>Technical Skills</strong></span>
+                            </div>
+                        </div>
+                        <div class="badge-footer">
+                            <button class="btn btn-sm btn-outlined">Edit</button>
+                            <button class="btn btn-sm btn-primary">Award Badge</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Badge 3 -->
+                    <div class="badge-card">
+                        <div class="badge-header">
+                            <div class="badge-icon purple">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="badge-actions">
+                                <button class="btn btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+                        <div class="badge-content">
+                            <div class="badge-title">
+                                <h3>Team Player</h3>
+                                <span class="badge-type judge">Judge Awarded</span>
+                            </div>
+                            <p class="badge-description">For outstanding collaboration and teamwork during the hackathon.</p>
+                            <div class="badge-stats">
+                                <div class="badge-stat">
+                                    <i class="fas fa-award"></i>
+                                    <span>7 awarded</span>
+                                </div>
+                                <div class="badge-stat">
+                                    <i class="fas fa-gavel"></i>
+                                    <span>4 judges can award</span>
+                                </div>
+                            </div>
+                            <div class="badge-category">
+                                <span>Category: <strong>Teamwork</strong></span>
+                            </div>
+                        </div>
+                        <div class="badge-footer">
+                            <button class="btn btn-sm btn-outlined">Edit</button>
+                            <button class="btn btn-sm btn-primary">Award Badge</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Badge 4 -->
+                    <div class="badge-card">
+                        <div class="badge-header">
+                            <div class="badge-icon orange">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <div class="badge-actions">
+                                <button class="btn btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+                        <div class="badge-content">
+                            <div class="badge-title">
+                                <h3>Design Star</h3>
+                                <span class="badge-type judge">Judge Awarded</span>
+                            </div>
+                            <p class="badge-description">For excellent user interface and experience design in the project.</p>
+                            <div class="badge-stats">
+                                <div class="badge-stat">
+                                    <i class="fas fa-award"></i>
+                                    <span>4 awarded</span>
+                                </div>
+                                <div class="badge-stat">
+                                    <i class="fas fa-gavel"></i>
+                                    <span>2 judges can award</span>
+                                </div>
+                            </div>
+                            <div class="badge-category">
+                                <span>Category: <strong>Technical Skills</strong></span>
+                            </div>
+                        </div>
+                        <div class="badge-footer">
+                            <button class="btn btn-sm btn-outlined">Edit</button>
+                            <button class="btn btn-sm btn-primary">Award Badge</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Badge 5 -->
+                    <div class="badge-card">
+                        <div class="badge-header">
+                            <div class="badge-icon red">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="badge-actions">
+                                <button class="btn btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+                        <div class="badge-content">
+                            <div class="badge-title">
+                                <h3>Innovator</h3>
+                                <span class="badge-type judge">Judge Awarded</span>
+                            </div>
+                            <p class="badge-description">For creating a unique solution that addresses a problem in a novel way.</p>
+                            <div class="badge-stats">
+                                <div class="badge-stat">
+                                    <i class="fas fa-award"></i>
+                                    <span>2 awarded</span>
+                                </div>
+                                <div class="badge-stat">
+                                    <i class="fas fa-gavel"></i>
+                                    <span>All judges can award</span>
+                                </div>
+                            </div>
+                            <div class="badge-category">
+                                <span>Category: <strong>Creativity</strong></span>
+                            </div>
+                        </div>
+                        <div class="badge-footer">
+                            <button class="btn btn-sm btn-outlined">Edit</button>
+                            <button class="btn btn-sm btn-primary">Award Badge</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Badge 6 -->
+                    <div class="badge-card">
+                        <div class="badge-header">
+                            <div class="badge-icon blue">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="badge-actions">
+                                <button class="btn btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+                        <div class="badge-content">
+                            <div class="badge-title">
+                                <h3>Active Communicator</h3>
+                                <span class="badge-type auto">Auto-Assigned</span>
+                            </div>
+                            <p class="badge-description">For consistently engaging in platform discussions and team communications.</p>
+                            <div class="badge-stats">
+                                <div class="badge-stat">
+                                    <i class="fas fa-award"></i>
+                                    <span>6 awarded</span>
+                                </div>
+                                <div class="badge-stat">
+                                    <i class="fas fa-bolt"></i>
+                                    <span>Auto-assigned</span>
+                                </div>
+                            </div>
+                            <div class="badge-category">
+                                <span>Category: <strong>Engagement</strong></span>
+                            </div>
+                        </div>
+                        <div class="badge-footer">
+                            <button class="btn btn-sm btn-outlined">Edit</button>
+                            <button class="btn btn-sm btn-primary">Award Badge</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Badge 7 -->
+                    <div class="badge-card">
+                        <div class="badge-header">
+                            <div class="badge-icon green">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <div class="badge-actions">
+                                <button class="btn btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+                        <div class="badge-content">
+                            <div class="badge-title">
+                                <h3>Team Leader</h3>
+                                <span class="badge-type judge">Judge Awarded</span>
+                            </div>
+                            <p class="badge-description">For demonstrating leadership qualities and guiding the team to success.</p>
+                            <div class="badge-stats">
+                                <div class="badge-stat">
+                                    <i class="fas fa-award"></i>
+                                    <span>4 awarded</span>
+                                </div>
+                                <div class="badge-stat">
+                                    <i class="fas fa-gavel"></i>
+                                    <span>3 judges can award</span>
+                                </div>
+                            </div>
+                            <div class="badge-category">
+                                <span>Category: <strong>Leadership</strong></span>
+                            </div>
+                        </div>
+                        <div class="badge-footer">
+                            <button class="btn btn-sm btn-outlined">Edit</button>
+                            <button class="btn btn-sm btn-primary">Award Badge</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Badge 8 -->
+                    <div class="badge-card">
+                        <div class="badge-header">
+                            <div class="badge-icon purple">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="badge-actions">
+                                <button class="btn btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+                        <div class="badge-content">
+                            <div class="badge-title">
+                                <h3>Resourceful Developer</h3>
+                                <span class="badge-type auto">Auto-Assigned</span>
+                            </div>
+                            <p class="badge-description">For effectively utilizing provided resources and APIs in the project.</p>
+                            <div class="badge-stats">
+                                <div class="badge-stat">
+                                    <i class="fas fa-award"></i>
+                                    <span>5 awarded</span>
+                                </div>
+                                <div class="badge-stat">
+                                    <i class="fas fa-bolt"></i>
+                                    <span>Auto-assigned</span>
+                                </div>
+                            </div>
+                            <div class="badge-category">
+                                <span>Category: <strong>Technical Skills</strong></span>
+                            </div>
+                        </div>
+                        <div class="badge-footer">
+                            <button class="btn btn-sm btn-outlined">Edit</button>
+                            <button class="btn btn-sm btn-primary">Award Badge</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pagination">
+                    <button class="pagination-btn" disabled><i class="fas fa-chevron-left"></i></button>
+                    <button class="pagination-btn active">1</button>
+                    <button class="pagination-btn">2</button>
+                    <button class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </section>
+
+            <!-- Recent Badge Awards -->
+            <section class="recent-awards-section">
+                <div class="section-header">
+                    <h2>Recent Badge Awards</h2>
+                    <button class="btn btn-outlined">View All Awards</button>
+                </div>
+                
+                <div class="table-container">
+                    <table class="awards-table">
+                        <thead>
+                            <tr>
+                                <th>Badge</th>
+                                <th>Recipient</th>
+                                <th>Team</th>
+                                <th>Awarded By</th>
+                                <th>Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="award-badge">
+                                        <div class="mini-badge blue">
+                                            <i class="fas fa-lightbulb"></i>
+                                        </div>
+                                        <span>Creative Genius</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="recipient-info">
+                                        <div class="recipient-avatar">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <span>Emily Chen</span>
+                                    </div>
+                                </td>
+                                <td>CodeNinjas</td>
+                                <td>
+                                    <div class="awarder-info">
+                                        <div class="awarder-avatar judge">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <span>Dr. Sarah Williams</span>
+                                    </div>
+                                </td>
+                                <td>Today, 10:45 AM</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn btn-icon"><i class="fas fa-eye"></i></button>
+                                        <button class="btn btn-icon"><i class="fas fa-undo"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="award-badge">
+                                        <div class="mini-badge purple">
+                                            <i class="fas fa-users"></i>
+                                        </div>
+                                        <span>Team Player</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="recipient-info">
+                                        <div class="recipient-avatar">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <span>Michael Zhang</span>
+                                    </div>
+                                </td>
+                                <td>ByteWizards</td>
+                                <td>
+                                    <div class="awarder-info">
+                                        <div class="awarder-avatar judge">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <span>Dr. James Thompson</span>
+                                    </div>
+                                </td>
+                                <td>Today, 9:30 AM</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn btn-icon"><i class="fas fa-eye"></i></button>
+                                        <button class="btn btn-icon"><i class="fas fa-undo"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="award-badge">
+                                        <div class="mini-badge blue">
+                                            <i class="fas fa-comments"></i>
+                                        </div>
+                                        <span>Active Communicator</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="recipient-info">
+                                        <div class="recipient-avatar">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <span>Alex Johnson</span>
+                                    </div>
+                                </td>
+                                <td>InnovateTech</td>
+                                <td>
+                                    <div class="awarder-info">
+                                        <div class="awarder-avatar system">
+                                            <i class="fas fa-robot"></i>
+                                        </div>
+                                        <span>System (Auto-assigned)</span>
+                                    </div>
+                                </td>
+                                <td>Yesterday, 4:15 PM</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn btn-icon"><i class="fas fa-eye"></i></button>
+                                        <button class="btn btn-icon"><i class="fas fa-undo"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="award-badge">
+                                        <div class="mini-badge orange">
+                                            <i class="fas fa-palette"></i>
+                                        </div>
+                                        <span>Design Star</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="recipient-info">
+                                        <div class="recipient-avatar">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <span>Sofia Martinez</span>
+                                    </div>
+                                </td>
+                                <td>DataCrunchers</td>
+                                <td>
+                                    <div class="awarder-info">
+                                        <div class="awarder-avatar judge">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <span>Dr. David Chen</span>
+                                    </div>
+                                </td>
+                                <td>Yesterday, 2:30 PM</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn btn-icon"><i class="fas fa-eye"></i></button>
+                                        <button class="btn btn-icon"><i class="fas fa-undo"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="award-badge">
+                                        <div class="mini-badge green">
+                                            <i class="fas fa-code"></i>
+                                        </div>
+                                        <span>Code Master</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="recipient-info">
+                                        <div class="recipient-avatar">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <span>James Wilson</span>
+                                    </div>
+                                </td>
+                                <td>CodeNinjas</td>
+                                <td>
+                                    <div class="awarder-info">
+                                        <div class="awarder-avatar judge">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <span>Dr. Sarah Williams</span>
+                                    </div>
+                                </td>
+                                <td>Feb 28, 2025</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn btn-icon"><i class="fas fa-eye"></i></button>
+                                        <button class="btn btn-icon"><i class="fas fa-undo"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Create Badge Modal -->
+    <div class="modal" id="createBadgeModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create New Badge</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="badge-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Badge Name *</label>
+                            <input type="text" class="form-control" placeholder="Enter badge name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Category *</label>
+                            <select class="form-control" required>
+                                <option value="">Select Category</option>
+                                <option value="technical">Technical Skills</option>
+                                <option value="teamwork">Teamwork</option>
+                                <option value="creativity">Creativity</option>
+                                <option value="leadership">Leadership</option>
+                                <option value="engagement">Engagement</option>
+                                <option value="add-new">+ Add New Category</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Description *</label>
+                        <textarea class="form-control" rows="3" placeholder="Enter badge description" required></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Badge Type</label>
+                            <select class="form-control" id="badge-type">
+                                <option value="judge">Judge Awarded</option>
+                                <option value="auto">Auto-Assigned</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="judges-selection">
+                            <label>Judges Who Can Award</label>
+                            <select class="form-control" multiple>
+                                <option value="all" selected>All Judges</option>
+                                <option value="1">Dr. Sarah Williams</option>
+                                <option value="2">Dr. James Thompson</option>
+                                <option value="3">Dr. David Chen</option>
+                                <option value="4">Dr. Lisa Garcia</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="auto-criteria" style="display: none;">
+                            <label>Auto-Assignment Criteria</label>
+                            <select class="form-control">
+                                <option value="">Select Criteria</option>
+                                <option value="messages">Message Count (> 20)</option>
+                                <option value="resources">Resource Usage (> 15)</option>
+                                <option value="logins">Login Frequency (Daily)</option>
+                                <option value="submissions">Early Submission</option>
+                                <option value="custom">Custom Criteria</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Badge Icon</label>
+                        <div class="icon-selector">
+                            <div class="icon-option selected"><i class="fas fa-lightbulb"></i></div>
+                            <div class="icon-option"><i class="fas fa-code"></i></div>
+                            <div class="icon-option"><i class="fas fa-users"></i></div>
+                            <div class="icon-option"><i class="fas fa-palette"></i></div>
+                            <div class="icon-option"><i class="fas fa-rocket"></i></div>
+                            <div class="icon-option"><i class="fas fa-star"></i></div>
+                            <div class="icon-option"><i class="fas fa-trophy"></i></div>
+                            <div class="icon-option"><i class="fas fa-crown"></i></div>
+                            <div class="icon-option"><i class="fas fa-comments"></i></div>
+                            <div class="icon-option"><i class="fas fa-laptop-code"></i></div>
+                            <div class="icon-option"><i class="fas fa-brain"></i></div>
+                            <div class="icon-option"><i class="fas fa-award"></i></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Badge Color</label>
+                        <div class="color-selector">
+                            <div class="color-option blue selected"></div>
+                            <div class="color-option green"></div>
+                            <div class="color-option purple"></div>
+                            <div class="color-option orange"></div>
+                            <div class="color-option red"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Badge Status</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="badge-status" checked>
+                            <label for="badge-status"></label>
+                            <span class="toggle-label">Active</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary close-btn">Cancel</button>
+                <button class="btn btn-primary save-btn">Create Badge</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Award Badge Modal -->
+    <div class="modal" id="awardBadgeModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Award Badge</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="award-badge-section">
+                    <div class="selected-badge">
+                        <div class="badge-preview blue">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="badge-info">
+                            <h3>Creative Genius</h3>
+                            <p>For exceptional creativity and innovative thinking during the hackathon.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Award To *</label>
+                        <select class="form-control" id="award-type">
+                            <option value="individual">Individual Participant</option>
+                            <option value="team">Entire Team</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group" id="participant-selection">
+                        <label>Select Participant</label>
+                        <div class="recipient-search">
+                            <input type="text" class="form-control" placeholder="Search participants...">
+                            <div class="recipient-suggestions">
+                                <div class="suggestion-item">
+                                    <div class="suggestion-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="suggestion-info">
+                                        <span class="suggestion-name">Emily Chen</span>
+                                        <span class="suggestion-team">Team: CodeNinjas</span>
+                                    </div>
+                                </div>
+                                <div class="suggestion-item">
+                                    <div class="suggestion-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="suggestion-info">
+                                        <span class="suggestion-name">Alex Johnson</span>
+                                        <span class="suggestion-team">Team: InnovateTech</span>
+                                    </div>
+                                </div>
+                                <div class="suggestion-item">
+                                    <div class="suggestion-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="suggestion-info">
+                                        <span class="suggestion-name">Michael Zhang</span>
+                                        <span class="suggestion-team">Team: ByteWizards</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" id="team-selection" style="display: none;">
+                        <label>Select Team</label>
+                        <select class="form-control">
+                            <option value="">Select a team</option>
+                            <option value="1">CodeNinjas</option>
+                            <option value="2">InnovateTech</option>
+                            <option value="3">ByteWizards</option>
+                            <option value="4">DataCrunchers</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Message (Optional)</label>
+                        <textarea class="form-control" rows="3" placeholder="Add a personal message to the badge recipient..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Notify Recipient</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="notify-recipient" checked>
+                            <label for="notify-recipient"></label>
+                            <span class="toggle-label">Send notification email</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary close-btn">Cancel</button>
+                <button class="btn btn-primary">Award Badge</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Category Modal -->
+    <div class="modal" id="categoryModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New Category</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="category-form">
+                    <div class="form-group">
+                        <label>Category Name *</label>
+                        <input type="text" class="form-control" placeholder="Enter category name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea class="form-control" rows="3" placeholder="Enter category description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Default Badge Type</label>
+                        <select class="form-control">
+                            <option value="judge">Judge Awarded</option>
+                            <option value="auto">Auto-Assigned</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary close-btn">Cancel</button>
+                <button class="btn btn-primary">Add Category</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sidebar Menu Functionality
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // If clicked on Dashboard, navigate to dashboard page
+                    if(this.querySelector('span').textContent.trim() === 'Dashboard') {
+                        window.location.href = 'OrganizerDashboard.html';
+                    }
+                    // If clicked on Resource Hub, navigate to resource hub page
+                    else if(this.querySelector('span').textContent.trim() === 'Resource Hub') {
+                        window.location.href = 'OrganizerResourceHub.html';
+                    }
+                    // If clicked on Messages, navigate to messages page
+                    else if(this.querySelector('span').textContent.trim() === 'Messages') {
+                        window.location.href = 'OrganizerMessages.html';
+                    }
+                    // If clicked on Analytics, navigate to analytics page
+                    else if(this.querySelector('span').textContent.trim() === 'Analytics') {
+                        window.location.href = 'OrganizerAnalytics.html';
+                    }
+                    
+                    menuItems.forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            // Category Items
+            const categoryItems = document.querySelectorAll('.category-item');
+            categoryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    categoryItems.forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            // Icon Selector
+            const iconOptions = document.querySelectorAll('.icon-option');
+            iconOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    iconOptions.forEach(o => o.classList.remove('selected'));
+                    this.classList.add('selected');
+                });
+            });
+            
+            // Color Selector
+            const colorOptions = document.querySelectorAll('.color-option');
+            colorOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    colorOptions.forEach(o => o.classList.remove('selected'));
+                    this.classList.add('selected');
+                });
+            });
+            
+            // Status Toggle
+            const badgeStatus = document.getElementById('badge-status');
+            const toggleLabel = document.querySelector('.toggle-label');
+            if (badgeStatus && toggleLabel) {
+                badgeStatus.addEventListener('change', function() {
+                    toggleLabel.textContent = this.checked ? 'Active' : 'Inactive';
+                });
+            }
+            
+            // Badge Type Toggle
+            const badgeType = document.getElementById('badge-type');
+            const judgesSelection = document.getElementById('judges-selection');
+            const autoCriteria = document.getElementById('auto-criteria');
+            if (badgeType && judgesSelection && autoCriteria) {
+                badgeType.addEventListener('change', function() {
+                    if (this.value === 'judge') {
+                        judgesSelection.style.display = 'block';
+                        autoCriteria.style.display = 'none';
+                    } else {
+                        judgesSelection.style.display = 'none';
+                        autoCriteria.style.display = 'block';
+                    }
+                });
+            }
+            
+            // Award Type Toggle
+            const awardType = document.getElementById('award-type');
+            const participantSelection = document.getElementById('participant-selection');
+            const teamSelection = document.getElementById('team-selection');
+            if (awardType && participantSelection && teamSelection) {
+                awardType.addEventListener('change', function() {
+                    if (this.value === 'individual') {
+                        participantSelection.style.display = 'block';
+                        teamSelection.style.display = 'none';
+                    } else {
+                        participantSelection.style.display = 'none';
+                        teamSelection.style.display = 'block';
+                    }
+                });
+            }
+            
+            // Create Badge Button
+            const createBadgeBtn = document.getElementById('createBadgeBtn');
+            const createBadgeModal = document.getElementById('createBadgeModal');
+            if (createBadgeBtn && createBadgeModal) {
+                createBadgeBtn.addEventListener('click', function() {
+                    createBadgeModal.style.display = 'block';
+                });
+            }
+            
+            // Add Category Button
+            const addCategoryBtn = document.getElementById('addCategoryBtn');
+            const categoryModal = document.getElementById('categoryModal');
+            if (addCategoryBtn && categoryModal) {
+                addCategoryBtn.addEventListener('click', function() {
+                    categoryModal.style.display = 'block';
+                });
+            }
+            
+            // Award Badge Buttons
+            const awardBadgeBtns = document.querySelectorAll('.badge-footer .btn-primary');
+            const awardBadgeModal = document.getElementById('awardBadgeModal');
+            if (awardBadgeBtns && awardBadgeModal) {
+                awardBadgeBtns.forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        awardBadgeModal.style.display = 'block';
+                    });
+                });
+            }
+            
+            // Close Buttons
+            const closeButtons = document.querySelectorAll('.close, .close-btn');
+            closeButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    createBadgeModal.style.display = 'none';
+                    awardBadgeModal.style.display = 'none';
+                    categoryModal.style.display = 'none';
+                });
+            });
+            
+            // Badge Action Menu
+            const badgeActionBtns = document.querySelectorAll('.badge-actions .btn-icon');
+            badgeActionBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    
+                    // Check if dropdown already exists and remove it
+                    const existingDropdown = document.querySelector('.badge-dropdown');
+                    if (existingDropdown) {
+                        existingDropdown.remove();
+                    }
+                    
+                    // Create new dropdown
+                    const dropdown = document.createElement('div');
+                    dropdown.className = 'badge-dropdown';
+                    dropdown.innerHTML = `
+                        <ul>
+                            <li><i class="fas fa-edit"></i> Edit Badge</li>
+                            <li><i class="fas fa-eye"></i> View Details</li>
+                            <li><i class="fas fa-medal"></i> Award Badge</li>
+                            <li><i class="fas fa-toggle-on"></i> Deactivate</li>
+                            <li class="danger"><i class="fas fa-trash"></i> Delete</li>
+                        </ul>
+                    `;
+                    
+                    // Position dropdown
+                    this.parentNode.appendChild(dropdown);
+                    
+                    // Close dropdown when clicking outside
+                    document.addEventListener('click', function closeDropdown(e) {
+                        if (!dropdown.contains(e.target) && e.target !== btn) {
+                            dropdown.remove();
+                            document.removeEventListener('click', closeDropdown);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
