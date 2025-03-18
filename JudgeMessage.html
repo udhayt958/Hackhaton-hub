@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCT Hackathon - Messages</title>
+    <link rel="stylesheet" href="JudgeDashboard.css">
+	<link rel="stylesheet" href="JudgeMessage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar (Same as previous pages) -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h2 class="brand-name">NCT Hackathon</h2>
+            </div>
+            
+            <div class="judge-profile">
+                <div class="profile-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-info">
+                    <h3>Dr. Sarah Williams</h3>
+                    <p>Judge Panel</p>
+                </div>
+                <div class="edit-profile-btn">
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <ul>
+                    <li class="menu-item">
+                        <a href="JudgeDashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="JudgeProjectEvaluation.html">
+                            <i class="fas fa-clipboard-list"></i>
+                            <span>Project Evaluation</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="JudgeScoring.html">
+                            <i class="fas fa-star"></i>
+                            <span>Scoring</span>
+                        </a>
+                    </li>
+                    
+                    <li class="menu-item">
+                        <a href="JudgeAwardBadge.html">
+                            <i class="fas fa-medal"></i>
+                            <span>Award Badges</span>
+                        </a>
+                    </li>
+					<li class="menu-item active">
+                        <a href="JudgeMessage.html">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                            <span class="badge message-badge">5</span>
+                        </a>
+                    </li>
+                    
+                    <li class="menu-item">
+                        <a href="JudgeRecources.html">
+                            <i class="fas fa-book"></i>
+                            <span>Resources</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="menu-separator"></div>
+                
+                <ul>
+                    <li class="menu-item logout">
+                        <a href="../home.html">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Messages Section -->
+            <section class="messages-section">
+                <div class="filter-sections">
+                    <div class="section-filter active" data-filter="all">All Messages</div>
+                    <div class="section-filter" data-filter="teams">Teams</div>
+                    <div class="section-filter" data-filter="organizers">Organizers</div>
+                    <button class="btn btn-primary ml-auto" id="composeMessageBtn">
+                        <i class="fas fa-plus"></i> Compose Message
+                    </button>
+                </div>
+
+                <div class="messages-container">
+                    <!-- Conversations List -->
+                    <div class="conversations-list">
+                        <div class="conversation-item active">
+                            <div class="conversation-avatar">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="conversation-details">
+                                <div class="conversation-name">Neural Network Team</div>
+                                <div class="conversation-preview">Can you provide more details about...</div>
+                                <div class="conversation-time">10:45 AM</div>
+                            </div>
+                        </div>
+                        <div class="conversation-item">
+                            <div class="conversation-avatar">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="conversation-details">
+                                <div class="conversation-name">Michael Rodriguez (Organizer)</div>
+                                <div class="conversation-preview">Updated judging guidelines are now...</div>
+                                <div class="conversation-time">Yesterday</div>
+                            </div>
+                        </div>
+                        <div class="conversation-item">
+                            <div class="conversation-avatar">
+                                <i class="fas fa-city"></i>
+                            </div>
+                            <div class="conversation-details">
+                                <div class="conversation-name">Code Warriors Team</div>
+                                <div class="conversation-preview">We've updated our project demo...</div>
+                                <div class="conversation-time">Feb 22</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Message Area -->
+                    <div class="message-area">
+                        <div class="message-header">
+                            <div class="conversation-info">
+                                <h2>Neural Network Team</h2>
+                                <p>AI Health Assistant Project</p>
+                            </div>
+                            <div class="header-actions">
+                                <button class="btn btn-icon">
+                                    <i class="fas fa-video"></i>
+                                </button>
+                                <button class="btn btn-icon">
+                                    <i class="fas fa-phone"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="message-body">
+                            <div class="message-list">
+                                <div class="message-item message-received">
+                                    Could you provide more details about the evaluation criteria for the AI/ML category?
+                                </div>
+                                <div class="message-item message-sent">
+                                    Certainly! The AI/ML category focuses on innovation, technical complexity, and practical application of machine learning technologies.
+                                </div>
+                                <div class="message-item message-received">
+                                    Thank you for the clarification. Are there specific benchmarks we should be aware of?
+                                </div>
+                                <div class="message-item message-sent">
+                                    We evaluate based on four key criteria:
+                                    1. Algorithmic Innovation
+                                    2. Technical Implementation
+                                    3. Real-world Applicability
+                                    4. Potential Impact
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="message-input">
+                            <input type="text" placeholder="Type your message...">
+                            <button class="btn btn-icon">
+                                <i class="fas fa-paperclip"></i>
+                            </button>
+                            <button class="btn btn-primary">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Compose Message Modal -->
+    <div class="modal" id="composeMessageModal">
+        <div class="modal-content large-modal">
+            <div class="modal-header">
+                <h2>Compose New Message</h2>
+                <div class="modal-actions">
+                    <button class="btn btn-icon" title="Start Video Call">
+                        <i class="fas fa-video"></i>
+                    </button>
+                    <button class="btn btn-icon" title="Start Audio Call">
+                        <i class="fas fa-phone"></i>
+                    </button>
+                    <span class="close-modal">&times;</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="compose-message-container">
+                    <!-- Continuing the Modal Body -->
+    <div class="recipients-section">
+        <div class="section-header">
+            <h3>Recipients</h3>
+            <div class="recipient-type-toggle">
+                <button class="btn btn-sm active" data-type="teams">Teams</button>
+                <button class="btn btn-sm" data-type="judges">Judges</button>
+                <button class="btn btn-sm" data-type="organizers">Organizers</button>
+            </div>
+        </div>
+        
+        <div class="recipients-list">
+            <div class="recipient-category" data-type="teams">
+                <h4>Hackathon Teams</h4>
+                <div class="recipient-grid">
+                    <label class="recipient-checkbox">
+                        <input type="checkbox" name="team" value="Neural Network">
+                        <span class="checkbox-label">Neural Network</span>
+                    </label>
+                    <label class="recipient-checkbox">
+                        <input type="checkbox" name="team" value="Code Warriors">
+                        <span class="checkbox-label">Code Warriors</span>
+                    </label>
+                    <label class="recipient-checkbox">
+                        <input type="checkbox" name="team" value="Tech Innovators">
+                        <span class="checkbox-label">Tech Innovators</span>
+                    </label>
+                    <label class="recipient-checkbox">
+                        <input type="checkbox" name="team" value="Reality Crafters">
+                        <span class="checkbox-label">Reality Crafters</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="recipient-category" data-type="judges" style="display:none;">
+                <h4>Judges</h4>
+                <div class="recipient-grid">
+                    <label class="recipient-checkbox">
+                        <input type="checkbox" name="judge" value="Dr. Sarah Williams">
+                        <span class="checkbox-label">Dr. Sarah Williams</span>
+                    </label>
+                    <label class="recipient-checkbox">
+                        <input type="checkbox" name="judge" value="James Thompson">
+                        <span class="checkbox-label">James Thompson</span>
+                    </label>
+                    <label class="recipient-checkbox">
+                        <input type="checkbox" name="judge" value="Dr. David Chen">
+                        <span class="checkbox-label">Dr. David Chen</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="recipient-category" data-type="organizers" style="display:none;">
+                <h4>Organizers</h4>
+                <div class="recipient-grid">
+                    <label class="recipient-checkbox">
+                        <input type="checkbox" name="organizer" value="Michael Rodriguez">
+                        <span class="checkbox-label">Michael Rodriguez</span>
+                    </label>
+                    <label class="recipient-checkbox">
+                        <input type="checkbox" name="organizer" value="Jennifer Lee">
+                        <span class="checkbox-label">Jennifer Lee</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="message-composition-section">
+        <div class="form-group">
+            <label>Message Subject</label>
+            <input type="text" class="form-control" placeholder="Enter message subject">
+        </div>
+        
+        <div class="form-group">
+            <label>Message Content</label>
+            <textarea class="form-control message-content" rows="8" placeholder="Write your message here..."></textarea>
+        </div>
+        
+        <div class="message-extras">
+            <div class="attachment-section">
+                <label>Attachments</label>
+                <div class="attachment-upload">
+                    <input type="file" id="fileAttachment" multiple style="display:none;">
+                    <button class="btn btn-outlined btn-sm" id="attachFileBtn">
+                        <i class="fas fa-paperclip"></i> Add Attachments
+                    </button>
+                </div>
+                <div class="attachment-preview-list"></div>
+            </div>
+            
+            <div class="message-priority">
+                <label>Priority</label>
+                <select class="form-control">
+                    <option value="normal">Normal</option>
+                    <option value="high">High Priority</option>
+                    <option value="urgent">Urgent</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="modal-footer">
+    <div class="footer-stats">
+        <span class="character-count">0/1000 characters</span>
+    </div>
+    <div class="action-buttons">
+        <button class="btn btn-secondary close-btn">Cancel</button>
+        <button class="btn btn-primary send-btn">
+            <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+    </div>
+</div>
+</div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Modal Open/Close Functionality
+    const composeMessageBtn = document.getElementById('composeMessageBtn');
+    const composeMessageModal = document.getElementById('composeMessageModal');
+    const closeModalBtn = composeMessageModal.querySelector('.close-modal');
+    const cancelBtn = composeMessageModal.querySelector('.close-btn');
+
+    // Open Modal
+    composeMessageBtn.addEventListener('click', function() {
+        composeMessageModal.style.display = 'block';
+    });
+
+    // Close Modal Functions
+    function closeModal() {
+        composeMessageModal.style.display = 'none';
+    }
+
+    closeModalBtn.addEventListener('click', closeModal);
+    cancelBtn.addEventListener('click', closeModal);
+
+    // Click outside to close
+    window.addEventListener('click', function(event) {
+        if (event.target === composeMessageModal) {
+            closeModal();
+        }
+    });
+
+    // Recipient Type Toggle
+    const recipientTypeButtons = document.querySelectorAll('.recipient-type-toggle .btn');
+    const recipientCategories = document.querySelectorAll('.recipient-category');
+    const messageContentTextarea = document.querySelector('.message-content');
+    const characterCountSpan = document.querySelector('.character-count');
+    const attachFileBtn = document.getElementById('attachFileBtn');
+    const fileAttachmentInput = document.getElementById('fileAttachment');
+    const attachmentPreviewList = document.querySelector('.attachment-preview-list');
+
+    // Recipient Type Toggle
+    recipientTypeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active from all buttons
+            recipientTypeButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+
+            // Hide all recipient categories
+            recipientCategories.forEach(category => {
+                category.style.display = 'none';
+            });
+
+            // Show selected category
+            const selectedType = this.dataset.type;
+            document.querySelector(`.recipient-category[data-type="${selectedType}"]`).style.display = 'block';
+        });
+    });
+
+    // Character Count
+    messageContentTextarea.addEventListener('input', function() {
+        const currentLength = this.value.length;
+        characterCountSpan.textContent = `${currentLength}/1000 characters`;
+    });
+
+    // File Attachment
+    attachFileBtn.addEventListener('click', () => {
+        fileAttachmentInput.click();
+    });
+
+    fileAttachmentInput.addEventListener('change', function(e) {
+        attachmentPreviewList.innerHTML = ''; // Clear previous attachments
+        
+        Array.from(this.files).forEach(file => {
+            const attachmentPreview = document.createElement('div');
+            attachmentPreview.classList.add('attachment-preview');
+            attachmentPreview.innerHTML = `
+                <i class="fas fa-file"></i>
+                <span>${file.name}</span>
+            `;
+            attachmentPreviewList.appendChild(attachmentPreview);
+        });
+    });
+
+    // Send Message Button
+    const sendMessageBtn = document.querySelector('.send-btn');
+    sendMessageBtn.addEventListener('click', function() {
+        // Gather selected recipients
+        const selectedRecipients = [];
+        document.querySelectorAll('.recipient-checkbox input:checked').forEach(checkbox => {
+            selectedRecipients.push(checkbox.value);
+        });
+
+        // Validate message
+        if (selectedRecipients.length === 0) {
+            alert('Please select at least one recipient');
+            return;
+        }
+
+        if (messageContentTextarea.value.trim() === '') {
+            alert('Please enter a message');
+            return;
+        }
+
+        // Here you would typically send the message via an API
+        alert(`Message sent to: ${selectedRecipients.join(', ')}`);
+        
+        // Reset the modal
+        messageContentTextarea.value = '';
+        closeModal();
+    });
+});
+</script>
+</body>
+</html>

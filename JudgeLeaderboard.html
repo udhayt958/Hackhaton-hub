@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCT Hackathon - Leaderboard</title>
+    <link rel="stylesheet" href="JudgeDashboard.css">
+	<link rel="stylesheet" href="JudgeLeaderboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar (Same as previous pages) -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h2 class="brand-name">NCT Hackathon</h2>
+            </div>
+            
+            <div class="judge-profile">
+                <div class="profile-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-info">
+                    <h3>Dr. Sarah Williams</h3>
+                    <p>Judge Panel</p>
+                </div>
+                <div class="edit-profile-btn">
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <ul>
+                    <li class="menu-item">
+                        <a href="JudgeDashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="JudgeProjectEvaluation.html">
+                            <i class="fas fa-clipboard-list"></i>
+                            <span>Project Evaluation</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="JudgeScoring.html">
+                            <i class="fas fa-star"></i>
+                            <span>Scoring</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="JudgeFeedback.html">
+                            <i class="fas fa-comment"></i>
+                            <span>Feedback</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="JudgeAwardBadge.html">
+                            <i class="fas fa-medal"></i>
+                            <span>Award Badges</span>
+                        </a>
+                    </li>
+					<li class="menu-item">
+                        <a href="JudgeMessage.html">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                            <span class="badge message-badge">5</span>
+                        </a>
+                    </li>
+                    <li class="menu-item active">
+                        <a href="JudgeLeaderboard.html">
+                            <i class="fas fa-trophy"></i>
+                            <span>Leaderboard</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="JudgeSchedule.html">
+                            <i class="fas fa-calendar"></i>
+                            <span>Schedule</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="JudgeRecources.html">
+                            <i class="fas fa-book"></i>
+                            <span>Resources</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="menu-separator"></div>
+                
+                <ul>
+                    <li class="menu-item logout">
+                        <a href="../home.html">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search teams...">
+                </div>
+                <div class="header-actions">
+                    <div class="notification-bell">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="messages-icon">
+                        <i class="fas fa-envelope"></i>
+                        <span class="badge">5</span>
+                    </div>
+                    <div class="help-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Leaderboard Section -->
+            <section class="leaderboard-section">
+                <div class="leaderboard-header">
+                    <h1>Hackathon Leaderboard</h1>
+                    <div class="section-actions">
+                        <select class="filter-dropdown">
+                            <option>All Categories</option>
+                            <option>AI/ML</option>
+                            <option>IoT</option>
+                            <option>Web App</option>
+                        </select>
+                        <button class="btn btn-outlined">
+                            <i class="fas fa-filter"></i> Filter
+                        </button>
+                    </div>
+                </div>
+
+                <table class="leaderboard-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Team</th>
+                            <th>Project</th>
+                            <th>Category</th>
+                            <th>Total Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="team-rank">1</span></td>
+                            <td>
+                                <div class="team-info">
+                                    <div class="team-avatar">
+                                        <i class="fas fa-brain"></i>
+                                    </div>
+                                    <div class="team-details">
+                                        <h4>Neural Network</h4>
+                                        <p>5 team members</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>AI Health Assistant</td>
+                            <td><span class="category-tag ai">AI/ML</span></td>
+                            <td class="score-column">
+                                <span class="score-value">91.5</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="team-rank">2</span></td>
+                            <td>
+                                <div class="team-info">
+                                    <div class="team-avatar">
+                                        <i class="fas fa-city"></i>
+                                    </div>
+                                    <div class="team-details">
+                                        <h4>Code Warriors</h4>
+                                        <p>4 team members</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Smart City Solution</td>
+                            <td><span class="category-tag iot">IoT</span></td>
+                            <td class="score-column">
+                                <span class="score-value">88.7</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="team-rank">3</span></td>
+                            <td>
+                                <div class="team-info">
+                                    <div class="team-avatar">
+                                        <i class="fas fa-laptop"></i>
+                                    </div>
+                                    <div class="team-details">
+                                        <h4>Tech Innovators</h4>
+                                        <p>6 team members</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Virtual Learning Platform</td>
+                            <td><span class="category-tag web">Web App</span></td>
+                            <td class="score-column">
+                                <span class="score-value">86.3</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="team-rank">4</span></td>
+                            <td>
+                                <div class="team-info">
+                                    <div class="team-avatar">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                    <div class="team-details">
+                                        <h4>Reality Crafters</h4>
+                                        <p>3 team members</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>AR Navigation App</td>
+                            <td><span class="category-tag web">Web App</span></td>
+                            <td class="score-column">
+                                <span class="score-value">84.2</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Leaderboard Statistics -->
+                <div class="leaderboard-stats">
+                    <div class="leaderboard-stat">
+                        <div class="stat-value">12</div>
+                        <div class="stat-label">Total Projects</div>
+                    </div>
+                    <div class="leaderboard-stat">
+                        <div class="stat-value">4</div>
+                        <div class="stat-label">Top Performing Categories</div>
+                    </div>
+                    <div class="leaderboard-stat">
+                        <div class="stat-value">91.5</div>
+                        <div class="stat-label">Highest Score</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterDropdown = document.querySelector('.filter-dropdown');
+            const tableRows = document.querySelectorAll('.leaderboard-table tbody tr');
+
+            filterDropdown.addEventListener('change', function() {
+                const selectedCategory = this.value;
+
+                tableRows.forEach(row => {
+                    const categoryTag = row.querySelector('.category-tag');
+                    
+                    if (selectedCategory === 'All Categories' || 
+                        categoryTag.textContent === selectedCategory) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+						}
+                });
+            });
+        });
+    </script>
+</body>
+</html>

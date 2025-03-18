@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCT Hackathon - Schedule</title>
+    <link rel="stylesheet" href="JudgeDashboard.css">
+	<link rel="stylesheet" href="JudgeSchedule.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar (Same as previous pages) -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h2 class="brand-name">NCT Hackathon</h2>
+            </div>
+            
+            <div class="judge-profile">
+                <div class="profile-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-info">
+                    <h3>Dr. Sarah Williams</h3>
+                    <p>Judge Panel</p>
+                </div>
+                <div class="edit-profile-btn">
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <ul>
+                    <li class="menu-item">
+                        <a href="JudgeDashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="JudgeProjectEvaluation.html">
+                            <i class="fas fa-clipboard-list"></i>
+                            <span>Project Evaluation</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="JudgeScoring.html">
+                            <i class="fas fa-star"></i>
+                            <span>Scoring</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="JudgeFeedback.html">
+                            <i class="fas fa-comment"></i>
+                            <span>Feedback</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="JudgeAwardBadge.html">
+                            <i class="fas fa-medal"></i>
+                            <span>Award Badges</span>
+                        </a>
+                    </li>
+					<li class="menu-item">
+                        <a href="JudgeMessage.html">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                            <span class="badge message-badge">5</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="JudgeLeaderboard.html">
+                            <i class="fas fa-trophy"></i>
+                            <span>Leaderboard</span>
+                        </a>
+                    </li>
+                    <li class="menu-item active">
+                        <a href="JudgeSchedule.html">
+                            <i class="fas fa-calendar"></i>
+                            <span>Schedule</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="JudgeRecources.html">
+                            <i class="fas fa-book"></i>
+                            <span>Resources</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="menu-separator"></div>
+                
+                <ul>
+                    <li class="menu-item logout">
+                        <a href="../home.html">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search events...">
+                </div>
+                <div class="header-actions">
+                    <div class="notification-bell">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="messages-icon">
+                        <i class="fas fa-envelope"></i>
+                        <span class="badge">5</span>
+                    </div>
+                    <div class="help-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Schedule Section -->
+            <section class="schedule-section">
+                <div class="schedule-header">
+                    <h1>Hackathon Schedule</h1>
+                    <div class="current-day-highlight">
+                        Current Day: Day 4 of 10
+                    </div>
+                </div>
+
+                <div class="timeline-vertical">
+                    <!-- Past Event -->
+                    <div class="timeline-event past">
+                        <div class="timeline-marker">1</div>
+                        <div class="event-details">
+                            <h3>Opening Ceremony</h3>
+                            <p>Welcome, rules explanation, and team formation. Initial networking and project ideation session.</p>
+                            <div class="event-meta">
+                                <div class="event-time">
+                                    <i class="fas fa-clock"></i> Feb 20, 2025 | 9:00 AM - 12:00 PM
+                                </div>
+                                <div class="event-location">
+                                    <i class="fas fa-map-marker-alt"></i> Main Hall
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Past Event -->
+                    <div class="timeline-event past">
+                        <div class="timeline-marker">2</div>
+                        <div class="event-details">
+                            <h3>Technical Workshops</h3>
+                            <p>Specialized workshops on latest technologies, mentoring sessions, and skill-building seminars.</p>
+                            <div class="event-meta">
+                                <div class="event-time">
+                                    <i class="fas fa-clock"></i> Feb 21, 2025 | All Day
+                                </div>
+                                <div class="event-location">
+                                    <i class="fas fa-map-marker-alt"></i> Tech Labs
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Current Event -->
+                    <div class="timeline-event current">
+                        <div class="timeline-marker">4</div>
+                        <div class="event-details">
+                            <h3>Mid-Hackathon Review</h3>
+                            <p>Teams present their progress, receive initial feedback from judges, and get guidance on further development.</p>
+                            <div class="event-meta">
+                                <div class="event-time">
+                                    <i class="fas fa-clock"></i> Feb 23, 2025 | 1:00 PM - 5:00 PM
+                                </div>
+                                <div class="event-location">
+                                    <i class="fas fa-map-marker-alt"></i> Main Auditorium
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Upcoming Events -->
+                    <div class="timeline-event upcoming">
+                        <div class="timeline-marker">5</div>
+                        <div class="event-details">
+                            <h3>Intensive Development Day</h3>
+                            <p>Full-day dedicated to project development, with mentors available for guidance and support.</p>
+                            <div class="event-meta">
+                                <div class="event-time">
+                                    <i class="fas fa-clock"></i> Feb 24, 2025 | All Day
+                                </div>
+                                <div class="event-location">
+                                    <i class="fas fa-map-marker-alt"></i> Development Labs
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- More upcoming events can be added -->
+                </div>
+
+                <div class="schedule-actions">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-download"></i> Download Full Schedule
+                    </button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Optional: Add any interactive features for the schedule page
+            const downloadButton = document.querySelector('.schedule-actions .btn-primary');
+            
+            downloadButton.addEventListener('click', function() {
+                alert('Schedule download functionality will be implemented in future updates.');
+            });
+        });
+    </script>
+</body>
+</html>

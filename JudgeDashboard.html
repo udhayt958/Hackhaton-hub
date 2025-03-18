@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCT Hackathon Portal - Judge Dashboard</title>
+    <link rel="stylesheet" href="JudgeDashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h2 class="brand-name">NCT Hackathon</h2>
+            </div>
+            
+            <div class="judge-profile">
+                <div class="profile-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-info">
+                    <h3>Dr. Sarah Williams</h3>
+                    <p>Judge Panel</p>
+                </div>
+                <div class="edit-profile-btn" onclick="document.getElementById('profileModal').style.display='block'">
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <ul>
+                    <li class="menu-item active">
+                        <a href="JudgeDashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="JudgeProjectEvaluation.html">
+                            <i class="fas fa-clipboard-list"></i>
+                            <span>Project Evaluation</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="JudgeScoring.html">
+                            <i class="fas fa-star"></i>
+                            <span>Scoring</span>
+                        </a>
+                    </li>
+                   <!--<li class="menu-item">
+                        <a href="JudgeFeedback.html">
+                            <i class="fas fa-comment"></i>
+                            <span>Feedback</span>
+                        </a>
+                    </li>    -->
+                    <li class="menu-item">
+                        <a href="JudgeAwardBadge.html">
+                            <i class="fas fa-medal"></i>
+                            <span>Award Badges</span>
+                        </a>
+                    </li>
+					<li class="menu-item">
+                        <a href="JudgeMessage.html">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                            <span class="badge message-badge">5</span>
+                        </a>
+                    </li>
+                    <!--
+                    <li class="menu-item">
+                        <a href="JudgeLeaderboard.html">
+                            <i class="fas fa-trophy"></i>
+                            <span>Leaderboard</span>
+                        </a>
+                    </li>-->
+                    <!--<li class="menu-item">
+                        <a href="JudgeSchedule.html">
+                            <i class="fas fa-calendar"></i>
+                            <span>Schedule</span>
+                        </a>-->
+                    </li>
+                    <li class="menu-item">
+                        <a href="JudgeRecources.html">
+                            <i class="fas fa-book"></i>
+                            <span>Resources</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="menu-separator"></div>
+                
+                <ul>
+                    <li class="menu-item logout">
+                        <a href="../home.html">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for projects...">
+                </div>
+                <div class="header-actions">
+                    <div class="notification-bell">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="messages-icon">
+                        <i class="fas fa-envelope"></i>
+                        <span class="badge">5</span>
+                    </div>
+                    <div class="help-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Welcome Banner -->
+            <section class="welcome-banner">
+                <div class="welcome-content">
+                    <h1>Welcome to the Judge Dashboard</h1>
+                    <p>You have <span class="highlight">7 pending reviews</span> to complete before the deadline.</p>
+                    <button class="btn btn-primary">Start Evaluation</button>
+                </div>
+                <div class="welcome-illustration">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+            </section>
+
+            <!-- Stats Cards -->
+
+            <!--
+            <section class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h2>12</h2>
+                        <p>Assigned Projects</p>
+                    </div>
+                    <div class="stat-progress">
+                        <div class="progress-bar" style="width: 100%"></div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon completed">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h2>5</h2>
+                        <p>Completed Reviews</p>
+                    </div>
+                    <div class="stat-progress">
+                        <div class="progress-bar completed" style="width: 42%"></div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon pending">
+                        <i class="fas fa-hourglass-half"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h2>7</h2>
+                        <p>Pending Reviews</p>
+                    </div>
+                    <div class="stat-progress">
+                        <div class="progress-bar pending" style="width: 58%"></div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon badge-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h2>8</h2>
+                        <p>Badges Awarded</p>
+                    </div>
+                    <div class="stat-progress">
+                        <div class="progress-bar badge-bar" style="width: 67%"></div>
+                    </div>
+                </div>
+            </section>       -->
+
+            <!-- Projects Section -->
+            <section class="projects-section">
+                <div class="section-header">
+                    <h2>Projects to Evaluate</h2>
+                    <div class="section-actions">
+                        <select class="filter-dropdown">
+                            <option>All Projects</option>
+                            <option>Pending</option>
+                            <option>Completed</option>
+                        </select>
+                        <button class="btn btn-outlined">
+                            <i class="fas fa-filter"></i> Filter
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table class="projects-table">
+                        <thead>
+                            <tr>
+                                <th>Project Name</th>
+                                <th>Team</th>
+                                <th>Category</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="project-info">
+                                        <i class="fas fa-city project-icon"></i>
+                                        <div>
+                                            <h4>Smart City Solution</h4>
+                                            <span class="project-id">#PRJ-201</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Code Warriors</td>
+                                <td><span class="category-badge iot">IoT</span></td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn btn-primary">Evaluate</button>
+                                        <button class="btn btn-icon"><i class="fas fa-medal" title="Award Badge"></i></button>
+                                        <button class="btn btn-icon"><i class="fas fa-comment" title="Send Message"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="project-info">
+                                        <i class="fas fa-brain project-icon"></i>
+                                        <div>
+                                            <h4>AI Health Assistant</h4>
+                                            <span class="project-id">#PRJ-202</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Neural Network</td>
+                                <td><span class="category-badge ai">AI/ML</span></td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn btn-primary">Evaluate</button>
+                                        <button class="btn btn-icon"><i class="fas fa-medal" title="Award Badge"></i></button>
+                                        <button class="btn btn-icon"><i class="fas fa-comment" title="Send Message"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="project-info">
+                                        <i class="fas fa-laptop project-icon"></i>
+                                        <div>
+                                            <h4>Virtual Learning Platform</h4>
+                                            <span class="project-id">#PRJ-203</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Tech Innovators</td>
+                                <td><span class="category-badge web">Web App</span></td>
+                                <td><span class="status-badge completed">Completed</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn btn-secondary">View Score</button>
+                                        <button class="btn btn-icon"><i class="fas fa-medal" title="Award Badge"></i></button>
+                                        <button class="btn btn-icon"><i class="fas fa-comment" title="Send Message"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="project-info">
+                                        <i class="fas fa-mobile-alt project-icon"></i>
+                                        <div>
+                                            <h4>AR Navigation App</h4>
+                                            <span class="project-id">#PRJ-204</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Reality Crafters</td>
+                                <td><span class="category-badge mobile">Mobile</span></td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn btn-primary">Evaluate</button>
+                                        <button class="btn btn-icon"><i class="fas fa-medal" title="Award Badge"></i></button>
+                                        <button class="btn btn-icon"><i class="fas fa-comment" title="Send Message"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Badge Award Section -->
+            <section class="badge-section">
+                <div class="section-header">
+                    <h2>Available Badges to Award</h2>
+                    <button class="btn btn-outlined">
+                        <i class="fas fa-cog"></i> Manage Badges
+                    </button>
+                </div>
+                
+                <div class="badges-grid">
+                    <div class="badge-card">
+                        <div class="badge-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="badge-content">
+                            <h3>Creative Genius</h3>
+                            <p>For exceptional creativity and innovative thinking.</p>
+                            <button class="btn btn-sm">Award Badge</button>
+                        </div>
+                    </div>
+                    
+                    <div class="badge-card">
+                        <div class="badge-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="badge-content">
+                            <h3>Code Master</h3>
+                            <p>For technical excellence and clean code.</p>
+                            <button class="btn btn-sm">Award Badge</button>
+                        </div>
+                    </div>
+                    
+                    <div class="badge-card">
+                        <div class="badge-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="badge-content">
+                            <h3>Team Player</h3>
+                            <p>For outstanding collaboration and teamwork.</p>
+                            <button class="btn btn-sm">Award Badge</button>
+                        </div>
+                    </div>
+                    
+                    <div class="badge-card">
+                        <div class="badge-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="badge-content">
+                            <h3>Design Star</h3>
+                            <p>For excellent user interface and experience design.</p>
+                            <button class="btn btn-sm">Award Badge</button>
+                        </div>
+                    </div>
+                    
+                    <div class="badge-card">
+                        <div class="badge-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <div class="badge-content">
+                            <h3>Problem Solver</h3>
+                            <p>For effectively addressing a real-world challenge.</p>
+                            <button class="btn btn-sm">Award Badge</button>
+                        </div>
+                    </div>
+                    
+                    <div class="badge-card">
+                        <div class="badge-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="badge-content">
+                            <h3>MVP</h3>
+                            <p>For overall exceptional performance.</p>
+                            <button class="btn btn-sm">Award Badge</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Messaging Section -->
+             <!--
+            <section class="messaging-section">
+                <div class="section-header">
+                    <h2>Recent Messages</h2>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i> New Message
+                    </button>
+                </div>
+                
+                <div class="messages-list">
+                    <div class="message-card unread">
+                        <div class="message-sender">
+                            <div class="sender-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="sender-info">
+                                <h4>Alex Johnson</h4>
+                                <span class="team-name">Code Warriors</span>
+                            </div>
+                        </div>
+                        <div class="message-preview">
+                            <p>Hi, I wanted to ask about the evaluation criteria for...</p>
+                            <span class="message-time">Today, 10:45 AM</span>
+                        </div>
+                        <div class="message-actions">
+                            <button class="btn btn-icon"><i class="fas fa-reply"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="message-card unread">
+                        <div class="message-sender">
+                            <div class="sender-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="sender-info">
+                                <h4>Sarah Johnson</h4>
+                                <span class="team-name">Neural Network</span>
+                            </div>
+                        </div>
+                        <div class="message-preview">
+                            <p>We've updated our project demo. Could you please take a look at...</p>
+                            <span class="message-time">Today, 9:30 AM</span>
+                        </div>
+                        <div class="message-actions">
+                            <button class="btn btn-icon"><i class="fas fa-reply"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="message-card">
+                        <div class="message-sender">
+                            <div class="sender-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="sender-info">
+                                <h4>Michael Rodriguez</h4>
+                                <span class="sender-role">Organizer</span>
+                            </div>
+                        </div>
+                        <div class="message-preview">
+                            <p>Could you please review the new judging guidelines I've uploaded to the resource hub?</p>
+                            <span class="message-time">Yesterday, 3:15 PM</span>
+                        </div>
+                        <div class="message-actions">
+                            <button class="btn btn-icon"><i class="fas fa-reply"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn btn-outlined view-all">View All Messages</button>
+            </section>
+            -->
+
+            <!-- Resource Hub Section -->
+            <section class="resource-hub-section">
+                <div class="section-header">
+                    <h2>Resource Hub</h2>
+                    <div class="resource-filters">
+                        <select class="filter-dropdown">
+                            <option>All Resources</option>
+                            <option>Guidelines</option>
+                            <option>Templates</option>
+                            <option>References</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h3>Judging Guidelines</h3>
+                            <p>Comprehensive guide for evaluating hackathon projects.</p>
+                            <div class="resource-meta">
+                                <span><i class="fas fa-calendar"></i> Feb 20, 2025</span>
+                                <span><i class="fas fa-user"></i> Michael (Organizer)</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn btn-sm"><i class="fas fa-download"></i> Download</button>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h3>Evaluation Rubric</h3>
+                            <p>Detailed scoring rubric for each category.</p>
+                            <div class="resource-meta">
+                                <span><i class="fas fa-calendar"></i> Feb 18, 2025</span>
+                                <span><i class="fas fa-user"></i> Admin</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn btn-sm"><i class="fas fa-download"></i> Download</button>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card new">
+                        <div class="resource-icon">
+                            <i class="fas fa-file-code"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h3>Technical Evaluation Guide</h3>
+                            <p>Framework for assessing technical implementation.</p>
+                            <div class="resource-meta">
+                                <span><i class="fas fa-calendar"></i> Feb 24, 2025</span>
+                                <span><i class="fas fa-user"></i> Michael (Organizer)</span>
+                            </div>
+                            <span class="new-tag">NEW</span>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn btn-sm"><i class="fas fa-download"></i> Download</button>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-file-excel"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h3>Scoring Template</h3>
+                            <p>Excel template for tracking evaluations.</p>
+                            <div class="resource-meta">
+                                <span><i class="fas fa-calendar"></i> Feb 15, 2025</span>
+                                <span><i class="fas fa-user"></i> Admin</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn btn-sm"><i class="fas fa-download"></i> Download</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Feedback Section -->
+             <!--
+            <section class="feedback-section">
+                <div class="section-header">
+                    <h2>Submitted Feedback</h2>
+                    <div class="section-actions">
+                        <select class="filter-dropdown">
+                            <option>All Teams</option>
+                            <option>Code Warriors</option>
+                            <option>Neural Network</option>
+                            <option>Tech Innovators</option>
+                            <option>Reality Crafters</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="feedback-list">
+                    <div class="feedback-card">
+                        <div class="feedback-header">
+                            <div class="team-info">
+                                <div class="team-avatar">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div>
+                                    <h4>Tech Innovators</h4>
+                                    <span>Virtual Learning Platform</span>
+                                </div>
+                            </div>
+                            <div class="feedback-score">
+                                <span>85</span>/100
+                            </div>
+                        </div>
+                        <div class="feedback-content">
+                            <p>The Virtual Learning Platform shows excellent design and user experience. The technical implementation is solid, with good architecture and code quality. Innovative features like the AI-driven learning path are impressive. Some performance optimizations could enhance the overall experience.</p>
+                        </div>
+                        <div class="feedback-categories">
+                            <div class="category-item">
+                                <span class="category-label">Innovation</span>
+                                <div class="category-score">
+                                    <div class="score-fill" style="width: 90%"></div>
+                                </div>
+                                <span class="score-value">90%</span>
+                            </div>
+                            <div class="category-item">
+                                <span class="category-label">Technical</span>
+                                <div class="category-score">
+                                    <div class="score-fill" style="width: 85%"></div>
+                                </div>
+                                <span class="score-value">85%</span>
+                            </div>
+                            <div class="category-item">
+                                <span class="category-label">Design</span>
+                                <div class="category-score">
+                                    <div class="score-fill" style="width: 88%"></div>
+                                </div>
+                                <span class="score-value">88%</span>
+                            </div>
+                            <div class="category-item">
+                                <span class="category-label">Presentation</span>
+                                <div class="category-score">
+                                    <div class="score-fill" style="width: 78%"></div>
+                                </div>
+                                <span class="score-value">78%</span>
+                            </div>
+                        </div>
+                        <div class="feedback-actions">
+                            <button class="btn btn-sm btn-outlined">Edit Feedback</button>
+                            <span class="feedback-date">Submitted: Feb 22, 2025</span>
+                        </div>
+                    </div>
+                    
+                    <div class="feedback-card">
+                        <div class="feedback-header">
+                            <div class="team-info">
+                                <div class="team-avatar">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div>
+                                    <h4>Reality Crafters</h4>
+                                    <span>AR Navigation App</span>
+                                </div>
+                            </div>
+                            <div class="feedback-score">
+                                <span>82</span>/100
+                            </div>
+                        </div>
+                        <div class="feedback-content">
+                            <p>The AR Navigation App demonstrates a creative solution to real-world navigation challenges. The AR implementation is impressive and the UI is intuitive. Performance in high-density areas needs improvement. Team presented their concept clearly and addressed questions well.</p>
+                        </div>
+                        <div class="feedback-categories">
+                            <div class="category-item">
+                                <span class="category-label">Innovation</span>
+                                <div class="category-score">
+                                    <div class="score-fill" style="width: 88%"></div>
+                                </div>
+                                <span class="score-value">88%</span>
+                            </div>
+                            <div class="category-item">
+                                <span class="category-label">Technical</span>
+                                <div class="category-score">
+                                    <div class="score-fill" style="width: 80%"></div>
+                                </div>
+                                <span class="score-value">80%</span>
+                            </div>
+                            <div class="category-item">
+                                <span class="category-label">Design</span>
+                                <div class="category-score">
+                                    <div class="score-fill" style="width: 82%"></div>
+                                </div>
+                                <span class="score-value">82%</span>
+                            </div>
+                            <div class="category-item">
+                                <span class="category-label">Presentation</span>
+                                <div class="category-score">
+                                    <div class="score-fill" style="width: 79%"></div>
+                                </div>
+                                <span class="score-value">79%</span>
+                            </div>
+                        </div>
+                        <div class="feedback-actions">
+                            <button class="btn btn-sm btn-outlined">Edit Feedback</button>
+                            <span class="feedback-date">Submitted: Feb 21, 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </section>     -->
+
+            <!-- Judging Criteria Section -->
+            <section class="criteria-section">
+                <div class="section-header">
+                    <h2>Judging Criteria</h2>
+                    <button class="btn btn-outlined">
+                        <i class="fas fa-download"></i> Download Guide
+                    </button>
+                </div>
+                
+                <div class="criteria-grid">
+                    <div class="criteria-card">
+                        <div class="criteria-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="criteria-content">
+                            <h3>Innovation & Creativity</h3>
+                            <div class="weight-badge">25%</div>
+                            <p>Originality of the idea and creative approach to solving the problem.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="criteria-card">
+                        <div class="criteria-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="criteria-content">
+                            <h3>Technical Complexity</h3>
+                            <div class="weight-badge">25%</div>
+                            <p>Technical difficulty, complexity, and quality of implementation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="criteria-card">
+                        <div class="criteria-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="criteria-content">
+                            <h3>Design & User Experience</h3>
+                            <div class="weight-badge">20%</div>
+                            <p>Interface design, user experience, and visual appeal.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="criteria-card">
+                        <div class="criteria-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="criteria-content">
+                            <h3>Practicality & Impact</h3>
+                            <div class="weight-badge">20%</div>
+                            <p>Practical application, market potential, and social impact.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="criteria-card">
+                        <div class="criteria-icon">
+                            <i class="fas fa-presentation"></i>
+                        </div>
+                        <div class="criteria-content">
+                            <h3>Presentation</h3>
+                            <div class="weight-badge">10%</div>
+                            <p>Quality of presentation, demo, and communication of ideas.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Event Schedule Section -->
+            <section class="schedule-section">
+                <div class="section-header">
+                    <h2>Hackathon Schedule</h2>
+                    <span class="current-day">Current Day: 4 of 10</span>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-event past">
+                        <div class="event-date">
+                            <div class="date-badge">Day 1</div>
+                            <div class="date-full">Feb 20, 2025</div>
+                        </div>
+                        <div class="event-content">
+                            <h3>Opening Ceremony</h3>
+                            <p>Welcome, rules explanation, and team formation.</p>
+                            <div class="event-meta">
+                                <span><i class="fas fa-clock"></i> 9:00 AM - 12:00 PM</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Main Hall</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-event past">
+                        <div class="event-date">
+                            <div class="date-badge">Day 2</div>
+                            <div class="date-full">Feb 21, 2025</div>
+                        </div>
+                        <div class="event-content">
+                            <h3>Workshops & Development</h3>
+                            <p>Technical workshops and project development.</p>
+                            <div class="event-meta">
+                                <span><i class="fas fa-clock"></i> All Day</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Labs 1-3</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-event past">
+                        <div class="event-date">
+                            <div class="date-badge">Day 3</div>
+                            <div class="date-full">Feb 22, 2025</div>
+                        </div>
+                        <div class="event-content">
+                            <h3>Mentoring Sessions</h3>
+                            <p>One-on-one mentoring with industry professionals.</p>
+                            <div class="event-meta">
+                                <span><i class="fas fa-clock"></i> 10:00 AM - 4:00 PM</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Conference Rooms</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-event current">
+                        <div class="event-date">
+                            <div class="date-badge">Day 4</div>
+                            <div class="date-full">Feb 23, 2025</div>
+                        </div>
+                        <div class="event-content">
+                            <h3>Progress Presentations</h3>
+                            <p>Teams present their progress so far. Initial judge feedback.</p>
+                            <div class="event-meta">
+                                <span><i class="fas fa-clock"></i> 1:00 PM - 5:00 PM</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Auditorium</span>
+                            </div>
+                            <div class="event-actions">
+                                <button class="btn btn-sm">Your Schedule</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-event upcoming">
+                        <div class="event-date">
+                            <div class="date-badge">Day 5</div>
+                            <div class="date-full">Feb 24, 2025</div>
+                        </div>
+                        <div class="event-content">
+                            <h3>Development Day</h3>
+                            <p>Full day of development and implementation.</p>
+                            <div class="event-meta">
+                                <span><i class="fas fa-clock"></i> All Day</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Labs 1-3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <!-- Edit Profile Modal -->
+    <div class="modal" id="profileModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edit Profile</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="profile-edit-container">
+                    <div class="profile-image-editor">
+                        <div class="profile-image-preview">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <button class="btn btn-sm">Change Photo</button>
+                    </div>
+                    <div class="profile-form">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" value="Dr. Sarah Williams" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" value="sarah.williams@example.com" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Job Title</label>
+                            <input type="text" value="Senior AI Researcher" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Company/Institution</label>
+                            <input type="text" value="Tech Solutions Inc." class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Bio</label>
+                            <textarea class="form-control">AI researcher with 10+ years of experience in machine learning and neural networks. Passionate about mentoring new talent and promoting innovation in tech.</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Areas of Expertise</label>
+                            <select multiple class="form-control">
+                                <option selected>AI/Machine Learning</option>
+                                <option selected>Neural Networks</option>
+                                <option selected>Data Science</option>
+                                <option>Web Development</option>
+                                <option>Mobile Development</option>
+                                <option>IoT</option>
+                                <option>Cloud Computing</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary close-btn">Cancel</button>
+                <button class="btn btn-primary save-btn">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Badge Assignment Modal -->
+    <div class="modal" id="badgeModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Award Badge to Team</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="badge-assignment-container">
+                    <div class="form-group">
+                        <label>Select Team</label>
+                        <select class="form-control">
+                            <option>Code Warriors</option>
+                            <option>Neural Network</option>
+                            <option>Tech Innovators</option>
+                            <option>Reality Crafters</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Select Badge</label>
+                        <div class="badge-selection-grid">
+                            <div class="badge-option selected">
+                                <div class="badge-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <span>Creative Genius</span>
+                            </div>
+                            <div class="badge-option">
+                                <div class="badge-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <span>Code Master</span>
+                            </div>
+                            <div class="badge-option">
+                                <div class="badge-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <span>Team Player</span>
+                            </div>
+                            <div class="badge-option">
+                                <div class="badge-icon">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                                <span>Design Star</span>
+                            </div>
+                            <div class="badge-option">
+                                <div class="badge-icon">
+                                    <i class="fas fa-bullseye"></i>
+                                </div>
+                                <span>Problem Solver</span>
+                            </div>
+                            <div class="badge-option">
+                                <div class="badge-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <span>MVP</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Feedback/Reason (optional)</label>
+                        <textarea class="form-control" placeholder="Add a note about why you're awarding this badge..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Notify Team</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="notifyTeam" checked>
+                            <label for="notifyTeam"></label>
+                            <span class="toggle-label">Send notification to team members</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary close-btn">Cancel</button>
+                <button class="btn btn-primary save-btn">Award Badge</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- New Message Modal -->
+    <div class="modal" id="messageModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>New Message</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="message-form">
+                    <div class="form-group">
+                        <label>To</label>
+                        <select class="form-control">
+                            <option>Select Recipient</option>
+                            <optgroup label="Teams">
+                                <option>All Teams</option>
+                                <option>Code Warriors</option>
+                                <option>Neural Network</option>
+                                <option>Tech Innovators</option>
+                                <option>Reality Crafters</option>
+                            </optgroup>
+                            <optgroup label="Organizers">
+                                <option>Michael Rodriguez</option>
+                                <option>Jennifer Lee</option>
+                            </optgroup>
+                            <optgroup label="Judges">
+                                <option>All Judges</option>
+                                <option>James Thompson</option>
+                                <option>Dr. David Chen</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input type="text" class="form-control" placeholder="Enter subject">
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea class="form-control" rows="5" placeholder="Write your message here..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Attachments</label>
+                        <div class="attachment-upload">
+                            <button class="btn btn-outlined btn-sm">
+                                <i class="fas fa-paperclip"></i> Add Attachment
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary close-btn">Cancel</button>
+                <button class="btn btn-primary send-btn">Send Message</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feedback Form Modal -->
+    <div class="modal" id="feedbackModal">
+        <div class="modal-content large-modal">
+            <div class="modal-header">
+                <h2>Project Evaluation Form</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="evaluation-header">
+                    <div class="project-details">
+                        <h3>Smart City Solution</h3>
+                        <p>Team: Code Warriors</p>
+                    </div>
+                </div>
+                
+                <div class="evaluation-form">
+                    <div class="form-group">
+                        <label>Innovation & Creativity (25%)</label>
+                        <div class="slider-container">
+                            <input type="range" min="0" max="100" value="85" class="range-slider" id="innovationScore">
+                            <div class="range-value">85</div>
+                        </div>
+                        <textarea class="form-control" placeholder="Comments on innovation and creativity..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Technical Complexity (25%)</label>
+                        <div class="slider-container">
+                            <input type="range" min="0" max="100" value="80" class="range-slider" id="technicalScore">
+                            <div class="range-value">80</div>
+                        </div>
+                        <textarea class="form-control" placeholder="Comments on technical implementation..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Design & User Experience (20%)</label>
+                        <div class="slider-container">
+                            <input type="range" min="0" max="100" value="75" class="range-slider" id="designScore">
+                            <div class="range-value">75</div>
+                        </div>
+                        <textarea class="form-control" placeholder="Comments on design and user experience..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Practicality & Impact (20%)</label>
+                        <div class="slider-container">
+                            <input type="range" min="0" max="100" value="85" class="range-slider" id="impactScore">
+                            <div class="range-value">85</div>
+                        </div>
+                        <textarea class="form-control" placeholder="Comments on practicality and impact..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Presentation (10%)</label>
+                        <div class="slider-container">
+                            <input type="range" min="0" max="100" value="90" class="range-slider" id="presentationScore">
+                            <div class="range-value">90</div>
+                        </div>
+                        <textarea class="form-control" placeholder="Comments on presentation..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Overall Feedback</label>
+                        <textarea class="form-control" rows="5" placeholder="Provide comprehensive feedback for the team..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="evaluation-summary">
+                            <div class="summary-header">
+                                <h3>Overall Score</h3>
+                                <div class="overall-score">82</div>
+                            </div>
+                            <div class="summary-text">
+                                <p>Based on the weighted scores across all categories.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Recommend for Badge(s)</label>
+                        <div class="badge-recommendations">
+                            <div class="badge-checkbox">
+                                <input type="checkbox" id="creativeBadge">
+                                <label for="creativeBadge">Creative Genius</label>
+                            </div>
+                            <div class="badge-checkbox">
+                                <input type="checkbox" id="codeBadge">
+                                <label for="codeBadge">Code Master</label>
+                            </div>
+                            <div class="badge-checkbox">
+                                <input type="checkbox" id="designBadge">
+                                <label for="designBadge">Design Star</label>
+                            </div>
+                            <div class="badge-checkbox">
+                                <input type="checkbox" id="teamBadge">
+                                <label for="teamBadge">Team Player</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary close-btn">Cancel</button>
+                <button class="btn btn-outlined save-draft-btn">Save Draft</button>
+                <button class="btn btn-primary submit-btn">Submit Evaluation</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    console.log("DOM fully loaded");
+    
+    // Store modal elements
+    const modals = {
+        profileModal: document.getElementById('profileModal'),
+        badgeModal: document.getElementById('badgeModal'),
+        messageModal: document.getElementById('messageModal'),
+        feedbackModal: document.getElementById('feedbackModal')
+    };
+    
+    // Menu item active state handling
+    const menuItems = document.querySelectorAll('.menu-item');
+    menuItems.forEach(item => {
+        item.addEventListener('click', function() {
+            menuItems.forEach(i => i.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+    
+    // Edit Profile Button - fixed the event binding to use modals object
+    const editProfileBtn = document.querySelector('.edit-profile-btn');
+    if (editProfileBtn) {
+        editProfileBtn.addEventListener('click', function() {
+            console.log("Edit profile button clicked");
+            modals.profileModal.style.display = 'block';
+        });
+    }
+    
+    // Badge Award Buttons
+    const badgeButtons = document.querySelectorAll('.fa-medal');
+    badgeButtons.forEach(btn => {
+        btn.parentElement.addEventListener('click', function() {
+            modals.badgeModal.style.display = 'block';
+        });
+    });
+    
+    // Badge Award Buttons in Badge Section
+    const awardBadgeButtons = document.querySelectorAll('.badge-content .btn');
+    awardBadgeButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            modals.badgeModal.style.display = 'block';
+        });
+    });
+    
+    // Message Buttons
+    const messageButtons = document.querySelectorAll('.fa-comment');
+    messageButtons.forEach(btn => {
+        btn.parentElement.addEventListener('click', function() {
+            modals.messageModal.style.display = 'block';
+        });
+    });
+    
+    // New Message Button
+    const newMessageBtn = document.querySelector('.messaging-section .btn-primary');
+    if (newMessageBtn) {
+        newMessageBtn.addEventListener('click', function() {
+            modals.messageModal.style.display = 'block';
+        });
+    }
+    
+    // Evaluate Buttons
+    const evaluateButtons = document.querySelectorAll('.btn-primary');
+    evaluateButtons.forEach(btn => {
+        if (btn.textContent.trim() === 'Evaluate') {
+            btn.addEventListener('click', function() {
+                modals.feedbackModal.style.display = 'block';
+            });
+        }
+    });
+    
+    // Edit Feedback Buttons
+    const editFeedbackButtons = document.querySelectorAll('.feedback-actions .btn-outlined');
+    editFeedbackButtons.forEach(btn => {
+        if (btn.textContent.trim() === 'Edit Feedback') {
+            btn.addEventListener('click', function() {
+                modals.feedbackModal.style.display = 'block';
+            });
+        }
+    });
+
+    // Close Buttons - Fixed to properly close the parent modal
+    const closeButtons = document.querySelectorAll('.close, .close-btn');
+    closeButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const modal = this.closest('.modal');
+            if (modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+
+    // Close modal when clicking outside of it
+    window.addEventListener('click', function(event) {
+        if (event.target.classList.contains('modal')) {
+            event.target.style.display = 'none';
+        }
+    });
+    
+    // Range Sliders
+    const rangeSliders = document.querySelectorAll('.range-slider');
+    rangeSliders.forEach(slider => {
+        const rangeValue = slider.nextElementSibling;
+        slider.addEventListener('input', function() {
+            rangeValue.textContent = this.value;
+            updateOverallScore();
+        });
+    });
+    
+    // Update Overall Score
+    function updateOverallScore() {
+        const innovationScore = parseFloat(document.getElementById('innovationScore').value) * 0.25;
+        const technicalScore = parseFloat(document.getElementById('technicalScore').value) * 0.25;
+        const designScore = parseFloat(document.getElementById('designScore').value) * 0.20;
+        const impactScore = parseFloat(document.getElementById('impactScore').value) * 0.20;
+        const presentationScore = parseFloat(document.getElementById('presentationScore').value) * 0.10;
+        
+        const overallScore = innovationScore + technicalScore + designScore + impactScore + presentationScore;
+        document.querySelector('.overall-score').textContent = Math.round(overallScore);
+    }
+    
+    // Badge Selection
+    const badgeOptions = document.querySelectorAll('.badge-option');
+    badgeOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            badgeOptions.forEach(o => o.classList.remove('selected'));
+            this.classList.add('selected');
+        });
+    });
+    
+    // Notification animation
+    const notificationBell = document.querySelector('.notification-bell');
+    if (notificationBell) {
+        notificationBell.addEventListener('click', function() {
+            this.classList.toggle('active');
+        });
+    }
+    
+    // Messages Icon
+    const messagesIcon = document.querySelector('.messages-icon');
+    if (messagesIcon) {
+        messagesIcon.addEventListener('click', function() {
+            this.classList.toggle('active');
+        });
+    }
+});
+    </script>
+</body>
+</html>

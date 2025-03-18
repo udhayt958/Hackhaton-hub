@@ -1,0 +1,164 @@
+ .leaderboard-section {
+            background-color: white;
+            border-radius: var(--radius-md);
+            padding: 30px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .leaderboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        .leaderboard-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 15px;
+        }
+
+        .leaderboard-table thead th {
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .leaderboard-table tbody tr {
+            transition: all 0.3s ease;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .leaderboard-table tbody tr:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .leaderboard-table tbody td {
+            padding: 15px;
+            vertical-align: middle;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .team-rank {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 20px;
+        }
+
+        .team-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .team-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 24px;
+        }
+
+        .team-details h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .team-details p {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        .score-column {
+            text-align: center;
+        }
+
+        .score-value {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 18px;
+        }
+
+        .category-tag {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .category-tag.ai {
+            background-color: rgba(156, 39, 176, 0.1);
+            color: var(--ai-color);
+        }
+
+        .category-tag.iot {
+            background-color: rgba(0, 188, 212, 0.1);
+            color: var(--iot-color);
+        }
+
+        .category-tag.web {
+            background-color: rgba(255, 87, 34, 0.1);
+            color: var(--web-color);
+        }
+
+        .leaderboard-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+            background-color: var(--primary-light);
+            padding: 20px;
+            border-radius: var(--radius-md);
+        }
+
+        .leaderboard-stat {
+            text-align: center;
+            padding: 15px;
+            background-color: white;
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        @media (max-width: 1200px) {
+            .leaderboard-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .leaderboard-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .leaderboard-table thead th,
+            .leaderboard-table tbody td {
+                padding: 10px;
+            }
+        }

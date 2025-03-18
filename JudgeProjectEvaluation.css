@@ -1,0 +1,159 @@
+/* Import the base CSS from JudgeDashboard.css */
+@import 'JudgeDashboard.css';
+
+/* Project Evaluation Specific Styles */
+.project-evaluation-section {
+    background-color: white;
+    border-radius: var(--radius-md);
+    padding: 25px;
+    box-shadow: var(--shadow-sm);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.section-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s;
+}
+
+.project-card:hover {
+    box-shadow: var(--shadow-sm);
+    transform: translateY(-3px);
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.project-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radius-sm);
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+.project-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--dark-color);
+}
+
+.project-category {
+    font-size: 12px;
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+    padding: 3px 8px;
+    border-radius: 12px;
+}
+
+.project-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.team-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.team-info span {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 3px;
+}
+
+.project-status {
+    text-align: right;
+}
+
+.status-badge {
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+.status-badge.pending {
+    background-color: rgba(255, 159, 67, 0.1);
+    color: var(--warning-color);
+}
+
+.status-badge.in-progress {
+    background-color: rgba(0, 207, 232, 0.1);
+    color: var(--info-color);
+}
+
+.project-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-actions .btn-icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border-color);
+    background-color: white;
+    color: var(--text-light);
+    transition: all 0.2s;
+}
+
+.project-actions .btn-icon:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .section-actions {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}

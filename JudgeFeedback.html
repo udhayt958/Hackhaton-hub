@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCT Hackathon - Feedback Management</title>
+    <link rel="stylesheet" href="JudgeDashboard.css">
+	<link rel="stylesheet" href="JudgeFeedback.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar (Same as in JudgeDashboard.html) -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h2 class="brand-name">NCT Hackathon</h2>
+            </div>
+            
+            <div class="judge-profile">
+                <div class="profile-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-info">
+                    <h3>Dr. Sarah Williams</h3>
+                    <p>Judge Panel</p>
+                </div>
+                <div class="edit-profile-btn" onclick="document.getElementById('profileModal').style.display='block'">
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <ul>
+                    <li class="menu-item">
+                        <a href="JudgeDashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="JudgeProjectEvaluation.html">
+                            <i class="fas fa-clipboard-list"></i>
+                            <span>Project Evaluation</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="JudgeScoring.html">
+                            <i class="fas fa-star"></i>
+                            <span>Scoring</span>
+                        </a>
+                    </li>
+                    <li class="menu-item active">
+                        <a href="JudgeFeedback.html">
+                            <i class="fas fa-comment"></i>
+                            <span>Feedback</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="JudgeAwardBadge.html">
+                            <i class="fas fa-medal"></i>
+                            <span>Award Badges</span>
+                        </a>
+                    </li>
+					<li class="menu-item">
+                        <a href="JudgeMessage.html">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                            <span class="badge message-badge">5</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="JudgeLeaderboard.html">
+                            <i class="fas fa-trophy"></i>
+                            <span>Leaderboard</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="JudgeSchedule.html">
+                            <i class="fas fa-calendar"></i>
+                            <span>Schedule</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="JudgeRecources.html">
+                            <i class="fas fa-book"></i>
+                            <span>Resources</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="menu-separator"></div>
+                
+                <ul>
+                    <li class="menu-item logout">
+                        <a href="../home.html">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for project feedback...">
+                </div>
+                <div class="header-actions">
+                    <div class="notification-bell">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="messages-icon">
+                        <i class="fas fa-envelope"></i>
+                        <span class="badge">5</span>
+                    </div>
+                    <div class="help-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Feedback Section -->
+            <section class="feedback-section">
+                <div class="feedback-header">
+                    <h1>Project Feedback</h1>
+                    <div class="section-actions">
+                        <select class="filter-dropdown">
+                            <option>All Projects</option>
+                            <option>Completed Feedback</option>
+                            <option>Pending Feedback</option>
+                        </select>
+                        <button class="btn btn-outlined">
+                            <i class="fas fa-filter"></i> Filter
+                        </button>
+                    </div>
+                </div>
+
+                <div class="feedback-grid">
+                    <!-- Feedback Card 1: Smart City Solution -->
+                    <div class="feedback-card">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-city"></i>
+                            </div>
+                            <div class="project-info">
+                                <h3>Smart City Solution</h3>
+                                <span class="project-category">IoT Category</span>
+                            </div>
+                        </div>
+
+                        <div class="feedback-metrics">
+                            <div class="feedback-metric">
+                                <div class="metric-value">85</div>
+                                <div class="metric-label">Innovation</div>
+                            </div>
+                            <div class="feedback-metric">
+                                <div class="metric-value">78</div>
+                                <div class="metric-label">Technical</div>
+                            </div>
+                            <div class="feedback-metric">
+                                <div class="metric-value">90</div>
+                                <div class="metric-label">Impact</div>
+                            </div>
+                            <div class="feedback-metric">
+                                <div class="metric-value">82</div>
+                                <div class="metric-label">Presentation</div>
+                            </div>
+                        </div>
+
+                        <div class="feedback-content">
+                            <p>The Smart City Solution demonstrates an innovative approach to urban infrastructure management. The project effectively integrates IoT technologies to address real-world challenges in city planning and resource optimization.</p>
+                        </div>
+
+                        <div class="feedback-actions">
+                            <div class="feedback-status status-completed">
+                                <i class="fas fa-check-circle status-icon"></i>
+                                Feedback Completed
+                            </div>
+                            <div class="action-buttons">
+                                <button class="btn btn-secondary">Edit Feedback</button>
+                                <button class="btn btn-primary">Share Feedback</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feedback Card 2: AI Health Assistant -->
+                    <div class="feedback-card">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="project-info">
+                                <h3>AI Health Assistant</h3>
+                                <span class="project-category">AI/ML Category</span>
+                            </div>
+                        </div>
+
+                        <div class="feedback-metrics">
+                            <div class="feedback-metric">
+                                <div class="metric-value">92</div>
+                                <div class="metric-label">Innovation</div>
+                            </div>
+                            <div class="feedback-metric">
+                                <div class="metric-value">88</div>
+                                <div class="metric-label">Technical</div>
+                            </div>
+                            <div class="feedback-metric">
+                                <div class="metric-value">95</div>
+                                <div class="metric-label">Impact</div>
+                            </div>
+                            <div class="feedback-metric">
+                                <div class="metric-value">87</div>
+                                <div class="metric-label">Presentation</div>
+                            </div>
+                        </div>
+
+                        <div class="feedback-content">
+                            <p>The AI Health Assistant showcases exceptional potential in revolutionizing healthcare delivery. The machine learning algorithms demonstrate sophisticated predictive capabilities and user-friendly interface design.</p>
+                        </div>
+
+                        <div class="feedback-actions">
+                            <div class="feedback-status status-pending">
+                                <i class="fas fa-clock status-icon"></i>
+                                Feedback Pending
+                            </div>
+                            <div class="action-buttons">
+                                <button class="btn btn-secondary">Continue Feedback</button>
+                                <button class="btn btn-primary">Submit Feedback</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Interactive Feedback Management
+        document.addEventListener('DOMContentLoaded', function() {
+            const editButtons = document.querySelectorAll('.btn-secondary');
+            
+            editButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const feedbackCard = this.closest('.feedback-card');
+                    // Placeholder for future modal or edit functionality
+                    alert('Edit feedback functionality will be implemented in future updates.');
+                });
+            });
+
+            const shareButtons = document.querySelectorAll('.btn-primary');
+            
+            shareButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const feedbackCard = this.closest('.feedback-card');
+                    const projectName = feedbackCard.querySelector('.project-info h3').textContent;
+                    // Placeholder for sharing functionality
+                    alert(`Sharing feedback for ${projectName}`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

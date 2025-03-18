@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCT Hackathon - Project Scoring</title>
+    <link rel="stylesheet" href="JudgeDashboard.css">
+	<link rel="stylesheet" href="JudgeScoring.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar (Same as in JudgeDashboard.html) -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h2 class="brand-name">NCT Hackathon</h2>
+            </div>
+            
+            <div class="judge-profile">
+                <div class="profile-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-info">
+                    <h3>Dr. Sarah Williams</h3>
+                    <p>Judge Panel</p>
+                </div>
+                <div class="edit-profile-btn" onclick="document.getElementById('profileModal').style.display='block'">
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <ul>
+                    <li class="menu-item">
+                        <a href="JudgeDashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="JudgeProjectEvaluation.html">
+                            <i class="fas fa-clipboard-list"></i>
+                            <span>Project Evaluation</span>
+                        </a>
+                    </li>
+                    <li class="menu-item active">
+                        <a href="JudgeScoring.html">
+                            <i class="fas fa-star"></i>
+                            <span>Scoring</span>
+                        </a>
+                    </li>
+                   
+                    <li class="menu-item">
+                        <a href="JudgeAwardBadge.html">
+                            <i class="fas fa-medal"></i>
+                            <span>Award Badges</span>
+                        </a>
+                    </li>
+					<li class="menu-item">
+                        <a href="JudgeMessage.html">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                            <span class="badge message-badge">5</span>
+                        </a>
+                    </li>
+                   
+                    <li class="menu-item">
+                        <a href="JudgeRecources.html">
+                            <i class="fas fa-book"></i>
+                            <span>Resources</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="menu-separator"></div>
+                
+                <ul>
+                    <li class="menu-item logout">
+                        <a href="../home.html">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for projects...">
+                </div>
+                <div class="header-actions">
+                    <div class="notification-bell">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="messages-icon">
+                        <i class="fas fa-envelope"></i>
+                        <span class="badge">5</span>
+                    </div>
+                    <div class="help-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Scoring Section -->
+            <section class="scoring-section">
+                <div class="scoring-header">
+                    <h1>Project Scoring</h1>
+                    <div class="section-actions">
+                        <select class="filter-dropdown">
+                            <option>All Projects</option>
+                            <option>Pending Scoring</option>
+                            <option>Completed</option>
+                        </select>
+                        <button class="btn btn-outlined">
+                            <i class="fas fa-filter"></i> Filter
+                        </button>
+                    </div>
+                </div>
+
+                <div class="scoring-grid">
+                    <!-- Project 1: Smart City Solution -->
+                    <div class="scoring-card">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-city"></i>
+                            </div>
+                            <div class="project-info">
+                                <h3>Smart City Solution</h3>
+                                <span class="project-category">IoT Category</span>
+                            </div>
+                        </div>
+
+                        <div class="scoring-criteria">
+                            <div class="scoring-criteria-item">
+                                <span class="criteria-label">Innovation</span>
+                                <div class="scoring-slider">
+                                    <input type="range" min="0" max="100" value="85" class="range-slider">
+                                    <span class="score-value">85</span>
+                                </div>
+                            </div>
+                            <div class="scoring-criteria-item">
+                                <span class="criteria-label">Technical Complexity</span>
+                                <div class="scoring-slider">
+                                    <input type="range" min="0" max="100" value="78" class="range-slider">
+                                    <span class="score-value">78</span>
+                                </div>
+                            </div>
+                            <div class="scoring-criteria-item">
+                                <span class="criteria-label">Practical Impact</span>
+                                <div class="scoring-slider">
+                                    <input type="range" min="0" max="100" value="90" class="range-slider">
+                                    <span class="score-value">90</span>
+                                </div>
+                            </div>
+                            <div class="scoring-criteria-item">
+                                <span class="criteria-label">Presentation</span>
+                                <div class="scoring-slider">
+                                    <input type="range" min="0" max="100" value="82" class="range-slider">
+                                    <span class="score-value">82</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="total-score">
+                            <span class="total-score-label">Total Score</span>
+                            <span class="total-score-value">84</span>
+                        </div>
+
+                        <div class="scoring-actions">
+                            <button class="btn btn-secondary">Save Draft</button>
+                            <button class="btn btn-primary">Submit Scoring</button>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: AI Health Assistant -->
+                    <div class="scoring-card">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="project-info">
+                                <h3>AI Health Assistant</h3>
+                                <span class="project-category">AI/ML Category</span>
+                            </div>
+                        </div>
+
+                        <div class="scoring-criteria">
+                            <div class="scoring-criteria-item">
+                                <span class="criteria-label">Innovation</span>
+                                <div class="scoring-slider">
+                                    <input type="range" min="0" max="100" value="92" class="range-slider">
+                                    <span class="score-value">92</span>
+                                </div>
+                            </div>
+                            <div class="scoring-criteria-item">
+                                <span class="criteria-label">Technical Complexity</span>
+                                <div class="scoring-slider">
+                                    <input type="range" min="0" max="100" value="88" class="range-slider">
+                                    <span class="score-value">88</span>
+                                </div>
+                            </div>
+                            <div class="scoring-criteria-item">
+                                <span class="criteria-label">Practical Impact</span>
+                                <div class="scoring-slider">
+                                    <input type="range" min="0" max="100" value="95" class="range-slider">
+                                    <span class="score-value">95</span>
+                                </div>
+                            </div>
+                            <div class="scoring-criteria-item">
+                                <span class="criteria-label">Presentation</span>
+                                <div class="scoring-slider">
+                                    <input type="range" min="0" max="100" value="87" class="range-slider">
+                                    <span class="score-value">87</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="total-score">
+                            <span class="total-score-label">Total Score</span>
+                            <span class="total-score-value">91</span>
+                        </div>
+
+                        <div class="scoring-actions">
+                            <button class="btn btn-secondary">Save Draft</button>
+                            <button class="btn btn-primary">Submit Scoring</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Interactive Scoring Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const rangeSliders = document.querySelectorAll('.range-slider');
+            
+            rangeSliders.forEach(slider => {
+                const scoreValue = slider.nextElementSibling;
+                
+                slider.addEventListener('input', function() {
+                    scoreValue.textContent = this.value;
+                    updateTotalScore(this.closest('.scoring-card'));
+                });
+            });
+
+            function updateTotalScore(scoringCard) {
+                const sliders = scoringCard.querySelectorAll('.range-slider');
+                const totalScoreElement = scoringCard.querySelector('.total-score-value');
+                
+                let totalScore = 0;
+                sliders.forEach(slider => {
+                    totalScore += parseInt(slider.value);
+                });
+                
+                const averageScore = Math.round(totalScore / sliders.length);
+                totalScoreElement.textContent = averageScore;
+            }
+        });
+    </script>
+</body>
+</html>

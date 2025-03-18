@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCT Hackathon - Judge Resources</title>
+    <link rel="stylesheet" href="JudgeDashboard.css">
+	 <link rel="stylesheet" href="JudgeRecources.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar (Same as previous pages) -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h2 class="brand-name">NCT Hackathon</h2>
+            </div>
+            
+            <div class="judge-profile">
+                <div class="profile-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-info">
+                    <h3>Dr. Sarah Williams</h3>
+                    <p>Judge Panel</p>
+                </div>
+                <div class="edit-profile-btn">
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <ul>
+                    <li class="menu-item">
+                        <a href="JudgeDashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="JudgeProjectEvaluation.html">
+                            <i class="fas fa-clipboard-list"></i>
+                            <span>Project Evaluation</span>
+                        </a>
+                    </li>
+                    
+                    <li class="menu-item">
+                        <a href="JudgeAwardBadge.html">
+                            <i class="fas fa-medal"></i>
+                            <span>Award Badges</span>
+                        </a>
+                    </li>
+					<li class="menu-item">
+                        <a href="JudgeMessage.html">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                            <span class="badge message-badge">5</span>
+                        </a>
+                    </li>
+                   
+                   
+                    <li class="menu-item active">
+                        <a href="JudgeRecources.html">
+                            <i class="fas fa-book"></i>
+                            <span>Resources</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="menu-separator"></div>
+                
+                <ul>
+                    <li class="menu-item logout">
+                        <a href="../home.html">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search resources...">
+                </div>
+                <div class="header-actions">
+                    <div class="notification-bell">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="messages-icon">
+                        <i class="fas fa-envelope"></i>
+                        <span class="badge">5</span>
+                    </div>
+                    <div class="help-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="resources-container">
+                <!-- Main Resources Section -->
+                <section class="main-resources-section">
+                    <div class="resources-header">
+                        <h1>Judge Resources Hub</h1>
+                        <div class="section-actions">
+                            <select class="filter-dropdown">
+                                <option>All Resources</option>
+                                <option>Guidelines</option>
+                                <option>Templates</option>
+                                <option>Reference Materials</option>
+                            </select>
+                            <button class="btn btn-outlined">
+                                <i class="fas fa-filter"></i> Filter
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Resource Categories -->
+                    <div class="resource-categories">
+                        <div class="resource-category">
+                            <div class="category-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div class="category-title">Judging Guidelines</div>
+                            <div class="category-description">Comprehensive evaluation criteria and scoring methodology.</div>
+                        </div>
+                        <div class="resource-category">
+                            <div class="category-icon">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <div class="category-title">Scoring Templates</div>
+                            <div class="category-description">Standardized scoring sheets and evaluation forms.</div>
+                        </div>
+                        <div class="resource-category">
+                            <div class="category-icon">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <div class="category-title">Reference Materials</div>
+                            <div class="category-description">Additional context and background information.</div>
+                        </div>
+                    </div>
+
+                    <!-- Document List -->
+                    <div class="document-list">
+                        <div class="document-card">
+                            <div class="document-icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="document-details">
+                                <h3>Judging Criteria Handbook</h3>
+                                <p>Detailed guide for project evaluation and scoring</p>
+                                <div class="document-meta">
+                                    <span class="document-size">2.5 MB</span>
+                                    <button class="btn btn-sm btn-outlined">Download</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="document-card">
+                            <div class="document-icon">
+                                <i class="fas fa-file-excel"></i>
+                            </div>
+                            <div class="document-details">
+                                <h3>Scoring Template</h3>
+                                <p>Excel template for recording project scores</p>
+                                <div class="document-meta">
+                                    <span class="document-size">350 KB</span>
+                                    <button class="btn btn-sm btn-outlined">Download</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="document-card">
+                            <div class="document-icon">
+                                <i class="fas fa-file-powerpoint"></i>
+                            </div>
+                            <div class="document-details">
+                                <h3>Evaluation Presentation</h3>
+                                <p>Overview of hackathon judging process</p>
+                                <div class="document-meta">
+                                    <span class="document-size">1.2 MB</span>
+                                    <button class="btn btn-sm btn-outlined">Download</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="document-card">
+                            <div class="document-icon">
+                                <i class="fas fa-file-word"></i>
+                            </div>
+                            <div class="document-details">
+                                <h3>Feedback Guidelines</h3>
+                                <p>Best practices for providing constructive feedback</p>
+                                <div class="document-meta">
+                                    <span class="document-size">780 KB</span>
+                                    <button class="btn btn-sm btn-outlined">Download</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Resources Sidebar -->
+                <aside class="resources-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Quick Links</h3>
+                        <div class="quick-links">
+                            <a href="#" class="quick-link">
+                                <i class="fas fa-question-circle"></i>
+                                Help Center
+                            </a>
+                            <a href="#" class="quick-link">
+                                <i class="fas fa-envelope"></i>
+                                Contact Support
+                            </a>
+                            <a href="#" class="quick-link">
+                                <i class="fas fa-user-friends"></i>
+                                Judge Community
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Recent Updates</h3>
+                        <div class="quick-links">
+                            <div class="quick-link">
+                                <i class="fas fa-file-alt"></i>
+                                Updated Judging Guidelines
+                            </div>
+                            <div class="quick-link">
+                                <i class="fas fa-chart-line"></i>
+                                New Scoring Metrics
+                            </div>
+							</div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Upcoming Events</h3>
+                        <div class="quick-links">
+                            <div class="quick-link">
+                                <i class="fas fa-calendar-alt"></i>
+                                Judges Training Session
+                            </div>
+                            <div class="quick-link">
+                                <i class="fas fa-video"></i>
+                                Evaluation Webinar
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Download button functionality
+            const downloadButtons = document.querySelectorAll('.btn-sm.btn-outlined');
+            
+            downloadButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const documentName = this.closest('.document-details').querySelector('h3').textContent;
+                    alert(`Downloading: ${documentName}`);
+                });
+            });
+
+            // Quick links hover effect
+            const quickLinks = document.querySelectorAll('.quick-link');
+            
+            quickLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert(`Navigating to: ${this.textContent.trim()}`);
+                });
+            });
+
+            // Filter functionality
+            const filterDropdown = document.querySelector('.filter-dropdown');
+            const documentCards = document.querySelectorAll('.document-card');
+
+            filterDropdown.addEventListener('change', function() {
+                const selectedCategory = this.value.toLowerCase();
+
+                documentCards.forEach(card => {
+                    const documentTitle = card.querySelector('h3').textContent.toLowerCase();
+                    
+                    if (selectedCategory === 'all resources' || 
+                        documentTitle.includes(selectedCategory)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
